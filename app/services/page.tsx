@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, CheckCircle, Cog, TrendingUp, Lock, Globe, Code, Database, CreditCard, Monitor, Apple } from "lucide-react"
+import { ArrowRight, Shield, CheckCircle, Cog, TrendingUp, Lock, Globe, Code, Database, CreditCard, Monitor, Apple, Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,18 +6,27 @@ import Navigation from "@/components/navigation"
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-brand-foundation relative overflow-hidden text-white">
+      {/* Background Image with Overlay */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-overlay scale-110 blur-sm"
+        style={{ backgroundImage: 'url("/glass-facade-8016589.jpg")' }}
+      />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-foundation/70 via-brand-foundation to-brand-foundation" />
+
       {/* Navigation */}
-      <Navigation />
+      <div className="relative z-10">
+        <Navigation />
+      </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              End-to-End <span className="text-purple-400">Idea to Live Product</span> Solutions
+          <div className="inline-block p-10 md:p-14 rounded-[3rem] backdrop-blur-3xl bg-white/5 border border-white/10 mb-12 shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              End-to-End <span className="text-brand-primary">Idea to Live Product</span> Solutions
             </h1>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">
+            <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
               We transform your core ideas into secure, battle-tested products that are ready to handle the intricate demands of the real world.
             </p>
           </div>
@@ -25,11 +34,11 @@ export default function ServicesPage() {
       </section>
 
       {/* Core Service Categories */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Unified Service Portfolio</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Our Unified Service Portfolio</h2>
+            <p className="text-xl text-white/50 max-w-3xl mx-auto leading-relaxed">
               Three pillars of excellence that transform complex ideas into user friendly, reliable, secure, and market-ready products
             </p>
           </div>
@@ -39,6 +48,7 @@ export default function ServicesPage() {
               {
                 icon: <Globe className="h-10 w-10" />,
                 title: "Full-Stack Development",
+                color: "text-brand-primary",
                 description: "Complete application development using modern frameworks and proven architectures",
                 services: [
                   "Next.js & Remix web Applications",
@@ -52,6 +62,7 @@ export default function ServicesPage() {
               {
                 icon: <CreditCard className="h-10 w-10" />,
                 title: "Payment Gateway Integration",
+                color: "text-brand-secondary",
                 description: "Integrating payment gateways for secure and seamless transactions",
                 services: [
                   "Stripe & Paypal for Global Payments",
@@ -65,8 +76,8 @@ export default function ServicesPage() {
               {
                 icon: <TrendingUp className="h-10 w-10" />,
                 title: "System Analysis & Design",
-                description:
-                  "Aligning business objectives with robust engineering.",
+                color: "text-brand-tertiary",
+                description: "Aligning business objectives with robust engineering.",
                 services: [
                   "System Modernization & Automation Strategy",
                   "Regulatory & Security Compliance Planning",
@@ -79,6 +90,7 @@ export default function ServicesPage() {
               {
                 icon: <Cog className="h-10 w-10" />,
                 title: "Post-Launch Optimization",
+                color: "text-brand-primary",
                 description: "Continuous improvement and scaling to deliver measurable business value",
                 services: [
                   "Rigorous QA & Regression Testing",
@@ -93,17 +105,17 @@ export default function ServicesPage() {
             ].map((category, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
+                className="backdrop-blur-2xl bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 rounded-[2.5rem] group"
               >
-                <CardContent className="p-8">
-                  <div className="text-purple-400 mb-6">{category.icon}</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-white/70 mb-6">{category.description}</p>
+                <CardContent className="p-10">
+                  <div className={`${category.color} mb-8 transition-transform duration-500 group-hover:scale-110`}>{category.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">{category.title}</h3>
+                  <p className="text-white/60 mb-8 text-sm leading-relaxed">{category.description}</p>
                   <div className="space-y-3">
                     {category.services.map((service, idx) => (
-                      <div key={idx} className="flex items-center text-white/80">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{service}</span>
+                      <div key={idx} className="flex items-center text-white/70 group-hover:text-white transition-colors">
+                        <CheckCircle className={`h-4 w-4 ${category.color} mr-3 flex-shrink-0 opacity-80`} />
+                        <span className="text-sm font-medium">{service}</span>
                       </div>
                     ))}
                   </div>
@@ -115,16 +127,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Specialized Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Core Product Expertise</h2>
-            <p className="text-xl text-white/70">
-              Targeted Solutions to power the digital economy
-            </p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-white mb-6">Core Product Expertise</h2>
+            <p className="text-xl text-white/50">Targeted Solutions to power the digital economy</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {[
               {
                 icon: <Monitor className="h-8 w-8" />,
@@ -138,6 +148,7 @@ export default function ServicesPage() {
                   "Regulatory Compliance Framework",
                 ],
                 badge: "Digital Banking",
+                color: "brand-primary"
               },
               {
                 icon: <Apple className="h-8 w-8" />,
@@ -152,6 +163,7 @@ export default function ServicesPage() {
                   "Savings & Investment Platforms",
                 ],
                 badge: "FinTech Applications",
+                color: "brand-secondary"
               },
               {
                 icon: <Globe className="h-8 w-8" />,
@@ -164,6 +176,7 @@ export default function ServicesPage() {
                   "Custom Digital Commerce Solutions",
                 ],
                 badge: "Enterprise Web",
+                color: "brand-tertiary"
               },
               {
                 icon: <Shield className="h-8 w-8" />,
@@ -176,198 +189,27 @@ export default function ServicesPage() {
                   "Threat Modeling, Security Audits & Penetration Testing",
                 ],
                 badge: "QA & Security",
+                color: "brand-primary"
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
+                className="backdrop-blur-2xl bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 rounded-[3rem] group"
               >
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-400">{service.icon}</div>
-                    <Badge variant="secondary" className="bg-purple-600/20 text-purple-300">
+                <CardContent className="p-10 md:p-14">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className={`text-${service.color}`}>{service.icon}</div>
+                    <Badge variant="secondary" className={`bg-brand-foundation/40 text-${service.color} border border-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest`}>
                       {service.badge}
                     </Badge>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-white/70 mb-6">{service.description}</p>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-white/80">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Traditional Web Development Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Full-Stack Internet Applications Development</h2>
-            <p className="text-xl text-white/70">
-              Complete internet application development using modern frameworks and proven architectures
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                icon: <Code className="h-8 w-8" />,
-                title: "Frontend Development",
-                description: "Modern, responsive web applications with exceptional user experiences",
-                technologies: ["Next.js", "Remix", "React", "TypeScript", "Tailwind CSS"],
-                features: [
-                  "Server-Side Rendering (SSR)",
-                  "Progressive Web Apps (PWA)",
-                  "Mobile-First Design",
-                  "Performance Optimization",
-                  "SEO Optimization",
-                ],
-                badge: "Frontend",
-              },
-              {
-                icon: <Database className="h-8 w-8" />,
-                title: "Backend Development",
-                description: "Scalable, secure backend systems and APIs for any application",
-                technologies: ["Spring Boot/Java", "FastAPI/Python", "NestJS/Nodejs"],
-                features: [
-                  "RESTful API Design",
-                  "GraphQL Implementation",
-                  "Database Architecture",
-                  "Authentication & Authorization",
-                  "Microservices Architecture",
-                ],
-                badge: "Backend",
-              },
-              {
-                icon: <Globe className="h-8 w-8" />,
-                title: "Full-Stack Solutions",
-                description: "Integrated web and mobile experiences powered by a high-performance, shared API layer.",
-                technologies: ["React Native cross platform Mobile", "Remix/NextJs Full-Stack Web", "Custom API Layer"],
-                features: [
-                  "Unified Web & Mobile Codebases",
-                  "High-Concurrency API Design",
-                  "Real-time Data Synchronization",
-                  "Automated Cloud Infrastructure (VPS/AWS/GCP)",
-                  "CI/CD Pipelines & Automated Testing",
-                  "Legacy System Bridge-Building",
-                ],
-                badge: "Full-Stack",
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
-              >
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-400">{service.icon}</div>
-                    <Badge variant="secondary" className="bg-blue-600/20 text-blue-300">
-                      {service.badge}
-                    </Badge>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-white/70 mb-6">{service.description}</p>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white/90 mb-3">Technologies</h4>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {service.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-2 py-1 text-xs bg-blue-600/20 text-blue-300 rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-white/80">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Architecture Patterns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Popular Architecture Combinations",
-                combinations: [
-                  {
-                    name: "Spring Boot + Next.js",
-                    description: "Enterprise-grade Java backend with modern high performance React frontend",
-                    useCase: "Large-scale enterprise applications",
-                  },
-                  {
-                    name: "NextJs/Remix + NestJs/NodeJs",
-                    description: "A unified, type-safe TypeScript ecosystem across the entire application.",
-                    useCase: "Real-time digital wallets, payment gateways, and high-frequency transaction platforms",
-                  },
-                  {
-                    name: "FastAPI + Remix",
-                    description: "High-performance Python API with full-stack React framework",
-                    useCase: "Data-intensive applications with real-time features",
-                  },
-                  {
-                    name: "Express.js + React",
-                    description: "Lightweight Node.js backend with flexible React frontend",
-                    useCase: "Rapid prototyping and MVP development",
-                  },
-                  {
-                    name: "Full-Stack Remix/NextJs",
-                    description: "Unified full-stack React framework with server-side rendering",
-                    useCase: "E-commerce platforms, customer-facing portals,Content-heavy applications with excellent SEO",
-                  },
-                ],
-              },
-              {
-                title: "Independent Backend Systems",
-                combinations: [
-                  {
-                    name: "High-Performance Mobile & Edge APIs",
-                    description: "Specialized API layers engineered for low-latency and high-reliability, specifically for native Android and iOS environments",
-                    useCase: "Fintech apps, field-agent tools, and customer-facing mobile platforms",
-                  },
-                  {
-                    name: "Scalable Microservices & Distributed Systems",
-                    description: "Distributed systems with modular independent, scalable services",
-                    useCase: "Large applications requiring high availability",
-                  },
-                  {
-                    name: "Third-Party Integrations",
-                    description: "Backend systems that integrate with external services and APIs",
-                    useCase: "Complex business process automation",
-                  },
-                  {
-                    name: "Data Processing Pipelines",
-                    description: "Backend systems for data ingestion, processing, and analytics",
-                    useCase: "Business intelligence and reporting systems",
-                  },
-                ],
-              },
-            ].map((section, index) => (
-              <Card key={index} className="backdrop-blur-xl bg-white/10 border-white/20">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">{section.title}</h3>
+                  <h3 className="text-3xl font-bold text-white mb-6 font-semibold">{service.title}</h3>
+                  <p className="text-white/60 mb-8 leading-relaxed">{service.description}</p>
                   <div className="space-y-4">
-                    {section.combinations.map((combo, idx) => (
-                      <div key={idx} className="border-l-2 border-blue-400/30 pl-4">
-                        <h4 className="text-lg font-semibold text-white mb-2">{combo.name}</h4>
-                        <p className="text-white/70 text-sm mb-2">{combo.description}</p>
-                        <div className="text-blue-300 text-xs font-medium">{combo.useCase}</div>
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-white/80 group-hover:text-white transition-colors">
+                        <div className={`w-2 h-2 bg-${service.color} rounded-full mr-4 opacity-80`} />
+                        <span className="text-sm font-medium leading-relaxed">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -379,44 +221,46 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Agile Delivery Process</h2>
-            <p className="text-xl text-white/70">
-              Accelerating innovation cycles and market entry through iterative delivery
-            </p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Agile Delivery Process</h2>
+            <p className="text-xl text-white/50">Accelerating innovation cycles through institutional-grade engineering</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 step: "01",
-                title: "Discovery & Strategy",
-                description: "Deep dive into your business objectives and technical requirements",
+                title: "Discovery",
+                description: "Deep dive into your business objectives and technical requirements.",
+                color: "brand-primary"
               },
               {
                 step: "02",
-                title: "Design & Architecture",
-                description: "Create scalable, secure system architecture and user experience design",
+                title: "Architecture",
+                description: "Designing scalable, secure, and compliant system frameworks.",
+                color: "brand-secondary"
               },
               {
                 step: "03",
-                title: "Iterative Development",
-                description: "Agile development with regular feedback loops and continuous integration",
+                title: "Development",
+                description: "Sprints-based implementation with continuous integration.",
+                color: "brand-tertiary"
               },
               {
                 step: "04",
-                title: "Launch & Optimize",
-                description: "Market deployment with ongoing monitoring and performance optimization",
+                title: "Launch",
+                description: "Secure deployment and ongoing performance optimization.",
+                color: "brand-primary"
               },
             ].map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full backdrop-blur-xl bg-purple-600/20 border border-purple-400/30 flex items-center justify-center">
-                  <span className="text-purple-300 font-bold text-lg">{phase.step}</span>
+              <div key={index} className="text-center group p-8 rounded-[2rem] hover:bg-white/5 transition-all">
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-${phase.color}/10 border border-${phase.color}/20 flex items-center justify-center transition-transform group-hover:rotate-12`}>
+                  <span className={`text-${phase.color} font-bold text-xl`}>{phase.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
-                <p className="text-white/70 text-sm">{phase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{phase.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{phase.description}</p>
               </div>
             ))}
           </div>
@@ -424,23 +268,19 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Idea?</h2>
-            <p className="text-xl text-white/70 mb-8">
-              Let's discuss how our unified approach can accelerate your journey from concept to market-ready product
+      <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-12 md:p-24 shadow-4xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/10 blur-[120px] -ml-48 -mb-48" />
+
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight relative z-10">Ready to Start?</h2>
+            <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed relative z-10">
+              Let's discuss how our unified approach can accelerate your journey from concept to market-ready product.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
-                Schedule Consultation <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 bg-transparent"
-              >
-                View Case Studies
+            <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white px-10 py-8 rounded-2xl text-xl font-bold transition-all hover:scale-105">
+                Contact Us <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>
           </div>
@@ -448,15 +288,15 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/20">
+      <footer className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold text-white mb-4 md:mb-0">
-              FinTech<span className="text-purple-400">Labs</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-3xl font-bold text-white tracking-tighter">
+              Lithium<span className="text-brand-primary">Labs</span>
             </div>
-            <div className="text-white/70 text-center md:text-right">
-              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
-              <p className="mt-1">Your trusted partner for Fintech Integration and software solutions.</p>
+            <div className="text-center md:text-right">
+              <p className="text-white/40 text-sm tracking-wide">© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
+              <p className="mt-2 text-white/20 text-xs font-light">Transforming ideas into trusted digital products.</p>
             </div>
           </div>
         </div>

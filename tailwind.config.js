@@ -52,6 +52,12 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          tertiary: "hsl(var(--brand-tertiary))",
+          foundation: "hsl(var(--brand-foundation))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

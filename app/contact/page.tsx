@@ -5,125 +5,104 @@ import Navigation from "@/components/navigation"
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-brand-foundation relative overflow-hidden text-white">
+      {/* Background Image with Overlay */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-overlay scale-110 blur-sm"
+        style={{ backgroundImage: 'url("/glass-facade-8016589.jpg")' }}
+      />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-foundation/80 via-brand-foundation to-brand-foundation" />
+
       {/* Navigation */}
-      <Navigation />
+      <div className="relative z-10">
+        <Navigation />
+      </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Let's Transform Your <span className="text-purple-400">Idea</span>
+          <div className="inline-block p-10 md:p-14 rounded-[3rem] backdrop-blur-3xl bg-white/5 border border-white/10 mb-12 shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              Let's Build Your <span className="text-brand-primary">Next Project</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Ready to bridge the gap between your innovative concept and a market-ready digital product? Our team is
-              here to guide you through every step of the journey.
+            <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed font-light">
+              Ready to bridge the gap between your innovative concept and a market-ready digital product? Our team is here to guide you through every step.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
-            <div className="lg:col-span-1">
-              <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="lg:col-span-1 space-y-8">
+              <div className="p-10 rounded-[2.5rem] backdrop-blur-2xl bg-white/5 border border-white/10 shadow-xl">
+                <h2 className="text-3xl font-bold text-white mb-10 tracking-tight">Get in Touch</h2>
 
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-purple-600/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-purple-300" />
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-5 group">
+                    <div className="w-14 h-14 rounded-2xl backdrop-blur-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
+                      <Mail className="h-6 w-6 text-brand-primary" />
+                    </div>
+                    <div>
+                      <div className="text-white/40 text-xs font-black uppercase tracking-widest mb-1">Email</div>
+                      <div className="text-white font-medium">partnerships@lithiumlabs.com</div>
+                      <div className="text-white/60 text-sm">clintonfreelance380@gmail.com</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-white font-medium mb-1">Email</div>
-                    <div className="text-white/70">partnerships@lithiumlabs.com</div>
-                    <div className="text-white/70">clintonfreelance380@gmail.com</div>
+
+                  <div className="flex items-start space-x-5 group">
+                    <div className="w-14 h-14 rounded-2xl backdrop-blur-2xl bg-brand-secondary/10 border border-brand-secondary/20 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
+                      <Phone className="h-6 w-6 text-brand-secondary" />
+                    </div>
+                    <div>
+                      <div className="text-white/40 text-xs font-black uppercase tracking-widest mb-1">Phone</div>
+                      <div className="text-white font-medium">+254 114597682</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-5 group">
+                    <div className="w-14 h-14 rounded-2xl backdrop-blur-2xl bg-brand-tertiary/10 border border-brand-tertiary/20 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
+                      <MapPin className="h-6 w-6 text-brand-tertiary" />
+                    </div>
+                    <div>
+                      <div className="text-white/40 text-xs font-black uppercase tracking-widest mb-1">Office</div>
+                      <div className="text-white font-medium">AppleWood Adams</div>
+                      <div className="text-white/60 text-sm">Nairobi, Kenya</div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-purple-600/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-purple-300" />
-                  </div>
-                  <div>
-                    <div className="text-white font-medium mb-1">Phone</div>
-                    <div className="text-white/70">+1 (555) 123-4567</div>
-                    <div className="text-white/70">+254 114597682</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-purple-600/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-purple-300" />
-                  </div>
-                  <div>
-                    <div className="text-white font-medium mb-1">Office</div>
-                    <div className="text-white/70">AppleWood Adams</div>
-                    <div className="text-white/70">Nairobi, Kenya</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-purple-600/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-5 w-5 text-purple-300" />
-                  </div>
-                  <div>
-                    <div className="text-white font-medium mb-1">Response Time</div>
-                    <div className="text-white/70">Within 24 hours</div>
-                    <div className="text-white/70">Emergency: Within 2 hours</div>
+                <div className="mt-12">
+                  <h3 className="text-white/40 text-xs font-black uppercase tracking-widest mb-6">Social Links</h3>
+                  <div className="flex gap-4">
+                    {[Github, Linkedin, Twitter].map((Icon, idx) => (
+                      <Button
+                        key={idx}
+                        size="sm"
+                        variant="outline"
+                        className="w-12 h-12 rounded-xl border-white/10 text-white hover:bg-white/5 bg-transparent p-0 transition-colors"
+                      >
+                        <Icon className="h-5 w-5" />
+                      </Button>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 bg-transparent"
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 bg-transparent"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 bg-transparent"
-                  >
-                    <Twitter className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-
-              <Card className="backdrop-blur-xl bg-white/10 border-white/20">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-3">Quick Facts</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-white/70">Average Response:</span>
-                      <span className="text-white">&lt; 24 hours</span>
+              <Card className="backdrop-blur-2xl bg-brand-primary/5 border-brand-primary/10 rounded-[2.5rem]">
+                <CardContent className="p-8">
+                  <h3 className="text-lg font-bold text-white mb-6 tracking-tight">Quick Response Commitment</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center text-sm text-white/60">
+                      <Clock className="h-4 w-4 mr-3 text-brand-primary" />
+                      <span>General Inquiry: Within 24 hours</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/70">Project Timeline:</span>
-                      <span className="text-white">3-12 months</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/70">Success Rate:</span>
-                      <span className="text-white">100%</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-white/70">Support:</span>
-                      <span className="text-white">24/7 Available</span>
+                    <div className="flex items-center text-sm text-white/60">
+                      <Shield className="h-4 w-4 mr-3 text-brand-secondary" />
+                      <span>Security Incident: Within 2 hours</span>
                     </div>
                   </div>
                 </CardContent>
@@ -132,129 +111,89 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="backdrop-blur-xl bg-white/10 border-white/20">
-                <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold text-white mb-8">Start Your Project</h2>
+              <Card className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[3rem] shadow-4xl relative overflow-hidden h-full">
+                <CardContent className="p-10 md:p-14">
+                  <h2 className="text-4xl font-bold text-white mb-10 tracking-tight">Tell Us About Your Project</h2>
 
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-white font-medium mb-2">First Name *</label>
-                        <input
-                          type="text"
-                          required
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                          placeholder="John"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-white font-medium mb-2">Last Name *</label>
-                        <input
-                          type="text"
-                          required
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                          placeholder="Doe"
-                        />
-                      </div>
+                  <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">First Name</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full p-5 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all font-light"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Last Name</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full p-5 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all font-light"
+                        placeholder="Doe"
+                      />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-white font-medium mb-2">Email *</label>
-                        <input
-                          type="email"
-                          required
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                          placeholder="john@company.com"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-white font-medium mb-2">Phone</label>
-                        <input
-                          type="tel"
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                          placeholder="+1 (555) 123-4567"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Email Address</label>
+                      <input
+                        type="email"
+                        required
+                        className="w-full p-5 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all font-light"
+                        placeholder="john@company.com"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Company (Optional)</label>
+                      <input
+                        type="text"
+                        className="w-full p-5 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all font-light"
+                        placeholder="Your Enterprise"
+                      />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-white font-medium mb-2">Company</label>
-                        <input
-                          type="text"
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                          placeholder="Your Company"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-white font-medium mb-2">Project Type *</label>
-                        <select
-                          required
-                          className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
-                        >
-                          <option value="">Select project type</option>
-                          <option value="fintech">FinTech Development</option>
-                          <option value="web3">Web Development</option>
-                          <option value="mobile">Mobile App Development</option>
-                          <option value="web3">Web3 & Blockchain</option>
-                          <option value="consulting">Strategic Consulting</option>
-                          <option value="audit">Security Audit</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-white font-medium mb-2">Budget Range</label>
-                      <select className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
-                        <option value="">Select budget range</option>
-                        <option value="1k-2k">$1K - $2K</option>
-                        <option value="2k-5k">$2K - $5K</option>
-                        <option value="5k-9k">$5K - $9K</option>
-                        <option value="10k-25k">$10K - $25K</option>
-                        <option value="25k-50k">$25K - $50K</option>
-                        <option value="50k-100k">$50K - $100K</option>
-                        <option value="100k-250k">$100K - $250K</option>
-                        <option value="250k-500k">$250K - $500K</option>
-                        <option value="500k+">$500K+</option>
-                        <option value="discuss">Let's discuss</option>
+                    <div className="md:col-span-2 space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Project Type</label>
+                      <select
+                        required
+                        className="w-full p-5 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all appearance-none font-light"
+                      >
+                        <option value="" className="bg-brand-foundation">Select your project category</option>
+                        <option value="fintech" className="bg-brand-foundation">FinTech Development</option>
+                        <option value="web3" className="bg-brand-foundation">Web3 & Blockchain</option>
+                        <option value="enterprise" className="bg-brand-foundation">Enterprise SaaS</option>
+                        <option value="consulting" className="bg-brand-foundation">Strategic Consulting</option>
                       </select>
                     </div>
 
-                    <div>
-                      <label className="block text-white font-medium mb-2">Project Description *</label>
+                    <div className="md:col-span-2 space-y-2">
+                      <label className="text-xs font-black text-white/40 uppercase tracking-widest ml-1">Project Description</label>
                       <textarea
-                        rows={6}
+                        rows={5}
                         required
-                        placeholder="Tell us about your project, goals, and any specific requirements..."
-                        className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none"
+                        placeholder="Describe your vision, technical requirements, and target outcomes..."
+                        className="w-full p-6 rounded-2xl backdrop-blur-2xl bg-white/5 border border-white/10 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 transition-all resize-none font-light leading-relaxed"
                       ></textarea>
                     </div>
 
-                    <div className="flex items-start space-x-3">
+                    <div className="md:col-span-2 flex items-center space-x-3 ml-1 mb-4">
                       <input
                         type="checkbox"
                         id="terms"
                         required
-                        className="mt-1 w-4 h-4 text-purple-600 bg-white/10 border-white/20 rounded focus:ring-purple-400"
+                        className="w-5 h-5 rounded-lg border-white/20 bg-white/5 text-brand-primary focus:ring-brand-primary"
                       />
-                      <label htmlFor="terms" className="text-white/70 text-sm">
-                        I agree to the{" "}
-                        <a href="#" className="text-purple-300 hover:text-purple-200 underline">
-                          Terms of Service
-                        </a>{" "}
-                        and{" "}
-                        <a href="#" className="text-purple-300 hover:text-purple-200 underline">
-                          Privacy Policy
-                        </a>
-                        .
+                      <label htmlFor="terms" className="text-white/40 text-sm font-medium">
+                        I agree to the <a href="#" className="text-brand-primary hover:underline">Terms of Service</a> and <a href="#" className="text-brand-secondary hover:underline">Privacy Policy</a>
                       </label>
                     </div>
 
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg">
-                      Send Message <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+                    <div className="md:col-span-2">
+                      <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-8 rounded-[1.5rem] text-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-2xl">
+                        Send Project Brief <ArrowRight className="ml-3 h-6 w-6" />
+                      </Button>
+                    </div>
                   </form>
                 </CardContent>
               </Card>
@@ -264,48 +203,33 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-white/70">Common questions about our process and services</p>
+            <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Frequently Asked Questions</h2>
+            <p className="text-xl text-white/50 leading-relaxed max-w-2xl mx-auto">Common questions about our partnership process and project delivery.</p>
           </div>
 
           <div className="space-y-6">
             {[
               {
                 question: "What is your typical project timeline?",
-                answer:
-                  "Our projects typically range from 3-12 months depending on complexity. We use an agile methodology with iterative delivery, so you'll see progress every 2-3 weeks.",
+                answer: "Institutional-grade builds typically range from 3-12 months. We operate in 2-week agile sprints to ensure constant visibility and iterative feedback.",
+                color: "brand-primary"
               },
               {
-                question: "Do you provide ongoing support after launch?",
-                answer:
-                  "Yes, we offer comprehensive post-launch optimization including 24/7 support, security monitoring, performance optimization, and feature enhancements.",
-              },
-              {
-                question: "How do you ensure regulatory compliance?",
-                answer:
-                  "We have deep expertise in financial regulations across multiple jurisdictions. Our compliance-first approach ensures all solutions meet stringent regulatory requirements from day one.",
-              },
-              {
-                question: "What makes your approach different?",
-                answer:
-                  "Our unified 'Idea to Live Product' approach consolidates strategic advisory, development, and optimization under one roof, reducing overhead and accelerating time to market.",
-              },
-              {
-                question: "Do you work with startups or only enterprises?",
-                answer:
-                  "We work with both startups and enterprises. Our scalable approach allows us to adapt our services to different company sizes and budget requirements.",
+                question: "Do you provide post-launch optimization?",
+                answer: "Excellence doesn't stop at launch. We provide 24/7 security monitoring, performance scaling, and feature iteration as a long-term technology partner.",
+                color: "brand-secondary"
               },
             ].map((faq, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
+                className="backdrop-blur-2xl bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300 rounded-[2rem] group"
               >
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-white/70">{faq.answer}</p>
+                <CardContent className="p-8">
+                  <h3 className={`text-xl font-bold text-white mb-4 group-hover:text-${faq.color} transition-colors`}>{faq.question}</h3>
+                  <p className="text-white/50 leading-relaxed">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -314,15 +238,15 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/20">
+      <footer className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold text-white mb-4 md:mb-0">
-              FinTech<span className="text-purple-400">Labs</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-3xl font-bold text-white tracking-tighter">
+              Lithium<span className="text-brand-primary">Labs</span>
             </div>
-            <div className="text-white/70 text-center md:text-right">
-              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
-              <p className="mt-1">Your trusted partner for Fintech Integration and software solutions.</p>
+            <div className="text-center md:text-right">
+              <p className="text-white/40 text-sm tracking-wide">© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
+              <p className="mt-2 text-white/20 text-xs font-light">Transforming ideas into trusted digital products.</p>
             </div>
           </div>
         </div>

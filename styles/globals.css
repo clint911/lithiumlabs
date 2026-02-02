@@ -47,7 +47,18 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand Hierarchy */
+    --brand-primary: 221 83% 53%;
+    /* Electric Blue */
+    --brand-secondary: 258 89% 66%;
+    /* Cyber Indigo */
+    --brand-tertiary: 161 84% 39%;
+    /* Sage Mint/Teal */
+    --brand-foundation: 222 47% 5%;
+    /* Midnight Slate */
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -81,6 +92,12 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand Hierarchy Dark */
+    --brand-primary: 221 83% 53%;
+    --brand-secondary: 258 89% 66%;
+    --brand-tertiary: 161 84% 39%;
+    --brand-foundation: 222 47% 5%;
   }
 }
 
@@ -88,6 +105,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github, Star, TrendingUp, Shield, Users, Calendar, Award } from "lucide-react"
+import { ArrowRight, ExternalLink, Github, Star, TrendingUp, Shield, Users, Calendar, Award, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,44 +6,52 @@ import Navigation from "@/components/navigation"
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-brand-foundation relative overflow-hidden text-white">
+      {/* Background Image with Overlay */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-overlay scale-110 blur-sm"
+        style={{ backgroundImage: 'url("/glass-facade-8016589.jpg")' }}
+      />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-foundation/80 via-brand-foundation to-brand-foundation" />
+
       {/* Navigation */}
-      <Navigation />
+      <div className="relative z-10">
+        <Navigation />
+      </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transforming <span className="text-purple-400">Ideas</span> into
+          <div className="inline-block p-10 md:p-14 rounded-[3rem] backdrop-blur-3xl bg-white/5 border border-white/10 mb-12 shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              Transforming <span className="text-brand-primary">Ideas</span> into
               <br />
-              Market-Ready <span className="text-blue-400">Products</span>
+              Market-Ready <span className="text-brand-secondary">Products</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">
-              Explore our portfolio of successful FinTech and Web3 solutions that bridge the gap between innovative
-              concepts and tangible, market-ready digital assets.
+            <p className="text-xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
+              Explore our portfolio of successful FinTech and Web3 solutions that bridge the gap between innovative concepts and tangible digital assets.
             </p>
           </div>
         </div>
       </section>
 
       {/* Portfolio Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {[
-              { number: "5+", label: "Products Launched", icon: <TrendingUp className="h-6 w-6" /> },
-              { number: "100%", label: "Success Rate", icon: <Award className="h-6 w-6" /> },
-              { number: "$2.5B+", label: "Transaction Volume", icon: <Shield className="h-6 w-6" /> },
-              { number: "5+", label: "Countries Served", icon: <Users className="h-6 w-6" /> },
+              { number: "5+", label: "Products Launched", icon: <TrendingUp className="h-6 w-6" />, color: "brand-primary" },
+              { number: "100%", label: "Success Rate", icon: <Award className="h-6 w-6" />, color: "brand-secondary" },
+              { number: "$2.5B+", label: "Transaction Volume", icon: <Shield className="h-6 w-6" />, color: "brand-tertiary" },
+              { number: "5+", label: "Countries Served", icon: <Users className="h-6 w-6" />, color: "brand-primary" },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10"
+                className="text-center p-8 rounded-[2rem] backdrop-blur-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
               >
-                <div className="text-purple-400 mb-2 flex justify-center">{stat.icon}</div>
+                <div className={`text-${stat.color} mb-4 flex justify-center transition-transform group-hover:scale-110`}>{stat.icon}</div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/70 text-sm">{stat.label}</div>
+                <div className="text-white/40 font-medium uppercase tracking-widest text-xs">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -51,316 +59,147 @@ export default function PortfolioPage() {
       </section>
 
       {/* Featured Case Studies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Featured Case Studies</h2>
-            <p className="text-xl text-white/70">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">Featured Case Studies</h2>
+            <p className="text-xl text-white/50 max-w-3xl mx-auto leading-relaxed">
               Deep dives into our most impactful projects and the measurable business value delivered
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-24">
             {[
               {
                 title: "LionX Creatives Ecosystem",
-                category: "Fintech & Digital Asset Engineering",
-                client: "US-Based Digital Creatives Art Community",
-                timeline: "8 months(2022)",
+                category: "Fintech & Digital Assets",
+                client: "LionX Digital Creatives",
+                timeline: "2022",
+                color: "brand-primary",
                 description:
-                  "Architected and deployed a multi-tier financial platform that bridges the gap between decentralized assets and traditional secure backend infrastructure, focusing on transaction precision and data privacy.",
+                  "Architected and deployed a multi-tier financial platform that bridges the gap between decentralized assets and traditional secure backend infrastructure.",
                 challenge:
-                  "The client faced critical system bottlenecks, including high transaction slippage, redundant data requests, and privacy concerns when routing sensitive financial data directly to the ledger.",
+                  "Critical system bottlenecks, including high transaction slippage and data privacy concerns when routing sensitive financial data to the ledger.",
                 solution:
-                  "engineered a 'Security-First' architecture using a custom Express.js middleware layer to filter sensitive data. I also designed a proprietary path-finding algorithm to minimize transaction slippage and integrated multi-wallet support for seamless user onboarding.",
+                  "Engineered a Security-First architecture with custom data-filtering middleware and a proprietary path-finding algorithm to minimize slippage.",
                 results: [
-                  "20% Improvement in system load times through optimized data filtration strategies.",
-                  "Significant reduction in transaction costs via a custom-engineered slippage-minimization algorithm.",
-                  "Increased user conversion rates by expanding secure wallet interoperability (Wallet Connect/Tron-Link).",
-                  "Enhanced data privacy by strategically decoupling sensitive user data from public ledger interactions.",
+                  "20% Improvement in load times",
+                  "Reduced transaction costs",
+                  "Seamless wallet interoperability",
+                  "Enhanced user data privacy",
                 ],
-                technologies: ["React", "Express.js", "Node.js", "Solidity", "TypeScript", "AWS", "Redis"],
+                technologies: ["React", "Node.js", "Solidity", "Redis"],
                 image: "/Small-lionx.png",
                 preview: "https://lionxeco.net/",
               },
               {
-                title: "Decentralized Reporting & Verification System",
-                category: "Civic-Tech & Governance Systems",
-                client: "Ushahidi (Regional Civic-Tech Initiative)",
-                timeline: "9 months(2022-2023)",
+                title: "Decentralized Verification System",
+                category: "Civic-Tech & Governance",
+                client: "Ushahidi Initiative",
+                timeline: "2022-2023",
+                color: "brand-secondary",
                 description:
-                  "Engineered a decentralized platform for authenticating citizen-led reports, utilizing a community-driven curation model and blockchain-backed time-locking mechanisms to ensure information credibility.",
+                  "Engineered a decentralized platform for authenticating citizen-led reports, utilizing blockchain-backed time-locking mechanisms.",
                 challenge:
-                  "The primary hurdle was the high cost and slow speed of manual verification. Traditional methods couldn't scale with the volume of reports, leading to potential misinformation and a lack of accountability.",
+                  "High cost and slow speed of manual verification leading to potential misinformation and lack of accountability.",
                 solution:
-                  "Designed a tiered validation system where regional peer-voting is enforced by time-locked smart contracts. High-consensus reports are automatically escalated to community-elected regional validators, creating a scalable, automated trust hierarchy.",
+                  "Designed a tiered validation system where regional peer-voting is enforced by time-locked smart contracts.",
                 results: [
-                  "Implemented a decentralized verification workflow that reduced reporting-to-validation latency by 70%.",
-                  "Introduced a tamper-proof audit trail for all public reports using blockchain-based data anchoring.",
-                  "Engineered a time-locked voting system to prevent sybil attacks and ensure genuine community engagement.",
-                  "Successfully scaled regional validation across multiple geographic zones with automated escalation triggers.",
+                  "70% Latency reduction",
+                  "Tamper-proof audit trail",
+                  "Sybil attack prevention",
+                  "Scalable trust hierarchy",
                 ],
-                technologies: ["React Native", "Tailwindcss", "Solidity", "NodeJs/Typescript", "IPFS", "Foundry", "PostgreSQL"],
+                technologies: ["React Native", "Solidity", "IPFS", "PostgreSQL"],
                 image: "/taarifu-profile.jpg",
                 preview: "https://taarifu.vercel.app/"
               },
               {
-                title: "Alliance: Internal Hiring & Middleware Platform",
-                category: "Enterprise SaaS & Human Capital Systems",
-                client: "Internal Agency Infrastructure",
-                timeline: "9 months(2024-2025)",
+                title: "Alliance Talent Gateway",
+                category: "Enterprise SaaS",
+                client: "Institutional Partner",
+                timeline: "2024-2025",
+                color: "brand-tertiary",
                 description:
-                  "Architected a custom-built, role-based talent orchestration platform designed to streamline the subcontracting lifecycle, from guest onboarding to verified institutional-grade talent management.",
+                  "Architected a custom role-based talent orchestration platform designed to streamline the subcontracting lifecycle.",
                 challenge:
-                  "Scaling an agency requires a secure way to manage diverse talent tiers (Guests, Talents, Firms) while protecting sensitive project data and ensuring that only verified engineers can access high-stakes repositories.",
+                  "Managing diverse talent tiers while protecting sensitive project data and ensuring verified engineer access.",
                 solution:
-                  "Developed a session-less, JWT-authenticated architecture with a 4-tier Role-Based Access Control (RBAC) system. Built an automated, gamified 'Profile Upgrade' workflow that transitions users from public guests to vetted talent via rigorous data validation and secure identity mapping.",
+                  "Developed a JWT-authenticated architecture with a 4-tier Role-Based Access Control (RBAC) system.",
                 results: [
-                  "Engineered a zero-trust security model with resource-level access control for sensitive API endpoints.",
-                  "Automated the vetting workflow, reducing talent onboarding time by 65% through self-service profile completion.",
-                  "Integrated a unified 'Firm Portal' allowing subcontracting partners to manage listings and review applications in a secure silo.",
-                  "Implemented a healthy, scalable backend architecture with 99.9% uptime and structured error-tracking for high-reliability operations.",
+                  "Zero-trust security model",
+                  "65% Faster onboarding",
+                  "Unified Firm Portal",
+                  "99.9% Backend uptime",
                 ],
-                technologies: ["Spring Boot", "Java", "PostgreSQL", "JWT / OAuth2", "React", "Docker", "Coolify"],
+                technologies: ["Spring Boot", "Java", "PostgreSQL", "OAuth2"],
                 image: "/alliance-mascot.jpg",
                 preview: "https://alliance.xyz"
-              },
-              {
-                title: "Hifadhi: Decentralized Social Savings & Yield Engine",
-                category: "Systems Architecture & Smart Contract Engineering",
-                client: "Regional Fintech Initiative (Celo Ecosystem)",
-                timeline: "6 months(2025)",
-                description:
-                  "Architected the backend financial logic and automated yield-generation systems for a decentralized 'Chama' platform, enabling community-led savings with inflation-hedging stablecoin integration.",
-                challenge:
-                  "Transitioning the traditional African social savings model to the blockchain required solving for high gas costs, low-data accessibility (Minipay integration), and complex fund-lifecycle management without compromising security..",
-                solution:
-                  "Served as the Lead System Analyst and Backend Engineer to design the automated fund-routing architecture. I developed the smart contract logic for cyclical payouts and yield-bearing account structures, while ensuring the backend could handle real-time contribution tracking in low-bandwidth environments.",
-                results: [
-                  "Successfully architected a seamless 'Cyclical Payout' engine using time-locked smart contracts for automated fund distribution.",
-                  "Engineered a low-data backend sync strategy specifically for Opera Mini (MiniPay) compatibility, expanding accessibility to rural users.",
-                  "Integrated cUSD stablecoin logic to provide an inflation-proof savings environment for regional users.",
-                  "Optimized yield-generation workflows, allowing community pools to earn passive interest on stagnant deposits via DeFi protocol integrations.",
-                ],
-                technologies: ["Solidity", "Foundry", "NodeJs", "Minipay SDK", "Thirdweb", "PostgreSQL", "Gelato", "Docker"],
-                image: "/hifadhi-mascot.jpg",
-                preview: "https://hifadhi.xyz"
-              },
-              {
-                title: "Taarifu: A Modern Kenyan Media & Civic Platform",
-                category: "Digital Experience & Content Infrastructure",
-                client: "Taarifu Creative Studio",
-                timeline: "6 months(2025-present)",
-                description:
-                  "Architected a high-performance media portal that merges vibrant Kenyan cultural narratives with deep-tech editorial content and an interactive constitutional education engine.",
-                challenge:
-                  "Nairobi’s digital audience demands 'instant-load' experiences across varying network speeds. The challenge was to serve high-resolution aesthetics and complex data without compromising mobile performance.",
-                solution:
-                  "Engineered a 'Bento-style' modular UI for high-speed content consumption. I developed a custom CMS architecture to handle diverse content types—from viral 'Meme Bento' micro-content to long-form technical deep dives—and integrated an annotated 'Constitution Engine' for civic engagement.",
-                results: [
-                  "Successfully launched a unified platform serving 5M+ public views through optimized asset delivery and edge caching.",
-                  "Engineered a mobile-first interactive guide, making 264 constitutional articles accessible and searchable in low-data environments.",
-                  "Reduced content-to-consumer latency by 50% using a server-side rendered (SSR) architecture for rich-media editorial pieces.",
-                  "Developed a multi-tenant Agency Portal to bridge the gap between creative storytelling and full-stack technical execution.",
-                ],
-                technologies: ["NextJs", "Tailwind Css", "Supabase", "Framer-motion", "Prisma", "PostgreSQL"],
-                image: "/media-agency.jpg",
-                preview: "https://taarifu.xyz"
-              },
-              {
-                title: "TM: Oracle-Settled Prediction Ecosystem",
-                category: "Fintech",
-                client: "Strategic Venture (Regional Market Rollout)",
-                timeline: "12 months(2025-present)",
-                description:
-                  "Engineering a high-integrity prediction market platform designed to redirect retail speculative capital into transparent, locally relevant financial instruments via gasless blockchain infrastructure.",
-                challenge:
-                  "Kenyan retail investors face high on-chain costs and opaque settlement processes. The challenge was to build a low-friction, gasless experience that handles complex market resolutions (Sports, Policy, Commodities) with sub-second API latency.",
-                solution:
-                  "Architected a 'Gasless' trading environment using Account Abstraction and Pragma Oracles for automated settlement. Built a hybrid infrastructure leveraging Next.js and Supabase for real-time responsiveness, integrated with an AMM (LMSR) engine and M-Pesa liquidity rails for seamless local onboarding.",
-                results: [
-                  "Designed for scale with a targeted P95 API latency of <200ms and transaction processing under 3 seconds.",
-                  "Engineered a multi-chain optionality framework (Base/Celo) to ensure low-cost execution for high-frequency retail trades.",
-                  "Integrated automated KYC/AML workflows and audit trails to ensure institutional-grade regulatory compliance.",
-                  "Developed a modular 'Oracle-driven' resolution engine to eliminate human bias in market settlements.",
-                ],
-                technologies: ["NextJs", "Prisma", "PostgreSQL", "Tailwind CSS", "Privy", "Base", "Foundry", "Java", "Springboot", "Solidity"],
-                image: "/tm.jpg",
-                preview: "https://tmarkets.xyz"
               },
             ].map((project, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
+                className="backdrop-blur-3xl bg-white/5 border-white/10 hover:border-white/20 transition-all duration-500 overflow-hidden rounded-[3rem] group"
               >
                 <CardContent className="p-0">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <Badge variant="secondary" className="bg-purple-600/20 text-purple-300">
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div className="p-10 md:p-14">
+                      <div className="flex items-center justify-between mb-8">
+                        <Badge variant="secondary" className={`bg-${project.color}/10 text-${project.color} border-none px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest`}>
                           {project.category}
                         </Badge>
-                        <div className="flex items-center text-white/60 text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
+                        <div className="flex items-center text-white/30 text-sm font-medium">
+                          <Calendar className={`h-4 w-4 mr-2 text-${project.color}`} />
                           {project.timeline}
                         </div>
                       </div>
-                      <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
-                      <p className="text-purple-300 mb-4">{project.client}</p>
-                      <p className="text-white/70 mb-6">{project.description}</p>
+                      <h3 className="text-4xl font-bold text-white mb-4 tracking-tight">{project.title}</h3>
+                      <p className={`text-${project.color}/80 font-bold mb-6 text-lg`}>{project.client}</p>
+                      <p className="text-white/60 mb-10 leading-relaxed text-lg font-light">{project.description}</p>
 
-                      <div className="space-y-4 mb-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
                         <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                          <p className="text-white/70 text-sm">{project.challenge}</p>
+                          <h4 className="text-sm font-black text-white/40 uppercase tracking-tighter mb-4">The Challenge</h4>
+                          <p className="text-white/70 text-sm leading-relaxed">{project.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                          <p className="text-white/70 text-sm">{project.solution}</p>
+                          <h4 className="text-sm font-black text-white/40 uppercase tracking-tighter mb-4">The Solution</h4>
+                          <p className="text-white/70 text-sm leading-relaxed">{project.solution}</p>
                         </div>
                       </div>
 
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-3">Key Results</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {project.results.map((result, idx) => (
-                            <div key={idx} className="flex items-center text-white/80 text-sm">
-                              <Star className="h-3 w-3 text-yellow-400 mr-2 flex-shrink-0" />
-                              {result}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-3">Technologies</h4>
+                      <div className="mb-10">
+                        <h4 className="text-sm font-black text-white/40 uppercase tracking-tighter mb-6">Technologies Used</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech, idx) => (
-                            <span key={idx} className="px-2 py-1 text-xs bg-white/10 text-white/80 rounded">
+                            <span key={idx} className="px-3 py-1.5 text-xs bg-white/5 text-white/50 rounded-lg hover:bg-white/10 transition-colors border border-white/5">
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
 
-                      <div className="flex gap-3">
-                        <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white">
-                          View Case Study <ExternalLink className="ml-2 h-4 w-4" />
+                      <div className="flex gap-4">
+                        <Button className={`bg-${project.color} hover:bg-${project.color}/90 text-white px-8 py-6 rounded-xl text-lg font-bold transition-all hover:scale-105`}>
+                          View Details <ExternalLink className="ml-2 h-5 w-5" />
                         </Button>
                         <Button
-                          size="sm"
                           variant="outline"
-                          className="border-white/30 text-white hover:bg-white/10 bg-transparent"
+                          className="border-white/10 text-white hover:bg-white/5 bg-transparent px-8 py-6 rounded-xl"
                         >
-                          <Github className="h-4 w-4" />
+                          <Github className="h-5 w-5" />
                         </Button>
                       </div>
                     </div>
-                    <div className="relative">
+                    <div className="relative min-h-[400px]">
                       <img
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        className="w-full h-full object-cover rounded-r-lg"
+                        className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-r-lg"></div>
+                      <div className="absolute inset-0 bg-gradient-to-l from-brand-foundation/0 via-brand-foundation/40 to-brand-foundation" />
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Projects Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">More Success Stories</h2>
-            <p className="text-xl text-white/70">
-              Additional projects showcasing our expertise across FinTech and Web3 domains
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "E-commerce Platform",
-                category: "Full-Stack",
-                description: "Complete e-commerce solution with Spring Boot backend and Next.js storefront.",
-                metrics: "1k+ products, 99.9% uptime",
-                technologies: ["Spring Boot", "Next.js", "MySQL", "Redis"],
-              },
-              {
-                title: "Learning Management System",
-                category: "Web Development",
-                description:
-                  "Educational platform built with Remix featuring real-time collaboration and progress tracking.",
-                metrics: "50K+ students, 95% satisfaction",
-                technologies: ["Remix", "FastAPI", "PostgreSQL", "WebRTC"],
-              },
-              {
-                title: "Healthcare Management API",
-                category: "Backend",
-                description: "HIPAA-compliant backend system for patient data management and appointment scheduling.",
-                metrics: "HIPAA certified, 24/7 uptime",
-                technologies: ["Spring Boot", "MySQL", "Docker", "AWS"],
-              },
-              {
-                title: "Social Media Analytics",
-                category: "Full-Stack",
-                description: "Real-time social media monitoring and analytics platform with custom dashboard.",
-                metrics: "10M+ posts analyzed daily",
-                technologies: ["FastAPI", "React", "MongoDB", "Kafka"],
-              },
-              {
-                title: "Payment Gateway Integration",
-                category: "FinTech",
-                description: "Multi-currency payment processing with fraud detection and risk management.",
-                metrics: "99.99% uptime, <0.1% fraud rate",
-                technologies: ["Node.js", "Stripe", "MongoDB", "Docker"],
-              },
-              {
-                title: "DAO Governance Platform",
-                category: "Web3",
-                description: "Decentralized governance system with voting mechanisms and treasury management.",
-                metrics: "100+ DAOs, $500M+ governed",
-                technologies: ["Solidity", "Next.js", "The Graph", "IPFS"],
-              },
-            ].map((project, index) => (
-              <Card
-                key={index}
-                className="backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/15 transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="h-32 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg mb-4"></div>
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge variant="secondary" className="bg-purple-600/20 text-purple-300">
-                      {project.category}
-                    </Badge>
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-white/70 text-sm mb-3">{project.description}</p>
-                  <div className="text-purple-300 text-sm font-medium mb-4">{project.metrics}</div>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 text-xs bg-white/10 text-white/70 rounded">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="w-full border-white/30 text-white hover:bg-white/10 bg-transparent"
-                  >
-                    Learn More
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -369,23 +208,19 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Success Stories?</h2>
-            <p className="text-xl text-white/70 mb-8">
-              Let's discuss how we can transform your innovative concept into the next market-ready success story.
+      <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-12 md:p-24 shadow-4xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/10 blur-[120px] -ml-48 -mb-48" />
+
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight relative z-10">Ready for Your Success Story?</h2>
+            <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed relative z-10">
+              Let's discuss how we can transform your innovative concept into the next market-ready digital success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
-                Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 bg-transparent"
-              >
-                Request Detailed Case Studies
+            <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white px-10 py-8 rounded-2xl text-xl font-bold transition-all hover:scale-105">
+                Contact Our Team <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>
           </div>
@@ -393,15 +228,15 @@ export default function PortfolioPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/20">
+      <footer className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold text-white mb-4 md:mb-0">
-              FinTech<span className="text-purple-400">Labs</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-3xl font-bold text-white tracking-tighter">
+              Lithium<span className="text-brand-primary">Labs</span>
             </div>
-            <div className="text-white/70 text-center md:text-right">
-              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
-              <p className="mt-1">Transforming ideas into trusted digital products.</p>
+            <div className="text-center md:text-right">
+              <p className="text-white/40 text-sm tracking-wide">© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
+              <p className="mt-2 text-white/20 text-xs font-light">Transforming ideas into trusted digital products.</p>
             </div>
           </div>
         </div>
