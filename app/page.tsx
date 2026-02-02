@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-     <Navigation />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose FinTechLabs?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Lithium Labs?</h2>
               <p className="text-xl text-white/70 mb-8">
                 We don't just build products – we craft experiences that bridge the gap between complex financial
                 technology and user-friendly interfaces.
@@ -255,7 +255,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div>
                     <div className="text-white/70 mb-1">Email</div>
-                    <div className="text-white">hello@fintechlabs.com</div>
+                    <div className="text-white">hello@lithiumlabs.com</div>
                   </div>
                   <div>
                     <div className="text-white/70 mb-1">Phone</div>
@@ -331,7 +331,7 @@ export default function Home() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© 2024 FinTechLabs. All rights reserved.</p>
+              <p>© 2024 Lithium Labs. All rights reserved.</p>
               <p className="mt-1">Transforming ideas into trusted digital products.</p>
             </div>
           </div>

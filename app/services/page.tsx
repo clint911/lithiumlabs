@@ -36,7 +36,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-20">
             {[
-                {
+              {
                 icon: <Globe className="h-10 w-10" />,
                 title: "Full-Stack Development",
                 description: "Complete application development using modern frameworks and proven architectures",
@@ -49,7 +49,7 @@ export default function ServicesPage() {
                   "Cloud Deployment & DevOps",
                 ],
               },
-               {
+              {
                 icon: <CreditCard className="h-10 w-10" />,
                 title: "Payment Gateway Integration",
                 description: "Integrating payment gateways for secure and seamless transactions",
@@ -120,7 +120,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Core Product Expertise</h2>
             <p className="text-xl text-white/70">
-            Targeted Solutions to power the digital economy
+              Targeted Solutions to power the digital economy
             </p>
           </div>
 
@@ -311,7 +311,7 @@ export default function ServicesPage() {
                     description: "Enterprise-grade Java backend with modern high performance React frontend",
                     useCase: "Large-scale enterprise applications",
                   },
-                   {
+                  {
                     name: "NextJs/Remix + NestJs/NodeJs",
                     description: "A unified, type-safe TypeScript ecosystem across the entire application.",
                     useCase: "Real-time digital wallets, payment gateways, and high-frequency transaction platforms",
@@ -455,7 +455,7 @@ export default function ServicesPage() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© {new Date().getFullYear()} FinTechLabs. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
               <p className="mt-1">Your trusted partner for Fintech Integration and software solutions.</p>
             </div>
           </div>

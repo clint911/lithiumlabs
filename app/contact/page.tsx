@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-       <Navigation />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -39,8 +39,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-white font-medium mb-1">Email</div>
-                    <div className="text-white/70">hello@fintechlabs.com</div>
-                    <div className="text-white/70">partnerships@fintechlabs.com</div>
+                    <div className="text-white/70">partnerships@lithiumlabs.com</div>
+                    <div className="text-white/70">clintonfreelance380@gmail.com</div>
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
                   <div>
                     <div className="text-white font-medium mb-1">Phone</div>
                     <div className="text-white/70">+1 (555) 123-4567</div>
-                    <div className="text-white/70">+1 (555) 987-6543</div>
+                    <div className="text-white/70">+254 114597682</div>
                   </div>
                 </div>
 
@@ -61,8 +61,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-white font-medium mb-1">Office</div>
-                    <div className="text-white/70">123 Innovation Drive</div>
-                    <div className="text-white/70">San Francisco, CA 94105</div>
+                    <div className="text-white/70">AppleWood Adams</div>
+                    <div className="text-white/70">Nairobi, Kenya</div>
                   </div>
                 </div>
 
@@ -195,6 +195,8 @@ export default function ContactPage() {
                         >
                           <option value="">Select project type</option>
                           <option value="fintech">FinTech Development</option>
+                          <option value="web3">Web Development</option>
+                          <option value="mobile">Mobile App Development</option>
                           <option value="web3">Web3 & Blockchain</option>
                           <option value="consulting">Strategic Consulting</option>
                           <option value="audit">Security Audit</option>
@@ -207,6 +209,11 @@ export default function ContactPage() {
                       <label className="block text-white font-medium mb-2">Budget Range</label>
                       <select className="w-full p-4 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
                         <option value="">Select budget range</option>
+                        <option value="1k-2k">$1K - $2K</option>
+                        <option value="2k-5k">$2K - $5K</option>
+                        <option value="5k-9k">$5K - $9K</option>
+                        <option value="10k-25k">$10K - $25K</option>
+                        <option value="25k-50k">$25K - $50K</option>
                         <option value="50k-100k">$50K - $100K</option>
                         <option value="100k-250k">$100K - $250K</option>
                         <option value="250k-500k">$250K - $500K</option>
@@ -314,8 +321,8 @@ export default function ContactPage() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© 2024 FinTechLabs. All rights reserved.</p>
-              <p className="mt-1">Your trusted partner for blockchain and FinTech innovation.</p>
+              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
+              <p className="mt-1">Your trusted partner for Fintech Integration and software solutions.</p>
             </div>
           </div>
         </div>

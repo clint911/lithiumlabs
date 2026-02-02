@@ -278,7 +278,7 @@ export default function AboutPage() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© 2024 FinTechLabs. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
               <p className="mt-1">Transforming ideas into trusted digital products.</p>
             </div>
           </div>

@@ -2,13 +2,13 @@ import { ArrowRight, ExternalLink, Github, Star, TrendingUp, Shield, Users, Cale
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import Navigation from "@/components/navigation" 
+import Navigation from "@/components/navigation"
 
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-    <Navigation />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -158,10 +158,10 @@ export default function PortfolioPage() {
                 solution:
                   "Engineered a 'Bento-style' modular UI for high-speed content consumption. I developed a custom CMS architecture to handle diverse content types—from viral 'Meme Bento' micro-content to long-form technical deep dives—and integrated an annotated 'Constitution Engine' for civic engagement.",
                 results: [
-                 "Successfully launched a unified platform serving 5M+ public views through optimized asset delivery and edge caching.",
-                 "Engineered a mobile-first interactive guide, making 264 constitutional articles accessible and searchable in low-data environments.",
-                 "Reduced content-to-consumer latency by 50% using a server-side rendered (SSR) architecture for rich-media editorial pieces.",
-                 "Developed a multi-tenant Agency Portal to bridge the gap between creative storytelling and full-stack technical execution.",
+                  "Successfully launched a unified platform serving 5M+ public views through optimized asset delivery and edge caching.",
+                  "Engineered a mobile-first interactive guide, making 264 constitutional articles accessible and searchable in low-data environments.",
+                  "Reduced content-to-consumer latency by 50% using a server-side rendered (SSR) architecture for rich-media editorial pieces.",
+                  "Developed a multi-tenant Agency Portal to bridge the gap between creative storytelling and full-stack technical execution.",
                 ],
                 technologies: ["NextJs", "Tailwind Css", "Supabase", "Framer-motion", "Prisma", "PostgreSQL"],
                 image: "/media-agency.jpg",
@@ -288,7 +288,7 @@ export default function PortfolioPage() {
                 title: "E-commerce Platform",
                 category: "Full-Stack",
                 description: "Complete e-commerce solution with Spring Boot backend and Next.js storefront.",
-                metrics: "1M+ products, 99.9% uptime",
+                metrics: "1k+ products, 99.9% uptime",
                 technologies: ["Spring Boot", "Next.js", "MySQL", "Redis"],
               },
               {
@@ -400,7 +400,7 @@ export default function PortfolioPage() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© 2024 FinTechLabs. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Lithium Labs. All rights reserved.</p>
               <p className="mt-1">Transforming ideas into trusted digital products.</p>
             </div>
           </div>
