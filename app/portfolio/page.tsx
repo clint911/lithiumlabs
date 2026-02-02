@@ -96,10 +96,10 @@ export default function PortfolioPage() {
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
-              Verified <span className="text-brand-primary bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary">Transformations</span>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+              Verified <span className="text-brand-primary">Transformations</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/60 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
               The complete operational portfolio of **Lithium Labs**. Strategic execution across the entire FinTech lifecycle.
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {allProjects.map((project, index) => (
-              <Card key={index} className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 overflow-hidden rounded-[3.5rem] group flex flex-col">
+              <Card key={index} className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 overflow-hidden rounded-[3.5rem] group flex flex-col shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]">
                 <div className="relative h-64 overflow-hidden border-b border-white/10">
                   <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation to-transparent opacity-60" />
@@ -122,23 +122,23 @@ export default function PortfolioPage() {
                   </div>
                 </div>
                 <CardContent className="p-10 flex-grow flex flex-col">
-                  <div className="flex items-center justify-between mb-6 text-white/20 text-[10px] font-black uppercase tracking-widest">
+                  <div className="flex items-center justify-between mb-6 text-white/40 text-[10px] font-black uppercase tracking-widest">
                     <span>{project.client}</span>
                     <span>{project.timeline}</span>
                   </div>
                   <h3 className="text-3xl font-black text-white mb-6 tracking-tighter uppercase leading-none">{project.title}</h3>
-                  <p className="text-white/40 mb-8 text-sm leading-relaxed font-light flex-grow">{project.description}</p>
+                  <p className="text-white/60 mb-8 text-sm leading-relaxed font-light flex-grow">{project.description}</p>
 
                   <div className="space-y-4 mb-10">
                     <div className="flex items-start">
                       <Zap className={`h-4 w-4 ${project.color} mr-4 mt-0.5 flex-shrink-0 opacity-80`} />
-                      <p className="text-white/60 text-xs leading-relaxed"><span className="font-black uppercase tracking-tighter mr-2">Solution:</span>{project.solution}</p>
+                      <p className="text-white/70 text-xs leading-relaxed"><span className="font-black uppercase tracking-tighter mr-2">Solution:</span>{project.solution}</p>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-10">
                     {project.technologies.slice(0, 3).map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1.5 text-[8px] font-black bg-white/5 text-white/30 rounded-lg uppercase tracking-widest">{tech}</span>
+                      <span key={idx} className="px-3 py-1.5 text-[8px] font-black bg-white/5 text-white/50 rounded-lg uppercase tracking-widest">{tech}</span>
                     ))}
                   </div>
 

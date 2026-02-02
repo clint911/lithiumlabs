@@ -22,10 +22,10 @@ export default function AboutPage() {
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
-              Your Strategic <span className="text-brand-primary bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary">Technology Partner</span>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+              Your strategic <span className="text-brand-primary">technology</span> and software solutions partner.
             </h1>
-            <p className="text-xl md:text-2xl text-white/50 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
               Lithium Labs serves as the foundational partner for modern financial technology. We build the infrastructure that moves the world’s money, empowering businesses to navigate the digital economy through engineering secure, compliant, or scalable products.
             </p>
           </div>
@@ -36,13 +36,13 @@ export default function AboutPage() {
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group">
+            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]">
               <CardContent className="p-12 md:p-16">
                 <div className="flex items-center mb-10">
                   <Target className="h-10 w-10 text-brand-primary mr-6 transition-transform group-hover:scale-110" />
                   <h2 className="text-4xl font-black text-white tracking-tighter uppercase">Our Mission</h2>
                 </div>
-                <p className="text-xl text-white/40 mb-10 leading-relaxed font-light">
+                <p className="text-xl text-white/70 mb-10 leading-relaxed font-light">
                   To deliver high-impact financial systems that drive business value from Day 0 by building reliable, secure, and scalable technology that solves both business problems and creates user experiences we are proud of.
                 </p>
                 <div className="flex items-center text-brand-primary font-black uppercase text-xs tracking-widest">
@@ -52,13 +52,13 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group">
+            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group shadow-[0_0_40px_rgba(255,100,255,0.02)] hover:shadow-[0_0_60px_rgba(255,100,255,0.05)]">
               <CardContent className="p-12 md:p-16">
                 <div className="flex items-center mb-10">
                   <Lightbulb className="h-10 w-10 text-brand-secondary mr-6 transition-transform group-hover:scale-110" />
                   <h2 className="text-4xl font-black text-white tracking-tighter uppercase">Our Vision</h2>
                 </div>
-                <p className="text-xl text-white/40 mb-10 leading-relaxed font-light">
+                <p className="text-xl text-white/70 mb-10 leading-relaxed font-light">
                   To establish a new standard for excellence across all domains of software development - from traditional web applications to cutting-edge FinTech and blockchain solutions.
                 </p>
                 <div className="flex items-center text-brand-secondary font-black uppercase text-xs tracking-widest">
@@ -82,11 +82,11 @@ export default function AboutPage() {
               { icon: <Users className="h-8 w-8" />, title: "Unified Expertise", color: "brand-tertiary", description: "Technical and strategic expertise under one trusted partnership." },
               { icon: <Globe className="h-8 w-8" />, title: "Lead Innovation", color: "brand-primary", description: "Forefront of emerging technologies in FinTech and Web3." },
             ].map((value, index) => (
-              <Card key={index} className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:bg-white/10 transition-all duration-500 rounded-[3rem] group">
+              <Card key={index} className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:bg-white/10 transition-all duration-500 rounded-[3rem] group shadow-[0_0_20px_rgba(37,99,235,0.02)] hover:shadow-[0_0_40px_rgba(37,99,235,0.06)]">
                 <CardContent className="p-12">
                   <div className={`text-${value.color} mb-8 flex justify-center transition-transform duration-500 group-hover:scale-110`}>{value.icon}</div>
                   <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tighter">{value.title}</h3>
-                  <p className="text-white/30 text-xs leading-relaxed font-light uppercase tracking-widest leading-loose">{value.description}</p>
+                  <p className="text-white/60 text-xs leading-relaxed font-light uppercase tracking-widest leading-loose">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
