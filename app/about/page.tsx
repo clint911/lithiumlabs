@@ -15,11 +15,10 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <div className="inline-block p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 mb-8">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                The Unified Tech Agency <span className="text-purple-400">Vision</span>
+                Your strategic Business Technology <span className="text-purple-400">Partner</span>
               </h1>
               <p className="text-xl text-white/80 max-w-4xl mx-auto">
-                Serving as the indispensable partner that seamlessly integrates nascent blockchain technologies with
-                established financial systems, empowering businesses to navigate the evolving digital economy.
+                The Foundational Partner for Modern Financial Technology, from mission critical banking integrations to agile fintech platforms, we build the software that moves the world’s money, empowering businesses to navigate the evolving digital economy through engineering secure, compliant, and scalable products.
               </p>
             </div>
           </div>
@@ -37,14 +36,11 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-white">Our Mission</h2>
                 </div>
                 <p className="text-xl text-white/70 mb-8">
-                  To serve as the indispensable partner that seamlessly integrates cutting-edge technologies with
-                  established systems, from blockchain and FinTech solutions to modern web applications and enterprise
-                  systems.
+                  To deliver high-impact financial systems that drive business value from Day 0 by building reliable, secure, and scalable technology that solves both business problems & users actually love. We ensure that every product we build a net positive stable asset, not a technical liability.
                 </p>
                 <p className="text-white/70">
-                  Our commitment extends beyond technological implementation—we empower businesses to confidently
-                  navigate the digital landscape, whether building traditional web applications, FinTech platforms, or
-                  Web3 solutions where AI, digital assets, and modern web technologies intersect.
+                  Our commitment extends beyond technological implementation we empower businesses to confidently
+                  navigate the digital landscape.
                 </p>
               </CardContent>
             </Card>
@@ -56,14 +52,13 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-white">Our Vision</h2>
                 </div>
                 <p className="text-xl text-white/70 mb-8">
-                  To establish a new standard for excellence across all domains of software development—from traditional
-                  web applications to cutting-edge FinTech and blockchain solutions—by consolidating diverse expertise
+                  To establish a new standard for excellence across all domains of software development from traditional
+                  web applications to cutting-edge FinTech and blockchain solutions by consolidating diverse expertise,  process Automations & AI solutions
                   under one roof.
                 </p>
                 <p className="text-white/70">
                   We aim to transform complex ideas into secure, scalable, and market-ready products that deliver
-                  measurable business value, whether it's a Spring Boot enterprise system, a Remix web application, or a
-                  revolutionary DeFi protocol.
+                  measurable business value.
                 </p>
               </CardContent>
             </Card>
