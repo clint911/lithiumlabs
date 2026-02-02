@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, CheckCircle, Cog, TrendingUp, Lock, Globe, Code, Database } from "lucide-react"
+import { ArrowRight, Shield, CheckCircle, Cog, TrendingUp, Lock, Globe, Code, Database, CreditCard, Monitor, Apple } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,8 +18,7 @@ export default function ServicesPage() {
               End-to-End <span className="text-purple-400">Idea to Live Product</span> Solutions
             </h1>
             <p className="text-xl text-white/80 max-w-4xl mx-auto">
-              Comprehensive service portfolio spanning strategic advisory, in-depth development, and post-launch
-              optimization. We bridge the gap between innovative blockchain concepts and market-ready FinTech solutions.
+              We transform your core ideas into secure, battle-tested products that are ready to handle the intricate demands of the real world.
             </p>
           </div>
         </div>
@@ -31,51 +30,50 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Our Unified Service Portfolio</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Three pillars of excellence that transform complex ideas into secure, compliant, and market-ready products
+              Three pillars of excellence that transform complex ideas into user friendly, reliable, secure, and market-ready products
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-20">
             {[
+                {
+                icon: <Globe className="h-10 w-10" />,
+                title: "Full-Stack Development",
+                description: "Complete application development using modern frameworks and proven architectures",
+                services: [
+                  "Next.js & Remix web Applications",
+                  "Cross platform mobile Development",
+                  "Spring Boot Backend Systems",
+                  "FastAPI & NestJs/NodeJs APIs",
+                  "Database Design & Architecture",
+                  "Cloud Deployment & DevOps",
+                ],
+              },
+               {
+                icon: <CreditCard className="h-10 w-10" />,
+                title: "Payment Gateway Integration",
+                description: "Integrating payment gateways for secure and seamless transactions",
+                services: [
+                  "Stripe & Paypal for Global Payments",
+                  "Mpesa & Flutterwave for African Payments",
+                  "Bitcoin & Stable Coin Integration",
+                  "Subscription & Billing",
+                  "QR Code, NFC & Biometric Payments",
+                  "Agentic & Multi-Channel Payments",
+                ],
+              },
               {
                 icon: <TrendingUp className="h-10 w-10" />,
-                title: "Strategic Advisory",
+                title: "System Analysis & Design",
                 description:
-                  "Navigate the complexities at the intersection of emerging technologies and traditional finance",
+                  "Aligning business objectives with robust engineering.",
                 services: [
-                  "Blockchain Integration Strategy",
-                  "Regulatory Compliance Planning",
-                  "Market Entry Analysis",
-                  "Technology Stack Selection",
-                  "Risk Assessment & Mitigation",
-                  "Digital Asset Strategy",
-                ],
-              },
-              {
-                icon: <Code className="h-10 w-10" />,
-                title: "Web3 & FinTech Development",
-                description:
-                  "Specialized development for blockchain, cryptocurrency, and financial technology solutions",
-                services: [
-                  "Smart Contract Development",
-                  "DeFi Protocol Creation",
-                  "Payment System Integration",
-                  "Blockchain Infrastructure",
-                  "Cryptocurrency Exchanges",
-                  "RegTech Solutions",
-                ],
-              },
-              {
-                icon: <Globe className="h-10 w-10" />,
-                title: "Full-Stack Web Development",
-                description: "Complete web application development using modern frameworks and proven architectures",
-                services: [
-                  "Next.js & Remix Applications",
-                  "Spring Boot Backend Systems",
-                  "FastAPI & Express.js APIs",
-                  "Mobile Backend Development",
-                  "Database Architecture",
-                  "Cloud Deployment & DevOps",
+                  "System Modernization & Automation Strategy",
+                  "Regulatory & Security Compliance Planning",
+                  "Architectual Design & Technology Stack Selection",
+                  "Operational Worflow & Process Automation",
+                  "Technical Risk Assessment & Mitigation",
+                  "Scalability Roadmap & Integration Planning",
                 ],
               },
               {
@@ -83,12 +81,13 @@ export default function ServicesPage() {
                 title: "Post-Launch Optimization",
                 description: "Continuous improvement and scaling to deliver measurable business value",
                 services: [
-                  "Performance Monitoring",
-                  "Security Audits",
-                  "Feature Enhancement",
-                  "Scalability Solutions",
+                  "Rigorous QA & Regression Testing",
+                  "Proactive Performance & Uptime Monitoring",
+                  "Continuous Security Audits & Compliance Patches",
+                  "Iterative Feature Development & Enhancements",
+                  "System Hardening & Scalability Engineering",
                   "User Experience Optimization",
-                  "Ongoing Support & Maintenance",
+                  "SLA-Driven Support & System Maintenance",
                 ],
               },
             ].map((category, index) => (
@@ -119,65 +118,64 @@ export default function ServicesPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Specialized Capabilities</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Core Product Expertise</h2>
             <p className="text-xl text-white/70">
-              Deep expertise in the converging landscape of AI, digital assets, and traditional finance
+            Targeted Solutions to power the digital economy
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Shield className="h-8 w-8" />,
-                title: "Blockchain & Crypto Consulting",
-                description: "Seamlessly integrate nascent blockchain technologies with established financial systems",
+                icon: <Monitor className="h-8 w-8" />,
+                title: "Digital Banking & Core Integrations",
+                description: "Building the infrastructure that powers modern internet banking experiences.",
                 features: [
-                  "Cryptocurrency Exchange Development",
-                  "Tokenization Strategies",
-                  "Consensus Mechanism Design",
-                  "Cross-chain Interoperability",
+                  "Core Banking System (CBS) Integrations",
+                  "Mobile Money & Payment Gateway Syncing (M-Pesa, Pesalink, Flutterwave)",
+                  "API Layer Development for Third-party Access",
+                  "Ledger Management & Reconciliation Systems",
                   "Regulatory Compliance Framework",
                 ],
-                badge: "Blockchain",
+                badge: "Digital Banking",
+              },
+              {
+                icon: <Apple className="h-8 w-8" />,
+                title: "FinTech Applications Development",
+                description: "Developing scalable platforms for lending, savings, and investment.",
+                features: [
+                  "Micro-investment & WealthTech Platforms",
+                  "InsurTech Policy Management & Claims Processing",
+                  "Robo-Advisory Systems",
+                  "Multi-currency Wallets & Currency Exchange",
+                  "Digital Lending & Automated Appraisal Engines",
+                  "Savings & Investment Platforms",
+                ],
+                badge: "FinTech Applications",
               },
               {
                 icon: <Globe className="h-8 w-8" />,
-                title: "FinTech Web Development",
-                description: "Transform complex financial concepts into user-friendly, secure digital experiences",
+                title: "Enterprise Web & Digital Commerce",
+                description: "Applying institutional-grade engineering to high-growth e-commerce, healthtech, and modern business systems.",
                 features: [
-                  "Digital Banking Platforms",
-                  "Payment Gateway Integration",
-                  "Robo-Advisory Systems",
-                  "InsurTech Solutions",
-                  "RegTech Automation",
+                  "Single & Multi-tenant E-commerce platforms",
+                  "Healthtech & Telemedicine Systems",
+                  "Logistics & Supply Chain Management Systems",
+                  "Custom Digital Commerce Solutions",
                 ],
-                badge: "FinTech",
+                badge: "Enterprise Web",
               },
               {
-                icon: <Database className="h-8 w-8" />,
-                title: "AI & Machine Learning Integration",
-                description: "Leverage artificial intelligence to enhance financial decision-making and automation",
-                features: [
-                  "Algorithmic Trading Systems",
-                  "Fraud Detection & Prevention",
-                  "Credit Scoring Models",
-                  "Predictive Analytics",
-                  "Natural Language Processing",
-                ],
-                badge: "AI/ML",
-              },
-              {
-                icon: <Lock className="h-8 w-8" />,
-                title: "Security & Compliance",
+                icon: <Shield className="h-8 w-8" />,
+                title: "QA, Security & Compliance",
                 description: "Robust security protocols and stringent regulatory compliance across all solutions",
                 features: [
-                  "Multi-layer Security Architecture",
-                  "KYC/AML Implementation",
-                  "GDPR Compliance",
-                  "SOC 2 Certification Support",
-                  "Penetration Testing",
+                  "Unit, Integration & E2E Testing & QA",
+                  "Automated KYC/AML Onboarding Flows",
+                  "Regulatory Compliance (CBK, Data Protection Act, GDPR Compliance)",
+                  "Threat Modeling, Security Audits & Penetration Testing",
                 ],
-                badge: "Security",
+                badge: "QA & Security",
               },
             ].map((service, index) => (
               <Card
@@ -212,9 +210,9 @@ export default function ServicesPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Full-Stack Web Development</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Full-Stack Internet Applications Development</h2>
             <p className="text-xl text-white/70">
-              Complete web application development using modern frameworks and proven architectures
+              Complete internet application development using modern frameworks and proven architectures
             </p>
           </div>
 
@@ -238,7 +236,7 @@ export default function ServicesPage() {
                 icon: <Database className="h-8 w-8" />,
                 title: "Backend Development",
                 description: "Scalable, secure backend systems and APIs for any application",
-                technologies: ["Spring Boot", "FastAPI", "Express.js", "Node.js", "Python"],
+                technologies: ["Spring Boot/Java", "FastAPI/Python", "NestJS/Nodejs"],
                 features: [
                   "RESTful API Design",
                   "GraphQL Implementation",
@@ -251,14 +249,15 @@ export default function ServicesPage() {
               {
                 icon: <Globe className="h-8 w-8" />,
                 title: "Full-Stack Solutions",
-                description: "End-to-end application development with seamless frontend-backend integration",
-                technologies: ["Remix Full-Stack", "Next.js + Spring Boot", "FastAPI + React"],
+                description: "Integrated web and mobile experiences powered by a high-performance, shared API layer.",
+                technologies: ["React Native cross platform Mobile", "Remix/NextJs Full-Stack Web", "Custom API Layer"],
                 features: [
-                  "Unified Development Experience",
-                  "Type-Safe APIs",
-                  "Real-time Features",
-                  "Cloud Deployment",
-                  "CI/CD Pipelines",
+                  "Unified Web & Mobile Codebases",
+                  "High-Concurrency API Design",
+                  "Real-time Data Synchronization",
+                  "Automated Cloud Infrastructure (VPS/AWS/GCP)",
+                  "CI/CD Pipelines & Automated Testing",
+                  "Legacy System Bridge-Building",
                 ],
                 badge: "Full-Stack",
               },
@@ -309,8 +308,13 @@ export default function ServicesPage() {
                 combinations: [
                   {
                     name: "Spring Boot + Next.js",
-                    description: "Enterprise-grade Java backend with modern React frontend",
+                    description: "Enterprise-grade Java backend with modern high performance React frontend",
                     useCase: "Large-scale enterprise applications",
+                  },
+                   {
+                    name: "NextJs/Remix + NestJs/NodeJs",
+                    description: "A unified, type-safe TypeScript ecosystem across the entire application.",
+                    useCase: "Real-time digital wallets, payment gateways, and high-frequency transaction platforms",
                   },
                   {
                     name: "FastAPI + Remix",
@@ -323,9 +327,9 @@ export default function ServicesPage() {
                     useCase: "Rapid prototyping and MVP development",
                   },
                   {
-                    name: "Full-Stack Remix",
+                    name: "Full-Stack Remix/NextJs",
                     description: "Unified full-stack React framework with server-side rendering",
-                    useCase: "Content-heavy applications with excellent SEO",
+                    useCase: "E-commerce platforms, customer-facing portals,Content-heavy applications with excellent SEO",
                   },
                 ],
               },
@@ -333,13 +337,13 @@ export default function ServicesPage() {
                 title: "Independent Backend Systems",
                 combinations: [
                   {
-                    name: "Mobile API Backends",
-                    description: "Dedicated APIs for Android and iOS applications",
-                    useCase: "Native mobile app development",
+                    name: "High-Performance Mobile & Edge APIs",
+                    description: "Specialized API layers engineered for low-latency and high-reliability, specifically for native Android and iOS environments",
+                    useCase: "Fintech apps, field-agent tools, and customer-facing mobile platforms",
                   },
                   {
-                    name: "Microservices Architecture",
-                    description: "Distributed systems with independent, scalable services",
+                    name: "Scalable Microservices & Distributed Systems",
+                    description: "Distributed systems with modular independent, scalable services",
                     useCase: "Large applications requiring high availability",
                   },
                   {
@@ -451,8 +455,8 @@ export default function ServicesPage() {
               FinTech<span className="text-purple-400">Labs</span>
             </div>
             <div className="text-white/70 text-center md:text-right">
-              <p>© 2024 FinTechLabs. All rights reserved.</p>
-              <p className="mt-1">Your trusted partner for blockchain and FinTech innovation.</p>
+              <p>© {new Date().getFullYear()} FinTechLabs. All rights reserved.</p>
+              <p className="mt-1">Your trusted partner for Fintech Integration and software solutions.</p>
             </div>
           </div>
         </div>
