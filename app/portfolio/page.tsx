@@ -32,10 +32,10 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {[
-              { number: "50+", label: "Products Launched", icon: <TrendingUp className="h-6 w-6" /> },
+              { number: "5+", label: "Products Launched", icon: <TrendingUp className="h-6 w-6" /> },
               { number: "100%", label: "Success Rate", icon: <Award className="h-6 w-6" /> },
               { number: "$2.5B+", label: "Transaction Volume", icon: <Shield className="h-6 w-6" /> },
-              { number: "15+", label: "Countries Served", icon: <Users className="h-6 w-6" /> },
+              { number: "5+", label: "Countries Served", icon: <Users className="h-6 w-6" /> },
             ].map((stat, index) => (
               <div
                 key={index}
@@ -63,124 +63,130 @@ export default function PortfolioPage() {
           <div className="space-y-16">
             {[
               {
-                title: "Global DeFi Trading Platform",
-                category: "Web3 & Blockchain",
-                client: "Fortune 500 Financial Institution",
-                timeline: "8 months",
+                title: "LionX Creatives Ecosystem",
+                category: "Fintech & Digital Asset Engineering",
+                client: "US-Based Digital Creatives Art Community",
+                timeline: "8 months(2022)",
                 description:
-                  "Seamlessly integrated blockchain technology with traditional financial systems to create a comprehensive DeFi trading platform serving institutional clients globally.",
+                  "Architected and deployed a multi-tier financial platform that bridges the gap between decentralized assets and traditional secure backend infrastructure, focusing on transaction precision and data privacy.",
                 challenge:
-                  "Navigate complex regulatory requirements across multiple jurisdictions while ensuring enterprise-grade security and scalability.",
+                  "The client faced critical system bottlenecks, including high transaction slippage, redundant data requests, and privacy concerns when routing sensitive financial data directly to the ledger.",
                 solution:
-                  "Developed a modular, compliance-first architecture with automated KYC/AML processes and multi-layer security protocols.",
+                  "engineered a 'Security-First' architecture using a custom Express.js middleware layer to filter sensitive data. I also designed a proprietary path-finding algorithm to minimize transaction slippage and integrated multi-wallet support for seamless user onboarding.",
                 results: [
-                  "$500M+ in trading volume within first quarter",
-                  "99.9% uptime with zero security incidents",
-                  "Regulatory approval in 12 jurisdictions",
-                  "50% reduction in operational costs",
+                  "20% Improvement in system load times through optimized data filtration strategies.",
+                  "Significant reduction in transaction costs via a custom-engineered slippage-minimization algorithm.",
+                  "Increased user conversion rates by expanding secure wallet interoperability (Wallet Connect/Tron-Link).",
+                  "Enhanced data privacy by strategically decoupling sensitive user data from public ledger interactions.",
                 ],
-                technologies: ["Solidity", "React", "Node.js", "AWS", "PostgreSQL", "Redis"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["React", "Express.js", "Node.js", "Solidity", "TypeScript", "AWS", "Redis"],
+                image: "/Small-lionx.png",
+                preview: "https://lionxeco.net/",
               },
               {
-                title: "AI-Powered Digital Banking Suite",
-                category: "FinTech Development",
-                client: "Regional Banking Consortium",
-                timeline: "12 months",
+                title: "Decentralized Reporting & Verification System",
+                category: "Civic-Tech & Governance Systems",
+                client: "Ushahidi (Regional Civic-Tech Initiative)",
+                timeline: "9 months(2022-2023)",
                 description:
-                  "Transformed traditional banking operations with AI-driven insights, automated processes, and mobile-first user experiences.",
+                  "Engineered a decentralized platform for authenticating citizen-led reports, utilizing a community-driven curation model and blockchain-backed time-locking mechanisms to ensure information credibility.",
                 challenge:
-                  "Modernize legacy banking infrastructure while maintaining regulatory compliance and ensuring seamless user migration.",
+                  "The primary hurdle was the high cost and slow speed of manual verification. Traditional methods couldn't scale with the volume of reports, leading to potential misinformation and a lack of accountability.",
                 solution:
-                  "Implemented microservices architecture with AI/ML integration for personalized financial services and fraud detection.",
+                  "Designed a tiered validation system where regional peer-voting is enforced by time-locked smart contracts. High-consensus reports are automatically escalated to community-elected regional validators, creating a scalable, automated trust hierarchy.",
                 results: [
-                  "300% increase in mobile engagement",
-                  "85% reduction in fraud incidents",
-                  "40% improvement in customer satisfaction",
-                  "60% faster loan approval process",
+                  "Implemented a decentralized verification workflow that reduced reporting-to-validation latency by 70%.",
+                  "Introduced a tamper-proof audit trail for all public reports using blockchain-based data anchoring.",
+                  "Engineered a time-locked voting system to prevent sybil attacks and ensure genuine community engagement.",
+                  "Successfully scaled regional validation across multiple geographic zones with automated escalation triggers.",
                 ],
-                technologies: ["React Native", "Python", "TensorFlow", "Kubernetes", "MongoDB", "Apache Kafka"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["React Native", "Tailwindcss", "Solidity", "NodeJs/Typescript", "IPFS", "Foundry", "PostgreSQL"],
+                image: "/taarifu-profile.jpg",
+                preview: "https://taarifu.vercel.app/"
               },
               {
-                title: "Cross-Chain NFT Marketplace",
-                category: "Web3 & Digital Assets",
-                client: "Creative Industry Platform",
-                timeline: "6 months",
+                title: "Alliance: Internal Hiring & Middleware Platform",
+                category: "Enterprise SaaS & Human Capital Systems",
+                client: "Internal Agency Infrastructure",
+                timeline: "9 months(2024-2025)",
                 description:
-                  "Built a comprehensive NFT marketplace with cross-chain compatibility, creator tools, and royalty management systems.",
+                  "Architected a custom-built, role-based talent orchestration platform designed to streamline the subcontracting lifecycle, from guest onboarding to verified institutional-grade talent management.",
                 challenge:
-                  "Create interoperable solution across multiple blockchains while ensuring user-friendly experience for non-technical creators.",
+                  "Scaling an agency requires a secure way to manage diverse talent tiers (Guests, Talents, Firms) while protecting sensitive project data and ensuring that only verified engineers can access high-stakes repositories.",
                 solution:
-                  "Developed unified API layer with automated cross-chain bridging and intuitive creator dashboard with built-in analytics.",
+                  "Developed a session-less, JWT-authenticated architecture with a 4-tier Role-Based Access Control (RBAC) system. Built an automated, gamified 'Profile Upgrade' workflow that transitions users from public guests to vetted talent via rigorous data validation and secure identity mapping.",
                 results: [
-                  "$50M+ in NFT sales volume",
-                  "10,000+ active creators onboarded",
-                  "Support for 5 major blockchains",
-                  "95% creator retention rate",
+                  "Engineered a zero-trust security model with resource-level access control for sensitive API endpoints.",
+                  "Automated the vetting workflow, reducing talent onboarding time by 65% through self-service profile completion.",
+                  "Integrated a unified 'Firm Portal' allowing subcontracting partners to manage listings and review applications in a secure silo.",
+                  "Implemented a healthy, scalable backend architecture with 99.9% uptime and structured error-tracking for high-reliability operations.",
                 ],
-                technologies: ["Next.js", "Ethereum", "Polygon", "IPFS", "Web3.js", "GraphQL"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["Spring Boot", "Java", "PostgreSQL", "JWT / OAuth2", "React", "Docker", "Coolify"],
+                image: "/alliance-mascot.jpg",
+                preview: "https://alliance.xyz"
               },
               {
-                title: "Enterprise Resource Planning System",
-                category: "Full-Stack Web Development",
-                client: "Manufacturing Consortium",
-                timeline: "10 months",
+                title: "Hifadhi: Decentralized Social Savings & Yield Engine",
+                category: "Systems Architecture & Smart Contract Engineering",
+                client: "Regional Fintech Initiative (Celo Ecosystem)",
+                timeline: "6 months(2025)",
                 description:
-                  "Comprehensive ERP system built with Spring Boot backend and Next.js frontend, managing inventory, production, and financial operations across multiple facilities.",
+                  "Architected the backend financial logic and automated yield-generation systems for a decentralized 'Chama' platform, enabling community-led savings with inflation-hedging stablecoin integration.",
                 challenge:
-                  "Replace legacy systems while ensuring zero downtime and seamless data migration from multiple disparate systems.",
+                  "Transitioning the traditional African social savings model to the blockchain required solving for high gas costs, low-data accessibility (Minipay integration), and complex fund-lifecycle management without compromising security..",
                 solution:
-                  "Implemented microservices architecture with Spring Boot, React-based dashboard, and phased migration strategy with real-time data synchronization.",
+                  "Served as the Lead System Analyst and Backend Engineer to design the automated fund-routing architecture. I developed the smart contract logic for cyclical payouts and yield-bearing account structures, while ensuring the backend could handle real-time contribution tracking in low-bandwidth environments.",
                 results: [
-                  "40% improvement in operational efficiency",
-                  "Real-time inventory tracking across 15 facilities",
-                  "99.9% system uptime during migration",
-                  "60% reduction in manual data entry",
+                  "Successfully architected a seamless 'Cyclical Payout' engine using time-locked smart contracts for automated fund distribution.",
+                  "Engineered a low-data backend sync strategy specifically for Opera Mini (MiniPay) compatibility, expanding accessibility to rural users.",
+                  "Integrated cUSD stablecoin logic to provide an inflation-proof savings environment for regional users.",
+                  "Optimized yield-generation workflows, allowing community pools to earn passive interest on stagnant deposits via DeFi protocol integrations.",
                 ],
-                technologies: ["Spring Boot", "Next.js", "PostgreSQL", "Redis", "Docker", "AWS"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["Solidity", "Foundry", "NodeJs", "Minipay SDK", "Thirdweb", "PostgreSQL", "Gelato", "Docker"],
+                image: "/hifadhi-mascot.jpg",
+                preview: "https://hifadhi.xyz"
               },
               {
-                title: "Real-Time Analytics Dashboard",
-                category: "Backend & API Development",
-                client: "E-commerce Platform",
-                timeline: "4 months",
+                title: "Taarifu: A Modern Kenyan Media & Civic Platform",
+                category: "Digital Experience & Content Infrastructure",
+                client: "Taarifu Creative Studio",
+                timeline: "6 months(2025-present)",
                 description:
-                  "High-performance analytics backend using FastAPI with real-time data processing, serving millions of requests daily for business intelligence.",
+                  "Architected a high-performance media portal that merges vibrant Kenyan cultural narratives with deep-tech editorial content and an interactive constitutional education engine.",
                 challenge:
-                  "Process and analyze massive datasets in real-time while maintaining sub-second response times for dashboard queries.",
+                  "Nairobi’s digital audience demands 'instant-load' experiences across varying network speeds. The challenge was to serve high-resolution aesthetics and complex data without compromising mobile performance.",
                 solution:
-                  "Built scalable FastAPI backend with async processing, Redis caching, and optimized database queries with real-time WebSocket connections.",
+                  "Engineered a 'Bento-style' modular UI for high-speed content consumption. I developed a custom CMS architecture to handle diverse content types—from viral 'Meme Bento' micro-content to long-form technical deep dives—and integrated an annotated 'Constitution Engine' for civic engagement.",
                 results: [
-                  "Processing 10M+ events per day",
-                  "Sub-200ms average API response time",
-                  "Real-time dashboard updates",
-                  "90% reduction in data processing costs",
+                 "Successfully launched a unified platform serving 5M+ public views through optimized asset delivery and edge caching.",
+                 "Engineered a mobile-first interactive guide, making 264 constitutional articles accessible and searchable in low-data environments.",
+                 "Reduced content-to-consumer latency by 50% using a server-side rendered (SSR) architecture for rich-media editorial pieces.",
+                 "Developed a multi-tenant Agency Portal to bridge the gap between creative storytelling and full-stack technical execution.",
                 ],
-                technologies: ["FastAPI", "Python", "PostgreSQL", "Redis", "WebSockets", "Docker"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["NextJs", "Tailwind Css", "Supabase", "Framer-motion", "Prisma", "PostgreSQL"],
+                image: "/media-agency.jpg",
+                preview: "https://taarifu.xyz"
               },
               {
-                title: "Content Management Platform",
-                category: "Full-Stack Development",
-                client: "Media & Publishing Company",
-                timeline: "6 months",
+                title: "TM: Oracle-Settled Prediction Ecosystem",
+                category: "Fintech",
+                client: "Strategic Venture (Regional Market Rollout)",
+                timeline: "12 months(2025-present)",
                 description:
-                  "Full-stack content management system built with Remix, featuring advanced editorial workflows, multi-tenant architecture, and SEO optimization.",
+                  "Engineering a high-integrity prediction market platform designed to redirect retail speculative capital into transparent, locally relevant financial instruments via gasless blockchain infrastructure.",
                 challenge:
-                  "Create a scalable CMS that handles multiple publications with different branding while maintaining excellent SEO performance.",
+                  "Kenyan retail investors face high on-chain costs and opaque settlement processes. The challenge was to build a low-friction, gasless experience that handles complex market resolutions (Sports, Policy, Commodities) with sub-second API latency.",
                 solution:
-                  "Developed with Remix full-stack framework, implementing server-side rendering, progressive enhancement, and advanced caching strategies.",
+                  "Architected a 'Gasless' trading environment using Account Abstraction and Pragma Oracles for automated settlement. Built a hybrid infrastructure leveraging Next.js and Supabase for real-time responsiveness, integrated with an AMM (LMSR) engine and M-Pesa liquidity rails for seamless local onboarding.",
                 results: [
-                  "300% improvement in page load speeds",
-                  "Managing 50+ publications",
-                  "95+ Google PageSpeed scores",
-                  "50% increase in organic traffic",
+                  "Designed for scale with a targeted P95 API latency of <200ms and transaction processing under 3 seconds.",
+                  "Engineered a multi-chain optionality framework (Base/Celo) to ensure low-cost execution for high-frequency retail trades.",
+                  "Integrated automated KYC/AML workflows and audit trails to ensure institutional-grade regulatory compliance.",
+                  "Developed a modular 'Oracle-driven' resolution engine to eliminate human bias in market settlements.",
                 ],
-                technologies: ["Remix", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Vercel"],
-                image: "/placeholder.svg?height=400&width=600",
+                technologies: ["NextJs", "Prisma", "PostgreSQL", "Tailwind CSS", "Privy", "Base", "Foundry", "Java", "Springboot", "Solidity"],
+                image: "/tm.jpg",
+                preview: "https://tmarkets.xyz"
               },
             ].map((project, index) => (
               <Card

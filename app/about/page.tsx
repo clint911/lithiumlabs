@@ -163,7 +163,7 @@ export default function AboutPage() {
                 <div className="text-center mb-8">
                   <div className="text-6xl font-bold text-purple-400 mb-2">100%</div>
                   <div className="text-white/70 mb-6">Client Success Rate</div>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
+                  <div className="text-4xl font-bold text-blue-400 mb-2">5+</div>
                   <div className="text-white/70 mb-6">Products Launched</div>
                   <div className="text-4xl font-bold text-green-400 mb-2">0</div>
                   <div className="text-white/70">Security Incidents</div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                     <div className="text-sm text-white/70">Support</div>
                   </div>
                   <div className="p-4 rounded-xl bg-white/5 text-center">
-                    <div className="text-2xl font-bold text-white">5+</div>
+                    <div className="text-2xl font-bold text-white">3+</div>
                     <div className="text-sm text-white/70">Years Experience</div>
                   </div>
                 </div>
