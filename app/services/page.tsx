@@ -71,9 +71,8 @@ export default function ServicesPage() {
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-foundation/20 via-brand-foundation/60 to-brand-foundation" />
 
       {/* Navigation */}
-      <div className="relative z-10">
-        <Navigation />
-      </div>
+      <Navigation />
+
 
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">

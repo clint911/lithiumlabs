@@ -16,9 +16,8 @@ export default function Home() {
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-foundation/0 via-brand-foundation/60 to-brand-foundation" />
 
       {/* Navigation */}
-      <div className="relative z-10">
-        <Navigation />
-      </div>
+      <Navigation />
+
 
       {/* Hero Section - Balanced Typography */}
       <section className="relative z-10 pt-56 pb-20 px-4 sm:px-6 lg:px-8">
@@ -29,7 +28,7 @@ export default function Home() {
               <br />
               <span className="text-brand-secondary">Live Product</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/50 max-w-4xl mx-auto mb-14 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-white/60 max-w-4xl mx-auto mb-14 leading-relaxed font-light">
               We empower visionary founders by transforming complex <span className="text-white font-bold opacity-80">FinTech</span> and <span className="text-white font-bold opacity-80">Web3</span> concepts into secure, market-ready digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -58,7 +57,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-none">The Lithium <br /><span className="text-brand-primary">Edge</span></h2>
-              <p className="text-xl text-white/50 mb-10 leading-relaxed font-light">
+              <p className="text-xl text-white/60 mb-10 leading-relaxed font-light">
                 We aren't just developers; we are strategic architects. Lithium Labs was founded to bridge the critical gap between visionary concepts and production-grade digital assets.
               </p>
               <div className="space-y-6 mb-12">
@@ -67,14 +66,14 @@ export default function Home() {
                   "Institutional-Grade Implementation",
                   "Founder-Centric Strategic Synergy"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center text-white/70 group">
+                  <div key={i} className="flex items-center text-white/80 group">
                     <CheckCircle className="h-5 w-5 text-brand-primary mr-4 transition-transform group-hover:scale-110" />
-                    <span className="text-lg font-bold tracking-tight uppercase tracking-widest text-sm opacity-80">{item}</span>
+                    <span className="text-lg font-bold tracking-tight uppercase tracking-widest text-sm opacity-90">{item}</span>
                   </div>
                 ))}
               </div>
               <Link href="/about">
-                <Button variant="outline" className="border-white/10 text-white/50 hover:text-white px-8 py-6 rounded-xl font-black uppercase text-xs tracking-widest">
+                <Button variant="outline" className="border-white/10 text-white/60 hover:text-white px-8 py-6 rounded-xl font-black uppercase text-xs tracking-widest">
                   Read Full Story
                 </Button>
               </Link>
@@ -96,7 +95,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
             <div className="max-w-3xl">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Engineering <span className="text-brand-primary">Pillars</span></h2>
-              <p className="text-lg text-white/40 font-light leading-relaxed">
+              <p className="text-lg text-white/60 font-light leading-relaxed">
                 Strategic technical execution across the entire FinTech lifecycle, from architectural design to institutional scaling.
               </p>
             </div>
@@ -118,7 +117,7 @@ export default function Home() {
                 <CardContent className="p-10">
                   <div className={`text-${service.color} mb-8 transition-transform group-hover:scale-110`}>{service.icon}</div>
                   <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter">{service.title}</h3>
-                  <p className="text-white/30 text-sm font-light leading-relaxed">{service.description}</p>
+                  <p className="text-white/60 text-sm font-light leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -131,7 +130,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-24">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Verified <span className="text-brand-secondary">Builds</span></h2>
-            <p className="text-lg text-white/40 max-w-2xl mx-auto font-light mb-12">
+            <p className="text-lg text-white/60 max-w-2xl mx-auto font-light mb-12">
               Showcasing selected deployments for institutional partners and visionary startups.
             </p>
           </div>
@@ -157,7 +156,7 @@ export default function Home() {
                     Institutional Build
                   </Badge>
                   <h3 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase">{project.title}</h3>
-                  <p className="text-white/40 mb-10 text-lg leading-relaxed font-light">{project.description}</p>
+                  <p className="text-white/60 mb-10 text-lg leading-relaxed font-light">{project.description}</p>
                   <Link href="/portfolio">
                     <Button variant="outline" className="border-white/10 text-white/60 hover:text-white px-8 py-5 rounded-xl font-black uppercase text-[10px] tracking-widest">
                       Audit Result
@@ -184,7 +183,7 @@ export default function Home() {
           <div className="backdrop-blur-3xl bg-brand-foundation/60 border border-white/10 rounded-[4rem] p-16 md:p-24 shadow-4xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-none">The Future Is Built Now</h2>
-            <p className="text-xl text-white/50 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Ready to transform your vision into a benchmark digital asset?
             </p>
             <Link href="/contact">
@@ -203,7 +202,7 @@ export default function Home() {
             <div className="text-4xl font-black text-white tracking-tighter uppercase">
               Lithium<span className="text-brand-primary">Labs</span>
             </div>
-            <div className="text-white/30 text-[10px] font-black uppercase tracking-[0.4em]">© {new Date().getFullYear()} Lithium Labs Consortium</div>
+            <div className="text-white/40 text-[10px] font-black uppercase tracking-[0.4em]">© {new Date().getFullYear()} Lithium Labs Consortium</div>
           </div>
         </div>
       </footer>

@@ -34,7 +34,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-foundation/90 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}>
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-foundation/90 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
