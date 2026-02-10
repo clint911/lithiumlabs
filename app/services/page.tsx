@@ -9,31 +9,45 @@ export default function ServicesPage() {
   const serviceCategories = [
     {
       icon: <Globe className="h-12 w-12" />,
-      title: "Institutional Scaling",
+      title: "Full-Stack Development",
       color: "brand-primary",
-      description: "We build systems designed for the global market, ensuring sub-millisecond latency and 99.99% uptime for institutional-grade financial traffic.",
-      features: ["High-Concurrency Backends", "distributed Ledger Systems", "Automated Performance Triage"]
+      description: "End-to-end application development from concept to deployment. We build production-grade web and mobile applications using modern frameworks and best practices.",
+      features: ["React & Next.js Applications", "Node.js & Python Backends", "Real-time Systems & APIs", "Mobile-Responsive Interfaces"]
     },
     {
       icon: <Shield className="h-12 w-12" />,
-      title: "Security & Compliance",
+      title: "Cloud Infrastructure & DevOps",
       color: "brand-secondary",
-      description: "Deep integration of jurisdictional compliance and security-first protocols. We bake safety into the architectural foundation of every product.",
-      features: ["AES-256 Edge Encryption", "SOC2/GDPR Alignment", "Real-time Threat Neutralization"]
+      description: "Scalable cloud architecture on AWS, Azure, and GCP. We implement secure, compliant infrastructure with automated deployment pipelines and monitoring.",
+      features: ["Containerization (Docker/K8s)", "CI/CD Pipeline Setup", "Infrastructure as Code", "Security & Compliance (SOC2/GDPR)"]
+    },
+    {
+      icon: <CreditCard className="h-12 w-12" />,
+      title: "Payment Gateway Integration",
+      color: "brand-tertiary",
+      description: "Seamless integration of global and local payment systems. We connect Stripe, M-Pesa, and regional payment rails with smart routing and reconciliation.",
+      features: ["Multi-Rail Payment APIs", "Mobile Money Integration", "Smart Transaction Routing", "Automated Reconciliation"]
     },
     {
       icon: <Zap className="h-12 w-12" />,
-      title: "FinTech Infrastructure",
-      color: "brand-tertiary",
-      description: "Building the plumbing for modern money. We specialize in complex gateway orchestrations and multi-rail payment integrations.",
-      features: ["Multi-Rail Payment API", "Smart Transaction Routing", "Reconciliation Automation"]
+      title: "Blockchain & Web3 Solutions",
+      color: "brand-primary",
+      description: "Decentralized application development and smart contract implementation. We bridge traditional finance with blockchain technology securely.",
+      features: ["Smart Contract Development", "Wallet Integration", "DeFi Protocol Integration", "Token Systems & NFTs"]
+    },
+    {
+      icon: <Cog className="h-12 w-12" />,
+      title: "Data Engineering & Analytics",
+      color: "brand-secondary",
+      description: "Build data pipelines, warehouses, and analytics platforms. We transform raw data into actionable insights with real-time processing capabilities.",
+      features: ["ETL Pipeline Development", "Real-time Data Processing", "Analytics Dashboards", "ML Model Integration"]
     },
     {
       icon: <Target className="h-12 w-12" />,
-      title: "Strategic Advisory",
-      color: "brand-primary",
-      description: "More than builders; we are strategic partners by translating visionary concepts into technical blueprints that Founders can scale confidently.",
-      features: ["Technical Roadmap Design", "Architecture Audit", "Founder-Centric Triage"]
+      title: "Technical Advisory & Architecture",
+      color: "brand-tertiary",
+      description: "Strategic technical guidance from system design to execution. We audit existing systems, design scalable architectures, and plan technical roadmaps.",
+      features: ["System Architecture Design", "Technical Audits & Reviews", "Technology Stack Selection", "Scaling Strategy Planning"]
     }
   ]
 
@@ -55,10 +69,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
-              End-to-End <span className="text-brand-primary">Capability</span> set
+              Comprehensive <span className="text-brand-primary">Technical</span> Services
             </h1>
             <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
-              Strategic technical execution across the entire FinTech lifecycle, from architectural design to institutional scaling.
+              From full-stack development to blockchain integration, we deliver complete technical solutions for modern digital businesses.
             </p>
           </div>
         </div>
@@ -67,7 +81,7 @@ export default function ServicesPage() {
       {/* Main Services Pillars */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {serviceCategories.map((service, index) => (
               <Card key={index} className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-700 rounded-[3.5rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]">
                 <CardContent className="p-12 md:p-16">
@@ -96,22 +110,23 @@ export default function ServicesPage() {
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Delivery Framework</h2>
-            <p className="text-lg text-white/30 font-light max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">Scaling innovation cycles through institutional-grade engineering.</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Our Process</h2>
+            <p className="text-lg text-white/30 font-light max-w-2xl mx-auto uppercase tracking-widest leading-relaxed">From discovery to deployment and beyond.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {[
-              { step: "01", title: "Discovery", color: "brand-primary" },
-              { step: "02", title: "Architecture", color: "brand-secondary" },
-              { step: "03", title: "Development", color: "brand-tertiary" },
-              { step: "04", title: "Scaling", color: "brand-primary" },
+              { step: "01", title: "Discovery", color: "brand-primary", description: "Understanding your vision and technical requirements" },
+              { step: "02", title: "Design", color: "brand-secondary", description: "Architecture planning and system design" },
+              { step: "03", title: "Development", color: "brand-tertiary", description: "Building with best practices and modern tools" },
+              { step: "04", title: "Deployment", color: "brand-primary", description: "Launch, monitor, and continuous improvement" },
             ].map((phase, index) => (
               <div key={index} className="text-center group">
                 <div className={`w-20 h-20 mx-auto mb-8 rounded-[1.5rem] bg-white/[0.03] border border-white/10 flex items-center justify-center transition-all group-hover:bg-${phase.color}/10 group-hover:border-${phase.color}/20 group-hover:scale-110`}>
                   <span className={`text-${phase.color} font-black text-2xl`}>{phase.step}</span>
                 </div>
                 <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tighter">{phase.title}</h3>
+                <p className="text-white/50 text-sm font-light leading-relaxed mb-6">{phase.description}</p>
                 <div className="h-0.5 w-8 bg-white/10 mx-auto group-hover:w-16 transition-all group-hover:bg-brand-primary" />
               </div>
             ))}
@@ -124,7 +139,7 @@ export default function ServicesPage() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-16 md:p-24 shadow-4xl relative overflow-hidden">
             <h2 className="text-4xl font-black text-white mb-8 tracking-tighter uppercase">Ready to Build?</h2>
-            <p className="text-xl text-white/40 mb-12 font-light leading-relaxed">
+            <p className="text-xwe can bring your vision to life with cutting-edge technology
               Let's discuss how our unified approach can accelerate your concept to market.
             </p>
             <Link href="/contact">
