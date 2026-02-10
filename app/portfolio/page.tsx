@@ -40,7 +40,7 @@ export default function PortfolioPage() {
         "Solidity",
         "React",
         "TypeScript",
-        "Web3.js",
+        "Ethers.js",
       ],
       image: "/Small-lionx.png",
       liveUrl: "https://lionxeco.net/",
@@ -61,7 +61,8 @@ export default function PortfolioPage() {
       impact:
         "Implemented DeFi-based yield generated savings for in-app savings platform. Processing 2M+ transactions daily across 12 countries with 99.99% uptime and zero security breaches.",
       technologies: [
-        "Golang",
+        "NextJs",
+        "Hono & GraphQL",
         "AWS",
         "Docker",
         "Terraform",
@@ -87,15 +88,15 @@ export default function PortfolioPage() {
       impact:
         "Localized design system and content approach significantly reducing client churn. Improved user retention and cultural relevance across diverse markets.",
       technologies: [
-        "Python",
-        "FastAPI",
+        "NextJs",
+        "Express",
         "React",
         "PostgreSQL",
-        "TensorFlow",
+        "LangChain",
         "Redis",
       ],
       image: "/media-agency.jpg",
-      liveUrl: "",
+      liveUrl: "https://ccmedia.vercel.app",
     },
     {
       title: "Ushahidi Crisis Response Hub",
@@ -113,8 +114,8 @@ export default function PortfolioPage() {
       impact:
         "Implemented verifiable crisis news source with zero downtime during emergencies. Processing 50K+ citizen reports/hour with 10x query performance improvement for rapid crisis response.",
       technologies: [
-        "PHP",
         "Next.js",
+        "Solidity",
         "Redis",
         "ElasticSearch",
         "PostgreSQL",
@@ -139,10 +140,10 @@ export default function PortfolioPage() {
       impact:
         "Successfully matched local talent with international remote opportunities. Streamlined internal task allocation and improved project delivery efficiency across distributed teams.",
       technologies: [
-        "Node.js",
+        "SpringBoot",
+        "NextJs", 
         "Stripe API",
         "M-Pesa API",
-        "Go",
         "PostgreSQL",
         "Redis",
       ],
@@ -155,7 +156,7 @@ export default function PortfolioPage() {
       client: "Strategic Investment Partner",
       timeline: "2024",
       color: "brand-primary",
-      slug: "savannah-etff-trading-system",
+      slug: "savannah-etf-trading-system",
       description:
         "ETF trading platform helping investors gain exposure to diverse sectors without manual Excel analysis. Automatically sources, risk-grades, and recommends ETFs across various sectors, simplifying portfolio diversification.",
       challenge:
@@ -165,7 +166,8 @@ export default function PortfolioPage() {
       impact:
         "Eliminated costly reconciliation errors saving $4.7M annually. Developed auto risk-grading ETF algorithm sourcing and analyzing 15M+ data points daily for smarter investment decisions.",
       technologies: [
-        "Rust",
+        "NestJs",
+        "NextJs",
         "PostgreSQL",
         "Kafka",
         "Docker",
