@@ -1,6 +1,7 @@
 # LithiumLabs Design System
 
 ## Overview
+
 The LithiumLabs design system is a premium, institutional-grade visual language built for FinTech and Web3 platforms. It emphasizes trust, precision, and sophisticated minimalism through carefully crafted micro-interactions and transformations.
 
 ---
@@ -8,6 +9,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ## Color Palette
 
 ### Brand Colors
+
 - **Primary**: `brand-primary` - Electric Blue (#2563EB)
   - Used for: Primary CTAs, key highlights, active states
   - RGB: 37, 99, 235
@@ -28,6 +30,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
   - Allows vibrant colors to pop
 
 ### Opacity Scale
+
 - `white/[0.03]` - 3% - Subtle background layers
 - `white/[0.04]` - 4% - Card backgrounds (base)
 - `white/[0.05]` - 5% - Card backgrounds (hover/active)
@@ -46,6 +49,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ## Typography
 
 ### Font System
+
 - **Primary Font**: System sans-serif stack
 - **Weight Scale**:
   - `font-light` (300) - Descriptive text, subtitles
@@ -53,6 +57,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
   - `font-black` (900) - Headings, labels, CTAs
 
 ### Size Scale
+
 - **5xl-7xl**: Hero headings (48-72px / text-5xl to text-7xl)
 - **4xl-5xl**: Section headings (36-48px / text-4xl to text-5xl)
 - **3xl**: Card titles (30px / text-3xl)
@@ -66,6 +71,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - **[8px]**: Smallest elements (8px)
 
 ### Typographic Style Rules
+
 1. **UPPERCASE** + `tracking-tighter` or `tracking-widest` for headings
 2. **lowercase** + `font-light` for descriptive body copy
 3. All CTAs and labels: UPPERCASE + font-black + tracking-widest
@@ -76,6 +82,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ## Spacing & Layout
 
 ### Border Radius Scale
+
 - `rounded-[1.5rem]` (24px) - Small elements
 - `rounded-[2rem]` (32px) - Icons, small cards
 - `rounded-[2.5rem]` (40px) - Medium cards
@@ -87,6 +94,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - `rounded-full` - Badges, pills, dots
 
 ### Padding Scale
+
 - `p-10` (40px) - Small card padding
 - `p-12` (48px) - Standard card padding
 - `p-16` (64px) - Large card/section padding
@@ -95,6 +103,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - `py-8` / `px-12` - Button padding (large)
 
 ### Gaps
+
 - `gap-4` (16px) - Tight element spacing
 - `gap-6` (24px) - Standard element spacing
 - `gap-8` (32px) - Card spacing
@@ -106,15 +115,18 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ## Component Patterns
 
 ### Cards
+
 **Base Structure**:
+
 ```tsx
-<Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10 
-  hover:border-white/20 transition-all duration-700 
+<Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10
+  hover:border-white/20 transition-all duration-700
   rounded-[3rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)]
   hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]">
 ```
 
 **Key Characteristics**:
+
 - Heavy backdrop blur (`backdrop-blur-3xl`) for glassmorphism
 - Low opacity backgrounds (3-6%)
 - Subtle borders that glow on hover
@@ -125,20 +137,23 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ### Buttons
 
 **Primary CTA**:
+
 ```tsx
-<Button className="bg-brand-primary hover:bg-brand-primary/90 
-  text-white px-12 py-8 rounded-2xl text-xl font-black 
+<Button className="bg-brand-primary hover:bg-brand-primary/90
+  text-white px-12 py-8 rounded-2xl text-xl font-black
   uppercase tracking-widest shadow-2xl">
 ```
 
 **Secondary/Outline**:
+
 ```tsx
-<Button variant="outline" className="border-white/10 text-white/70 
-  hover:text-white px-8 py-6 rounded-xl font-black uppercase 
+<Button variant="outline" className="border-white/10 text-white/70
+  hover:text-white px-8 py-6 rounded-xl font-black uppercase
   text-xs tracking-widest">
 ```
 
 **Characteristics**:
+
 - Always UPPERCASE + font-black
 - Wide tracking (tracking-widest)
 - Generous padding
@@ -146,13 +161,15 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - Scale transforms on hover
 
 ### Badges
+
 ```tsx
-<Badge className="bg-brand-primary/10 text-brand-primary 
-  border-none px-4 py-1 rounded-full text-[9px] 
+<Badge className="bg-brand-primary/10 text-brand-primary
+  border-none px-4 py-1 rounded-full text-[9px]
   font-black uppercase tracking-widest">
 ```
 
 **Rules**:
+
 - 10% opacity background of brand color
 - Full text color of brand
 - Always font-black + uppercase + tracking-widest
@@ -163,6 +180,7 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 ## Micro-Animations & Transformations
 
 ### Hover Transformations
+
 1. **Scale Effects**:
    - Cards: No scale (stability)
    - Icons: `group-hover:scale-110` (10% growth)
@@ -189,14 +207,17 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
    - Creates kinetic feedback
 
 ### Entry Animations
+
 ```tsx
 animate-in fade-in zoom-in duration-1000
 ```
+
 - Used on hero sections
 - Creates premium reveal effect
 - Combines opacity + scale
 
 ### Transition Durations
+
 - Fast: `duration-500` (500ms) - Button hover, simple interactions
 - Standard: `duration-700` (700ms) - Card borders, most elements
 - Slow: `duration-1000` (1000ms) - Images, hero animations
@@ -206,19 +227,29 @@ animate-in fade-in zoom-in duration-1000
 ## Background Treatments
 
 ### Layered Background System
-```tsx
-{/* Layer 1: Image */}
-<div className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat 
-  opacity-[0.4] scale-105" 
-  style={{ backgroundImage: 'url("/glass-facade-8016589.jpg")' }} />
 
-{/* Layer 2: Gradient Overlay */}
-<div className="fixed inset-0 z-0 bg-gradient-to-b 
+```tsx
+{
+  /* Layer 1: Image */
+}
+<div
+  className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat 
+  opacity-[0.4] scale-105"
+  style={{ backgroundImage: 'url("/glass-facade-8016589.jpg")' }}
+/>;
+
+{
+  /* Layer 2: Gradient Overlay */
+}
+<div
+  className="fixed inset-0 z-0 bg-gradient-to-b 
   from-brand-foundation/20 via-brand-foundation/60 
-  to-brand-foundation" />
+  to-brand-foundation"
+/>;
 ```
 
 **Purpose**:
+
 - Creates depth and visual interest
 - Maintains text legibility
 - `scale-105` prevents edge artifacts
@@ -229,15 +260,17 @@ animate-in fade-in zoom-in duration-1000
 ## Icon System
 
 ### Usage Rules
+
 - **Size Scale**: `h-4 w-4` (small), `h-5 w-5` (medium), `h-6 w-6` (large), `h-8 w-8` (XL), `h-10 w-10` (hero icons), `h-12 w-12` (feature icons)
 - **Color**: Match brand color or `text-white/[opacity]`
 - **Spacing**: `mr-3`, `mr-4`, `ml-3`, `ml-4` from text
 - **Hover**: Add `transition-transform group-hover:scale-110`
 
 ### Icon Containers
+
 ```tsx
-<div className="w-20 h-20 rounded-[2rem] bg-brand-primary/10 
-  border border-brand-primary/20 flex items-center justify-center 
+<div className="w-20 h-20 rounded-[2rem] bg-brand-primary/10
+  border border-brand-primary/20 flex items-center justify-center
   transition-transform group-hover:scale-110">
 ```
 
@@ -246,19 +279,23 @@ animate-in fade-in zoom-in duration-1000
 ## Layout Principles
 
 ### Grid Systems
+
 - **2-column**: `grid-cols-1 md:grid-cols-2`
 - **3-column**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
 - **4-column**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-4`
 
 ### Container
+
 ```tsx
 <div className="max-w-7xl mx-auto">
 ```
+
 - Consistent across all pages
 - Centers content
 - Responsive padding: `px-4 sm:px-6 lg:px-8`
 
 ### Section Spacing
+
 - Standard: `py-20` or `py-32`
 - Hero: `pt-48 pb-20` (extra top padding for nav clearance)
 
@@ -267,12 +304,14 @@ animate-in fade-in zoom-in duration-1000
 ## Shadow System
 
 ### Custom Glows
+
 - **Blue glow**: `shadow-[0_0_40px_rgba(37,99,235,0.03)]`
 - **Magenta glow**: `shadow-[0_0_40px_rgba(255,100,255,0.02)]`
 - **Hover intensify**: Increase alpha ~2-3x
 - **Primary button**: `shadow-2xl shadow-brand-primary/30`
 
 ### Layered Shadows
+
 - Base: `shadow-4xl` (massive diffusion)
 - Add custom glow on top for color tint
 
@@ -317,18 +356,22 @@ When creating new pages/components:
 ## Brand Voice (Visual)
 
 **Luxurious yet Accessible**
+
 - Premium feel through glassmorphism and subtle animations
 - Not overwhelming or gaudy
 
 **Technical Precision**
+
 - Sharp typography, clear hierarchy
 - Measured spacing and alignment
 
 **Forward-Thinking**
+
 - Modern effects (blur, glow)
 - Contemporary color choices
 
 **Trustworthy**
+
 - Consistent patterns
 - Reliable, predictable interactions
 - Professional presentation
@@ -338,6 +381,7 @@ When creating new pages/components:
 ## File Structure Conventions
 
 ### Page Structure
+
 ```
 1. Background layers (fixed, z-0)
 2. Navigation (from component)
@@ -348,6 +392,7 @@ When creating new pages/components:
 ```
 
 ### Component Organization
+
 ```tsx
 // Imports
 import { Icons } from "lucide-react"
@@ -359,7 +404,7 @@ import Link from "next/link"
 export default function PageName() {
   // Data arrays (if needed)
   const items = [...]
-  
+
   // Return JSX
   return (
     <div className="min-h-screen bg-brand-foundation...">
@@ -377,6 +422,7 @@ export default function PageName() {
 ## Anti-Patterns (What NOT to Do)
 
 ❌ **Don't**:
+
 - Use bright, fully opaque backgrounds
 - Apply thin font weights to headings
 - Mix lowercase and capitals randomly in headings
@@ -388,6 +434,7 @@ export default function PageName() {
 - Use default rounded corners (rounded-lg, rounded-md)
 
 ✅ **Do**:
+
 - Keep backgrounds dark and layered
 - Make headings font-black and UPPERCASE
 - Use consistent tracking (tighter for display, wider for labels)
@@ -400,5 +447,5 @@ export default function PageName() {
 
 ---
 
-*Last Updated: February 2026*
-*Design System Version: 1.0*
+_Last Updated: February 2026_
+_Design System Version: 1.0_

@@ -169,8 +169,7 @@ export default function PortfolioPage() {
               </Card>
             ))}
           </div>
-          </div>
-        </div>
+        </div> 
       </section>
 
       {/* CTA Footer Section */}
