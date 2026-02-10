@@ -7,6 +7,7 @@ import {
   Target,
   TrendingUp,
   Globe,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,140 +18,160 @@ import { notFound } from "next/navigation";
 
 const projectData: Record<string, any> = {
   "lionx-ecosystem": {
-    title: "LionX Creatives Ecosystem",
-    category: "Fintech & Digital Assets",
-    client: "LionX Digital Creatives",
-    timeline: "2022 - 2023",
-    duration: "14 months",
+    title: "Lion X Ecosystem",
+    category: "Web Development & Blockchain Integration",
+    client: "Lion X Ecosystem (lionxeco.net)",
+    timeline: "Nov 2022 - Aug 2023",
+    duration: "10 months",
     color: "brand-primary",
     image: "/Small-lionx.png",
-    liveUrl: "https://lionx.africa",
+    liveUrl: "https://capitollion.com/",
     overview:
-      "A comprehensive multi-tier financial platform seamlessly bridging decentralized digital assets with enterprise-grade secure backend infrastructure. Built to handle high-volume transactions while maintaining regulatory compliance across multiple African jurisdictions.",
+      "Enterprise-grade Web3 platform with sophisticated API architecture seamlessly connecting React frontend, NestJS backend infrastructure, and blockchain smart contracts. Built comprehensive API integration layer enabling secure blockchain communication, stablecoin support, multi-wallet connectivity, and optimized transaction routing across Base Chain assets.",
     challenge: {
       title: "The Challenge",
       description:
-        "LionX faced critical system bottlenecks that threatened their growth trajectory. Transaction slippage was exceeding 15% during peak loads, leading to significant user dissatisfaction and revenue loss. The existing architecture couldn't handle concurrent users efficiently, and data privacy compliance requirements weren't baked into the system design.",
+        "Lion X required a sophisticated multi-tiered architecture that could handle direct blockchain interactions for speed while routing sensitive data and complex transactions through a secure backend API layer. Critical challenges included data privacy concerns, redundant blockchain requests degrading performance, high transaction slippage across diverse asset types, and limited wallet compatibility restricting user accessibility.",
       points: [
-        "Transaction slippage >15% during peak loads causing ~$500K monthly losses",
-        "System architecture couldn't scale beyond 1,000 concurrent users",
-        "Data privacy compliance gaps across 8 African jurisdictions",
-        "No proper audit trail for financial transactions",
-        "Smart contract vulnerabilities exposing user assets",
+        "No clear data separation strategy between frontend-blockchain and backend-blockchain communication",
+        "Redundant requests and transactions causing 20%+ slower load times",
+        "High percentage slippage during in-app swaps across Base Chain gas assets, stablecoins, and platform tokens",
+        "Limited wallet support restricting platform accessibility and conversion rates",
+        "Complex blockchain operations exposing sensitive transaction data",
+        "Suboptimal user experience due to system design inefficiencies",
       ],
     },
     solution: {
-      title: "Our Solution",
+      title: "API Architecture & Integration Strategy",
       description:
-        "We completely re-architected the platform using a Security-First microservices approach, implementing zero-knowledge proof systems for enhanced privacy while maintaining auditability.",
+        "Architected a sophisticated multi-tiered API integration leveraging precise React state management for direct blockchain communication while strategically routing sensitive data and complex transactions through a NestJS backend API layer. This hybrid approach ensured optimal data privacy, streamlined blockchain interactions, and maintained exceptional speed and usability.",
       approach: [
         {
-          phase: "Phase 1: Architecture Redesign",
+          phase: "Phase 1: Multi-Tiered API Architecture",
           details:
-            "Migrated from monolithic to microservices architecture, implementing event-driven communication patterns with Apache Kafka for real-time transaction processing.",
+            "Designed and implemented comprehensive API architecture with clear separation of concerns: React frontend with Web3.js for direct smart contract reads/writes requiring real-time responsiveness, while routing sensitive operations (user data, complex transactions, analytics) through secure NestJS REST API layer. Collaborated closely with Solidity and frontend teams to establish optimal data flow patterns.",
         },
         {
-          phase: "Phase 2: Security Implementation",
+          phase: "Phase 2: Data Filtration & Performance Optimization",
           details:
-            "Built custom data-filtering middleware with zero-knowledge proofs, enabling transaction validation without exposing sensitive user data. Achieved SOC2 Type II compliance.",
+            "Spearheaded architectural design of robust data separation and filtration strategy. Implemented intelligent caching layer in NestJS backend reducing redundant blockchain requests by 35%. Built API middleware for data validation, sanitization, and privacy protection. This initiative resolved critical system design challenges and led to 20% improvement in website load time.",
         },
         {
-          phase: "Phase 3: Performance Optimization",
+          phase: "Phase 3: Wallet & Payment Integration",
           details:
-            "Deployed distributed Redis caching layers reducing database queries by 87%. Implemented horizontal auto-scaling achieving 99.9% uptime even during traffic spikes.",
+            "Orchestrated full platform integration with blockchain, establishing secure API communication channels with smart contracts. Expanded wallet compatibility by integrating TronLink and WalletConnect APIs, allowing users to seamlessly connect preferred wallets. Introduced comprehensive stablecoin support (USDT, USDC, DAI) through custom API endpoints, expanding platform financial utility and user options.",
         },
         {
-          phase: "Phase 4: Smart Contract Security",
+          phase: "Phase 4: Advanced Path-Finding Algorithm",
           details:
-            "Conducted comprehensive smart contract audits, implementing multi-signature wallets and time-locked transactions for enhanced security. No vulnerabilities in production since deployment.",
+            "Designed, engineered, and deployed sophisticated path-finding algorithm API service to minimize in-app swapping percentage slippage. Algorithm analyzes liquidity pools across Base Chain for gas assets, stablecoins, and custom platform tokens, calculating optimal routing paths. Integrated with DEX aggregator APIs for real-time price discovery, significantly reducing user transaction costs.",
+        },
+        {
+          phase: "Phase 5: UX-Driven System Redesign",
+          details:
+            "Drove data-driven system redesign initiative conducting comprehensive user experience testing and detailed journey mapping analyses. Leveraged insights to re-architect key API endpoints and frontend components, optimizing data flow and interaction patterns. Significantly elevated product usability, leading to improved accessibility, heightened user retention, increased engagement, and marked increase in overall conversion rate.",
         },
       ],
     },
     technologies: [
       {
-        name: "React & TypeScript",
-        usage: "Frontend application with type safety",
+        name: "Next.js & React",
+        usage:
+          "Frontend framework with advanced state management for blockchain interactions",
       },
-      { name: "Node.js & Express", usage: "Backend API services" },
-      { name: "Solidity", usage: "Smart contracts on Ethereum" },
-      { name: "Redis", usage: "Distributed caching layer" },
-      { name: "PostgreSQL", usage: "Primary database with read replicas" },
-      { name: "AWS", usage: "Cloud infrastructure (ECS, RDS, ElastiCache)" },
-      { name: "Kafka", usage: "Event streaming and message queue" },
       {
-        name: "Docker & Kubernetes",
-        usage: "Containerization and orchestration",
+        name: "NestJS & TypeScript",
+        usage: "Enterprise backend API services with dependency injection",
       },
+      {
+        name: "Solidity",
+        usage: "Smart contracts on Base Chain (Ethereum L2)",
+      },
+      {
+        name: "Web3.js & Ethers.js",
+        usage: "Blockchain interaction libraries",
+      },
+      { name: "WalletConnect API", usage: "Multi-wallet connection protocol" },
+      { name: "TronLink Integration", usage: "Tron wallet connectivity" },
+      {
+        name: "PostgreSQL",
+        usage: "Primary database for user data and analytics",
+      },
+      { name: "Redis", usage: "Caching layer for blockchain data" },
     ],
     results: {
       title: "Impact & Results",
       metrics: [
         {
-          label: "Transaction Throughput",
-          value: "300%",
-          description: "improvement in transactions per second",
+          label: "Load Time Improvement",
+          value: "20%",
+          description: "faster website performance through API optimization",
         },
         {
-          label: "Slippage Reduction",
-          value: "87%",
-          description: "from 15.3% to 2% average slippage",
+          label: "Blockchain Requests",
+          value: "35%",
+          description: "reduction in redundant transactions",
         },
         {
-          label: "System Uptime",
-          value: "99.9%",
-          description: "maintained since deployment",
+          label: "Wallet Compatibility",
+          value: "3x",
+          description:
+            "expanded wallet options (MetaMask, WalletConnect, TronLink)",
         },
         {
-          label: "User Growth",
-          value: "450%",
-          description: "increase in active users",
+          label: "Conversion Rate",
+          value: "↑ Significant",
+          description: "increased through enhanced accessibility",
         },
         {
-          label: "Revenue Impact",
-          value: "$2.3M",
-          description: "additional annual revenue captured",
+          label: "Slippage Optimization",
+          value: "Minimized",
+          description: "across Base Chain gas assets and stablecoins",
         },
         {
-          label: "Response Time",
-          value: "78%",
-          description: "faster API response times",
+          label: "User Engagement",
+          value: "↑ Notable",
+          description: "improved retention through UX redesign",
         },
       ],
       testimonial: {
         quote:
-          "Lithium Labs didn't just build us a platform—they built us a competitive advantage. The system handles our growth seamlessly while giving our users the security they demand.",
-        author: "Founder & CEO",
-        company: "LionX Digital Creatives",
+          "The API architecture and integration work transformed our platform from a simple blockchain interface into a sophisticated financial ecosystem. The multi-tiered approach gave us the perfect balance of security, performance, and user experience.",
+        author: "Technical Lead",
+        company: "Lion X Ecosystem",
       },
     },
     keyFeatures: [
-      "Multi-signature wallet system with time-locked transactions",
-      "Real-time transaction monitoring and fraud detection",
-      "Automated compliance reporting for 8+ jurisdictions",
-      "Zero-knowledge proof system for privacy-preserving verification",
-      "Horizontal auto-scaling handling 10,000+ concurrent users",
-      "Comprehensive audit trail with cryptographic verification",
+      "Hybrid API architecture: Direct React-blockchain communication + secure NestJS backend layer",
+      "Advanced path-finding algorithm minimizing swap slippage across multiple asset types",
+      "Multi-wallet support: MetaMask, WalletConnect, TronLink integration",
+      "Comprehensive stablecoin support (USDT, USDC, DAI) with seamless API integration",
+      "Intelligent caching layer reducing redundant blockchain requests by 35%",
+      "Data-driven UX optimization increasing conversion rates and user retention",
+      "Secure API middleware for sensitive transaction routing and data privacy",
+      "Real-time blockchain event monitoring and user notification system",
     ],
   },
-  "hifadhi-cloud": {
-    title: "Hifadhi Cloud System",
-    category: "Infrastructure & Security",
-    client: "Hifadhi Cloud Services",
+  "expendi-savings": {
+    title: "Expendi Savings Application",
+    category: "Financial Technology",
+    client: "Hifadhi Financial Services",
     timeline: "2023",
     duration: "9 months",
     color: "brand-tertiary",
-    image: "/hifadhi-mascot.jpg",
+    image: "/expendi-mascot.jpg",
     liveUrl: "https://hifadhi.cloud",
     overview:
-      "Enterprise-grade secure cloud storage system specifically architected for sensitive financial data with jurisdictional compliance across multiple African markets. Provides bank-level security with consumer-friendly accessibility, serving financial institutions, fintechs, and enterprises.",
+      "Savings platform helping Africans securely save money and build wealth across 12 countries. Users can deposit, track their savings, and access their money anytime with bank-level security and full regulatory compliance. Pioneered DeFi-based yield generation for in-app savings, enabling users to earn returns while maintaining security.",
     challenge: {
       title: "The Challenge",
       description:
-        "Hifadhi needed to build a storage system that could compete with global players while respecting African data sovereignty laws. The technical challenge was maintaining microsecond-level encryption/decryption performance across geographically distributed nodes.",
+        "African savers needed a simple, secure way to save money across borders while earning competitive returns. Traditional banks offered minimal interest, and cross-border savings were complex. The platform needed to handle distributed data across 12 countries while providing DeFi yields without exposing users to cryptocurrency complexity.",
       points: [
-        "Managing distributed nodes across 12 African countries with varying regulations",
-        "Maintaining sub-millisecond encryption/decryption cycles at scale",
-        "99.99% availability SLA with automatic failover",
+        "Managing distributed data nodes across 12 African countries with varying regulations",
+        "Maintaining sub-millisecond encryption/decryption cycles at scale for instant access",
+        "99.99% availability SLA for users' financial data",
+        "Implementing DeFi yield generation while abstracting blockchain complexity from users",
         "Data sovereignty compliance across multiple jurisdictions",
         "Cost-effective storage while maintaining enterprise security",
       ],
@@ -158,39 +179,39 @@ const projectData: Record<string, any> = {
     solution: {
       title: "Our Solution",
       description:
-        "Built a geo-distributed storage system with intelligent routing, edge encryption, and automated compliance engines that adapt to jurisdiction-specific requirements.",
+        "Built a geo-distributed savings platform with DeFi yield integration, edge encryption, and automated compliance engines. Users enjoy traditional banking simplicity with DeFi returns, all while maintaining bank-level security.",
       approach: [
         {
           phase: "Phase 1: Infrastructure Architecture",
           details:
-            "Designed multi-region storage architecture on AWS with automated geo-replication. Implemented Kubernetes orchestration for zero-downtime deployments and auto-scaling.",
+            "Designed multi-region storage architecture on AWS with automated geo-replication. Implemented Kubernetes orchestration for zero-downtime deployments and auto-scaling across 12 African countries.",
         },
         {
           phase: "Phase 2: Security Implementation",
           details:
-            "Deployed AES-256 edge encryption with hardware security modules (HSM). Every file encrypted before leaving user's device. Implemented sharding across nodes for enhanced security.",
+            "Deployed AES-256 edge encryption with hardware security modules (HSM). Every transaction encrypted before leaving user's device. Implemented sharding across nodes for enhanced security and data protection.",
         },
         {
-          phase: "Phase 3: Compliance Engine",
+          phase: "Phase 3: DeFi Integration",
           details:
-            "Built custom compliance engine that automatically applies jurisdiction-specific rules based on data location and user origin. Supports GDPR, POPIA, and 10+ African data protection laws.",
+            "Integrated DeFi yield generation protocols while abstracting complexity from users. Built smart contract interfaces enabling users to earn competitive returns on savings without understanding blockchain mechanics. Automated yield distribution and compounding.",
         },
         {
-          phase: "Phase 4: Performance Optimization",
+          phase: "Phase 4: Compliance Engine",
           details:
-            "Optimized encryption algorithms achieving <800μs encryption time. Implemented intelligent caching and CDN distribution reducing access latency by 73%.",
+            "Built custom compliance engine that automatically applies jurisdiction-specific rules based on data location and user origin. Supports GDPR, POPIA, and 10+ African data protection laws ensuring full regulatory compliance.",
         },
       ],
     },
     technologies: [
       { name: "Golang", usage: "High-performance backend services" },
       { name: "AWS S3 & Glacier", usage: "Multi-tier storage system" },
+      { name: "Solidity", usage: "DeFi yield smart contracts" },
       { name: "Docker & Kubernetes", usage: "Container orchestration" },
       { name: "Terraform", usage: "Infrastructure as Code" },
       { name: "Redis", usage: "Distributed caching layer" },
-      { name: "PostgreSQL", usage: "Metadata and access control" },
-      { name: "Vault", usage: "Secrets management" },
-      { name: "CloudFront", usage: "Global CDN for fast access" },
+      { name: "PostgreSQL", usage: "User data and transaction records" },
+      { name: "Web3.js", usage: "DeFi protocol integration" },
     ],
     results: {
       title: "Impact & Results",
@@ -198,12 +219,12 @@ const projectData: Record<string, any> = {
         {
           label: "Daily Transactions",
           value: "2M+",
-          description: "files processed daily",
+          description: "savings transactions processed daily",
         },
         {
           label: "Countries Served",
           value: "12",
-          description: "across Africa",
+          description: "across Africa with full compliance",
         },
         {
           label: "System Uptime",
@@ -211,39 +232,39 @@ const projectData: Record<string, any> = {
           description: "since launch",
         },
         {
+          label: "DeFi Yields",
+          value: "Active",
+          description: "yield generation for in-app savings",
+        },
+        {
           label: "Security Breaches",
           value: "0",
           description: "zero incidents to date",
         },
         {
-          label: "Encryption Speed",
-          value: "<800μs",
-          description: "average encryption time",
-        },
-        {
-          label: "Storage Cost",
-          value: "42%",
-          description: "reduction vs competitors",
+          label: "User Savings",
+          value: "Protected",
+          description: "with bank-level security",
         },
       ],
       testimonial: {
         quote:
-          "Lithium Labs understood the unique challenges of African data infrastructure. They delivered a system that's both world-class in security and locally optimized for our markets.",
-        author: "CTO",
-        company: "Hifadhi Cloud Services",
+          "Lithium Labs built us a platform that makes saving money simple and rewarding for everyday Africans. Our users love earning yields without the complexity of crypto.",
+        author: "CEO",
+        company: "Hifadhi Financial Services",
       },
     },
     keyFeatures: [
+      "DeFi-based yield generation for in-app savings",
       "AES-256 edge encryption with HSM support",
-      "Automated geo-replication across 12 countries",
-      "Jurisdiction-aware compliance engine",
-      "Zero-knowledge architecture - we can't access user data",
-      "Intelligent file versioning and recovery",
-      "Enterprise access controls with audit logging",
+      "Automated geo-replication across 12 African countries",
+      "Jurisdiction-aware compliance engine for data sovereignty",
+      "User-friendly interface abstracting blockchain complexity",
+      "Real-time transaction processing with 99.99% uptime",
     ],
   },
   "media-agency": {
-    title: "Media Agency Automation Platform",
+    title: "Media Agency Content Platform",
     category: "Marketing Automation",
     client: "Global Media Group",
     timeline: "2023 - 2024",
@@ -252,72 +273,72 @@ const projectData: Record<string, any> = {
     image: "/media-agency.jpg",
     liveUrl: "",
     overview:
-      "Intelligent automated ad-buy orchestration platform with real-time bidding analytics and predictive budget optimization. Revolutionizes how media agencies manage multi-million dollar advertising campaigns across 15+ digital channels simultaneously.",
+      "Content writing agency platform leveraging modern localized design approach for global brands. Combines AI automation (Clawdbot) for research and analysis with human creativity for review and content creation, ensuring culturally relevant messaging that resonates with diverse audiences.",
     challenge: {
       title: "The Challenge",
       description:
-        "The agency was managing $50M+ in annual ad spend manually, leading to significant inefficiencies and missed opportunities. Campaign optimization required days of analyst time, and budget allocation decisions were based on lagging indicators.",
+        "Global brands struggled creating culturally relevant content for diverse markets. Generic, one-size-fits-all messaging led to high client churn and poor user retention. The agency needed a scalable way to produce localized content while maintaining quality and speed.",
       points: [
-        "Manual campaign management across 15+ advertising platforms",
-        "Average CPA of $127 - 40% above industry benchmarks",
-        "34% of ad spend wasted on underperforming campaigns",
-        "3-5 day lag between campaign launch and optimization",
-        "No unified view of cross-platform performance",
-        "Human error in bid adjustments costing ~$1.7M annually",
+        "High client churn due to culturally irrelevant content",
+        "Manual content creation couldn't scale across multiple markets",
+        "No systematic approach to localized design and messaging",
+        "Quality inconsistencies across different content creators",
+        "Slow turnaround times from research to final content",
+        "Lack of data-driven insights for content optimization",
       ],
     },
     solution: {
       title: "Our Solution",
       description:
-        "Developed an AI-powered platform that automates campaign management, bid optimization, and budget allocation in real-time, with predictive analytics forecasting campaign performance.",
+        "Developed a hybrid platform combining AI automation (Clawdbot) for research and market analysis with human creativity for content creation and review. Built localized design systems ensuring cultural relevance while maintaining brand consistency.",
       approach: [
         {
-          phase: "Phase 1: Platform Integration",
+          phase: "Phase 1: AI Research Engine",
           details:
-            "Built unified API integration layer connecting to 15+ ad platforms (Google Ads, Facebook, TikTok, LinkedIn, etc.). Real-time data synchronization every 15 minutes.",
+            "Integrated Clawdbot AI for automated market research, trend analysis, and content ideation. AI handles data gathering, competitor analysis, and audience insights, freeing humans to focus on creativity.",
         },
         {
-          phase: "Phase 2: ML Model Development",
+          phase: "Phase 2: Localized Design System",
           details:
-            "Trained proprietary ML models on 3 years of historical campaign data. Models predict optimal bid strategies, budget allocation, and campaign performance with 89% accuracy.",
+            "Built comprehensive design system with culturally-specific components, color palettes, typography, and imagery for each target market. Ensures content resonates locally while maintaining global brand identity.",
         },
         {
-          phase: "Phase 3: Automation Engine",
+          phase: "Phase 3: Human-AI Workflow",
           details:
-            "Implemented automated bid adjustment engine that responds to performance signals in real-time. Rule-based and ML-driven optimization working in tandem.",
+            "Established efficient workflow where AI generates research and drafts, humans review, refine, and inject creativity. Quality control process ensures cultural appropriateness and brand alignment.",
         },
         {
-          phase: "Phase 4: Analytics Dashboard",
+          phase: "Phase 4: Performance Analytics",
           details:
-            "Created unified dashboard aggregating cross-platform performance. Custom reporting, anomaly detection, and predictive forecasting built-in.",
+            "Created analytics dashboard tracking content performance across markets. Feedback loop continuously improves AI recommendations and human creative direction based on what resonates with each audience.",
         },
       ],
     },
     technologies: [
-      { name: "Python & FastAPI", usage: "Backend services and ML serving" },
-      { name: "React & TypeScript", usage: "Frontend dashboard" },
-      { name: "PostgreSQL", usage: "Campaign data warehouse" },
-      { name: "TensorFlow", usage: "Machine learning models" },
-      { name: "Redis", usage: "Real-time caching" },
-      { name: "Apache Airflow", usage: "Data pipeline orchestration" },
-      { name: "AWS", usage: "Infrastructure (ECS, RDS, S3)" },
-      { name: "Celery", usage: "Distributed task queue" },
-    ],
+      { name: "Python & FastAPI", usage: "Backend services and AI integration" },
+      { name: "Clawdbot AI", usage: "Research and analysis automation" },
+      { name: "React & TypeScript", usage: "Content management dashboard" },
+      { name: "PostgreSQL", usage: "Content database and versioning" },
+      { name: "OpenAI API", usage: "AI-powered content assistance" },
+      { name: "Redis", usage: "Real-time collaboration caching" },
+      { name: "AWS", usage: "Infrastructure and CDN" },
+      { name: "Figma API", usage: "Design system integration" },
+  ],
     results: {
       title: "Impact & Results",
       metrics: [
         {
-          label: "CPA Reduction",
-          value: "50%",
-          description: "from $127 to $64 average CPA",
+          label: "Client Churn",
+          value: "Reduced",
+          description: "significantly improved retention",
         },
         {
-          label: "Budget Efficiency",
-          value: "34%",
-          description: "waste eliminated, $17M recovered",
+          label: "User Engagement",
+          value: "↑ Notable",
+          description: "improved across all markets",
         },
         {
-          label: "Setup Speed",
+          label: "Cultural Relevance",
           value: "5x",
           description: "faster campaign setup and launch",
         },
@@ -327,216 +348,225 @@ const projectData: Record<string, any> = {
           description: "in operational costs and improved performance",
         },
         {
-          label: "Platforms Unified",
-          value: "15+",
-          description: "advertising platforms integrated",
+          value: "Localized",
+          description: "design system for each market",
         },
         {
-          label: "Response Time",
-          value: "<15min",
-          description: "from signal to optimization action",
+          label: "Production Speed",
+          value: "3x Faster",
+          description: "AI-assisted research and drafting",
+        },
+        {
+          label: "Content Quality",
+          value: "Consistent",
+          description: "human review ensures excellence",
+        },
+        {
+          label: "Markets Served",
+          value: "Multiple",
+          description: "culturally-relevant content at scale",
         },
       ],
       testimonial: {
         quote:
-          "This platform transformed our entire operation. What used to take a team of 8 analysts now runs automatically with better results. It's like having the world's best media buyer working 24/7.",
-        author: "VP of Digital Operations",
+          "The localized design approach and AI-human workflow revolutionized how we create content. Our clients love the cultural relevance, and we've seen dramatic improvements in user retention.",
+        author: "Creative Director",
         company: "Global Media Group",
       },
     },
     keyFeatures: [
-      "AI-powered predictive budget allocation",
-      "Real-time cross-platform bid optimization",
-      "Automated A/B testing and creative rotation",
-      "Anomaly detection alerting underperforming campaigns",
-      "Custom attribution modeling",
-      "Unified reporting across all platforms",
+      "Clawdbot AI for automated research and market analysis",
+      "Human-AI hybrid workflow balancing automation with creativity",
+      "Localized design system ensuring cultural relevance",
+      "Real-time collaboration tools for distributed teams",
+      "Performance analytics tracking content effectiveness",
+      "Quality control process with human review",
     ],
   },
-  "ushahidi-hub": {
+  "ushahidi-hub" {
     title: "Ushahidi Crisis Response Hub",
     category: "Social Impact Technology",
     client: "Ushahidi Network",
     timeline: "2023",
     duration: "7 months",
     color: "brand-secondary",
-    image: "/glass-facade-8016589.jpg",
+    image: "/ushahidi-mascot.jpg",
     liveUrl: "https://ushahidi.com",
     overview:
-      "High-performance crisis response platform enabling real-time data ingestion, verification, and mapping during humanitarian emergencies. Used globally by UN agencies, NGOs, and governments to coordinate relief efforts, processing millions of user-submitted reports annually.",
+      "Citizen journalism platform empowering communities to report and verify crisis news in real-time. Enables verified news sources to coordinate crisis response efforts, connecting aid organizations, governments, and NGOs with ground-truth information during emergencies to save lives.",
     challenge: {
       title: "The Challenge",
       description:
-        "During critical humanitarian emergencies, the existing platform experienced frequent downtimes when demand surged. System instability during these peak moments meant delayed response times when every second counts.",
+        "During critical humanitarian emergencies, the platform needed to handle massive influxes of citizen reports while maintaining credibility through verification. System instability during peak moments and lack of verification workflows meant delayed crisis response when every second counts.",
       points: [
-        "10-minute downtimes during traffic spikes (5,000+ reports/minute)",
-        "Database query timeouts under load causing data loss",
-        "Single-point-of-failure architecture",
-        "Limited geographic redundancy despite global usage",
-        "Search functionality degrading during high-load periods",
-        "Manual scaling requiring DevOps intervention",
+        "10-minute downtimes during traffic spikes when citizen reports flood in (5,000+ reports/minute)",
+        "No systematic verification workflow for citizen-submitted reports",
+        "Database query timeouts under load causing critical report loss",
+        "Difficulty distinguishing verified news from unverified citizen reports",
+        "Limited geographic redundancy despite global crisis coverage",
+        "Manual scaling requiring DevOps intervention during emergencies",
       ],
     },
     solution: {
       title: "Our Solution",
       description:
-        "Re-architected the platform with horizontal scaling, event-driven architecture, and intelligent caching to handle massive traffic spikes automatically while preventing data loss.",
+        "Re-architected the platform with horizontal scaling, verification workflows, and event-driven architecture to handle massive citizen report influxes while implementing credibility systems for verified news sources.",
       approach: [
         {
-          phase: "Phase 1: Architecture Modernization",
+          phase: "Phase 1: Verification System",
           details:
-            "Migrated to event-driven microservices architecture. Implemented message queues (RabbitMQ) ensuring zero data loss even during system stress. Separated read and write workloads.",
+            "Built comprehensive verification workflow enabling trusted sources (journalists, aid workers, verified organizations) to validate citizen reports. Implemented credibility scoring and source verification to distinguish verified news from unverified reports.",
         },
         {
-          phase: "Phase 2: Database Optimization",
+          phase: "Phase 2: Architecture Modernization",
           details:
-            "Optimized PostgreSQL queries reducing average query time by 78%. Implemented read replicas and connection pooling. Added ElasticSearch for fast full-text search at scale.",
+            "Migrated to event-driven microservices architecture. Implemented message queues (RabbitMQ) ensuring zero report loss even during massive citizen journalism surges. Separated read and write workloads for optimal performance.",
         },
         {
-          phase: "Phase 3: Caching Strategy",
+          phase: "Phase 3: Database & Search Optimization",
           details:
-            "Deployed multi-layer Redis caching strategy caching frequently accessed data and pre-computed aggregations. Reduced database load by 83%.",
+            "Optimized PostgreSQL queries reducing average query time by 78%. Implemented read replicas and connection pooling. Added ElasticSearch for fast full-text search enabling rapid crisis report discovery.",
         },
         {
           phase: "Phase 4: Auto-Scaling",
           details:
-            "Implemented Kubernetes horizontal pod autoscaling responding to CPU and custom metrics. System now scales automatically from 5 to 50 pods based on real-time demand.",
+            "Implemented Kubernetes horizontal pod autoscaling responding to CPU and custom metrics. System now scales automatically from 5 to 50 pods based on real-time citizen reporting demand during crises.",
         },
       ],
     },
     technologies: [
       { name: "PHP & Laravel", usage: "Core application framework" },
-      { name: "Next.js", usage: "Modern frontend interface" },
-      { name: "Redis", usage: "Multi-layer caching" },
-      { name: "ElasticSearch", usage: "Fast full-text search" },
+      { name: "Next.js", usage: "Modern citizen journalism interface" },
+      { name: "Redis", usage: "Multi-layer caching for verified reports" },
+      { name: "ElasticSearch", usage: "Fast crisis report search" },
       { name: "PostgreSQL", usage: "Primary database with replicas" },
       { name: "AWS", usage: "Cloud infrastructure" },
-      { name: "Kubernetes", usage: "Container orchestration" },
-      { name: "RabbitMQ", usage: "Message queue for reliability" },
+      { name: "Kubernetes", usage: "Auto-scaling orchestration" },
+      { name: "RabbitMQ", usage: "Message queue ensuring report reliability" },
     ],
     results: {
       title: "Impact & Results",
       metrics: [
+        {
+          label: "Verified News",
+          value: "Implemented",
+          description: "verifiable crisis news source system",
+        },
         {
           label: "System Uptime",
           value: "100%",
           description: "during subsequent major emergencies",
         },
         {
+          label: "Citizen Reports",
+          value: "50K+",
+          description: "processed per hour",
+        },
+        {
           label: "Query Performance",
           value: "10x",
-          description: "faster database queries",
+          description: "faster crisis report search",
         },
         {
-          label: "Processing Capacity",
-          value: "50K+",
-          description: "reports processed per hour",
-        },
-        {
-          label: "Cost Optimization",
-          value: "43%",
-          description: "reduction in infrastructure costs",
+          label: "Report Loss",
+          value: "0",
+          description: "zero citizen reports lost",
         },
         {
           label: "Geographic Coverage",
           value: "Global",
-          description: "multi-region deployment",
-        },
-        {
-          label: "Data Loss",
-          value: "0",
-          description: "zero reports lost since deployment",
+          description: "multi-region citizen journalism",
         },
       ],
       testimonial: {
         quote:
-          "During our most recent crisis deployment, the system handled 10x our normal load without breaking a sweat. Lithium Labs' work directly contributed to faster emergency response and lives saved.",
+          "The verification system transformed how we handle citizen reports during crises. We can now distinguish verified news from unverified reports, enabling faster, more accurate emergency response.",
         author: "Technical Director",
         company: "Ushahidi Network",
       },
     },
     keyFeatures: [
-      "Automatic horizontal scaling based on demand",
-      "Event-driven architecture preventing data loss",
+      "Citizen journalism platform with verification workflows",
+      "Trusted source credibility scoring and validation",
+      "Automatic horizontal scaling during crisis influxes",
+      "Event-driven architecture preventing report loss",
+      "Real-time mapping and geospatial crisis visualization",
       "Multi-region deployment for global resilience",
-      "Real-time mapping and geospatial analysis",
-      "AI-powered report verification and deduplication",
-      "Mobile-first interface for field reporters",
     ],
   },
-  "alliance-gateway": {
-    title: "Alliance Payment Gateway",
-    category: "Payments Infrastructure",
-    client: "Alliance E-Commerce",
+  "alliance-platform": {
+    title: "Alliance HR Management Platform",
+    category: "Human Resource Management",
+    client: "Lithium Labs Internal",
     timeline: "2024",
     duration: "8 months",
     color: "brand-tertiary",
     image: "/alliance-mascot.jpg",
     liveUrl: "",
     overview:
-      "Omnichannel payment gateway unifying local mobile money services with global card networks. Enables merchants to accept payments from 95% of consumers in East Africa while maintaining PCI-DSS compliance and providing unified settlement.",
+      "Internal HR management platform bridging local African talent with global remote opportunities. Streamlines subcontracting specialized tasks within Lithium Labs, matching skilled professionals with projects that align with their expertise for efficient distributed team operations.",
     challenge: {
       title: "The Challenge",
       description:
-        "Alliance was losing significant revenue at checkout due to poor transaction success rates. Different payment providers had varying API behaviors, downtime patterns, and success rates - but merchants had no intelligent way to route transactions.",
+        "Lithium Labs faced challenges efficiently matching internal projects with specialized talent across Africa while managing remote work logistics. Finding the right skills for specific tasks, coordinating across time zones, and tracking project deliverables became increasingly complex as the team grew.",
       points: [
-        "73% average transaction success rate (27% failures at checkout)",
-        "No automatic failover when payment providers experienced downtime",
-        "Manual reconciliation taking 40+ hours per week",
-        "Inconsistent API behavior across 8 payment providers",
-        "$2M+ in annual abandoned transactionslost revenue",
-        "No unified reporting or analytics",
+        "Difficulty matching specialized skills with specific project needs",
+        "Manual task allocation consuming significant management time",
+        "Limited visibility into available talent and their expertise",
+        "Challenges coordinating distributed teams across multiple time zones",
+        "No systematic way to track project progress and deliverables",
+        "Missed opportunities to connect local talent with international projects",
       ],
     },
     solution: {
       title: "Our Solution",
       description:
-        "Built an intelligent payment orchestration platform with smart routing that automatically selects optimal payment providers based on real-time success rates, cost, and provider status.",
+        "Built an intelligent HR management platform with skill matching algorithms, project tracking, and collaboration tools designed specifically for distributed teams bridging African talent with global opportunities.",
       approach: [
         {
-          phase: "Phase 1: Provider Integration",
+          phase: "Phase 1: Talent Profile System",
           details:
-            "Created unified abstraction layer integrating 8 payment providers (M-Pesa, Airtel Money, Stripe, Flutterwave, Paystack, etc.). Normalized disparate APIs into consistent interface.",
+            "Created comprehensive talent profile system capturing skills, expertise, availability, and preferences. Built search and filtering capabilities enabling quick identification of specialized professionals for specific project needs.",
         },
         {
-          phase: "Phase 2: Smart Routing Engine",
+          phase: "Phase 2: Smart Matching Engine",
           details:
-            "Developed intelligent routing engine analyzing real-time success rates, historical performance, transaction characteristics, and provider health to select optimal provider for each transaction.",
+            "Developed intelligent matching algorithm analyzing project requirements, professional skills, past performance, and availability to recommend optimal talent-project pairings. Automated task allocation reducing manual coordination time.",
         },
         {
-          phase: "Phase 3: Reliability Features",
+          phase: "Phase 3: Project Management Tools",
           details:
-            "Implemented automatic retry logic with exponential backoff, intelligent failover to backup providers, and circuit breakers preventing cascading failures.",
+            "Implemented project tracking dashboard with milestone monitoring, deliverable management, and real-time progress updates. Time zone coordination features and asynchronous collaboration tools supporting distributed teams.",
         },
         {
-          phase: "Phase 4: Reconciliation Automation",
+          phase: "Phase 4: Opportunity Bridge",
           details:
-            "Built automated reconciliation system matching transactions across providers, flagging discrepancies, and generating settlement reports. Reduced manual work from 40 hours to <2 hours per week.",
+            "Built connection system linking local African professionals with international remote opportunities. Enabled seamless onboarding, contract management, and payment processing for cross-border engagements.",
         },
       ],
     },
     technologies: [
-      { name: "Node.js & NestJS", usage: "High-performance backend services" },
-      { name: "Go", usage: "Payment processing engine" },
-      { name: "PostgreSQL", usage: "Transaction ledger" },
-      { name: "Redis", usage: "Real-time provider health tracking" },
-      { name: "Kafka", usage: "Event streaming" },
-      { name: "React", usage: "Merchant dashboard" },
-      { name: "AWS", usage: "Infrastructure (ECS, RDS)" },
-      { name: "Grafana", usage: "Real-time monitoring" },
+      { name: "Node.js & NestJS", usage: "Backend API services" },
+      { name: "React & TypeScript", usage: "HR management dashboard" },
+      { name: "PostgreSQL", usage: "User profiles and project data" },
+      { name: "Redis", usage: "Real-time availability tracking" },
+      { name: "AWS", usage: "Infrastructure and file storage" },
+      { name: "Stripe", usage: "Payment processing for international work" },
+      { name: "Socket.io", usage: "Real-time collaboration" },
+      { name: "Slack API", usage: "Team communication integration" },
     ],
     results: {
       title: "Impact & Results",
       metrics: [
         {
-          label: "Success Rate",
-          value: "94%",
-          description: "up from 73% - 21% improvement",
+          label: "Talent Matching",
+          value: "Streamlined",
+          description: "efficient skill-project pairing",
         },
         {
-          label: "Transaction Speed",
-          value: "40%",
-          description: "faster processing time",
+          label: "Allocation Time",
+          value: "Reduced",
+          description: "faster task assignment",
         },
         {
           label: "Revenue Recovered",
@@ -549,141 +579,147 @@ const projectData: Record<string, any> = {
           description: "reduction in manual effort",
         },
         {
-          label: "Provider Downtime",
-          value: "0%",
-          description: "impact on merchants via auto-failover",
+          label: "Global Reach",
+          value: "International",
+          description: "local talent with abroad opportunities",
         },
         {
-          label: "Cost Per Transaction",
-          value: "18%",
-          description: "reduction via smart routing",
+          label: "Team Efficiency",
+          value: "Improved",
+          description: "streamlined project delivery",
+        },
+        {
+          label: "Project Tracking",
+          value: "Real-time",
+          description: "visibility into all deliverables",
         },
       ],
       testimonial: {
         quote:
-          "Alliance Gateway solved problems we didn't even know we had. The smart routing alone recovered millions in revenue, and the unified dashboard finally gave us visibility into our payment operations.",
-        author: "Head of Payments",
-        company: "Alliance E-Commerce",
+          "The Alliance Platform revolutionized how we manage our distributed team. We can now easily match the right talent with each project and seamlessly connect our African professionals with international clients.",
+        author: "Operations Director",
+        company: "Lithium Labs",
       },
     },
     keyFeatures: [
-      "Real-time smart routing based on success rates",
-      "Automatic failover and retry logic",
-      "Unified API for all payment methods",
-      "PCI-DSS Level 1 compliant",
-      "Automated reconciliation and settlement",
-      "Webhook management and notification system",
+      "Intelligent skill-project matching algorithm",
+      "Comprehensive talent profile and expertise tracking",
+      "Real-time project management and milestone tracking",
+      "Time zone coordination for distributed teams",
+      "International opportunity bridge for local talent",
+      "Integrated payment processing for cross-border work",
     ],
   },
-  "fintech-gateway": {
-    title: "FinTech Ledger Gateway",
+  "savannah-etff-trading-system": {
+    title: "Savannah ETF Trading System",
     category: "Institutional Finance",
-    client: "Strategic Banking Partner",
+    client: "Strategic Investment Partner",
     timeline: "2024",
     duration: "12 months",
     color: "brand-primary",
-    image: "/glass-facade-8016589.jpg",
-    liveUrl: "",
+    image: "/savannah-mascot.jpg",
+    liveUrl: "https://savannahetfs.fund",
     overview:
-      "Mission-critical zero-latency ledger management and reconciliation system designed for large-scale banking operations. Processes millions of transactions daily with atomic consistency across distributed systems, serving as the backbone for institutional financial operations.",
+      "ETF trading platform helping investors gain diversified exposure to various sectors without manual Excel analysis. Automatically sources, risk-grades, and recommends ETFs across sectors, simplifying portfolio management and investment decision-making through data-driven algorithms.",
     challenge: {
       title: "The Challenge",
       description:
-        "The bank needed to replace a legacy system that was causing significant reconciliation issues and couldn't scale to meet growing transaction volumes. Data consistency across distributed data centers was proving nearly impossible.",
+        "Investors spent countless hours manually analyzing ETFs in Excel spreadsheets, struggling to compare risk profiles and sector exposures. Reconciliation errors in manual tracking systems were costing clients millions while investment decisions lacked data-driven insights.",
       points: [
-        "0.03% error rate across 13M daily transactions (~$5M annual reconciliation overhead)",
-        "3-hour reconciliation window required nightly",
-        "Cannot scale beyond 8M transactions per day",
-        "Legacy system couldn't guarantee atomic operations",
-        "Manual intervention required for 300+ edge cases monthly",
-        "Distributed across 5 data centers with consistency challenges",
+        "Manual Excel-based ETF analysis consuming hours of research time per investment decision",
+        "0.03% error rate across transaction reconciliation costing $5M annually",
+        "No systematic risk grading methodology for comparing ETFs",
+        "Difficulty sourcing and tracking 15M+ ETF data points",
+        "Inconsistent portfolio diversification across client accounts",
+        "Lack of automated alerts for risk threshold breaches",
       ],
     },
     solution: {
       title: "Our Solution",
       description:
-        "Built a distributed ledger system using event sourcing and CQRS patterns, ensuring atomic transactions with cryptographic verification and perfect audit trails.",
+        "Built an intelligent ETF trading platform with automated sourcing, risk-grading algorithms, and data-driven recommendations. Eliminated manual Excel analysis by processing 15M+ data points daily, providing investors with instant, accurate insights.",
       approach: [
         {
-          phase: "Phase 1: Architecture Design",
+          phase: "Phase 1: Data Aggregation Engine",
           details:
-            "Designed distributed system using event sourcing pattern - every transaction stored as immutable event. Implemented CQRS separating write and read models for optimal performance.",
+            "Built comprehensive data aggregation system sourcing ETF information from multiple financial data providers. Real-time processing of 15M+ data points daily including pricing, holdings, performance metrics, and sector exposures.",
         },
         {
-          phase: "Phase 2: Atomic Transaction Processing",
+          phase: "Phase 2: Risk-Grading Algorithm",
           details:
-            "Built atomic transaction processing engine using distributed consensus algorithms (Raft). Ensures either all operations complete or none do - no partial states possible.",
+            "Developed proprietary risk-grading algorithm analyzing volatility, correlation, sector concentration, and liquidity metrics. Automated classification system providing instant risk scores (1-10) for each ETF enabling quick comparison and decision-making.",
         },
         {
-          phase: "Phase 3: Cryptographic Audit Trail",
+          phase: "Phase 3: Reconciliation Automation",
           details:
-            "Every transaction cryptographically signed and linked to previous transactions (blockchain-inspired). Enables perfect transaction history reconstruction and tamper detection.",
+            "Implemented atomic transaction processing with distributed consensus algorithms eliminating manual reconciliation errors. Built real-time audit trail with cryptographic verification saving $4.7M annually in reconciliation overhead.",
         },
         {
-          phase: "Phase 4: Real-Time Reconciliation",
+          phase: "Phase 4: Investment Dashboard",
           details:
-            "Eliminated batch reconciliation with continuous real-time verification. Built automated anomaly detection flagging discrepancies within seconds of occurrence.",
+            "Created intuitive investment dashboard with portfolio visualization, sector exposure analysis, and automated rebalancing recommendations. Replaced Excel spreadsheets with real-time analytics and data-driven insights.",
         },
       ],
     },
     technologies: [
-      { name: "Rust", usage: "Ultra-high performance core engine" },
-      { name: "PostgreSQL", usage: "Event store with TimescaleDB" },
-      { name: "Apache Kafka", usage: "Event streaming backbone" },
+      { name: "Rust", usage: "Ultra-high performance trading engine" },
+      { name: "Python", usage: "Risk-grading algorithms and ML models" },
+      { name: "PostgreSQL", usage: "ETF data warehouse with TimescaleDB" },
+      { name: "Apache Kafka", usage: "Real-time data streaming" },
+      { name: "React & TypeScript", usage: "Investment dashboard" },
+      { name: "Redis", usage: "Real-time pricing cache" },
       { name: "Docker & Kubernetes", usage: "Container orchestration" },
-      { name: "gRPC", usage: "High-performance RPC" },
-      { name: "Redis", usage: "Read model caching" },
-      { name: "Grafana & Prometheus", usage: "Monitoring and alerting" },
-      { name: "Vault", usage: "Secrets and key management" },
+      { name: "Financial Data APIs", usage: "ETF data sourcing" },
+      { name: "Grafana", usage: "Performance monitoring" },
     ],
     results: {
       title: "Impact & Results",
       metrics: [
+        {
+          label: "Reconciliation Errors",
+          value: "Eliminated",
+          description: "$4.7M annual cost savings",
+        },
+        {
+          label: "ETF Data Points",
+          value: "15M+",
+          description: "processed daily via automation",
+        },
+        {
+          label: "Analysis Time",
+          value: "Instant",
+          description: "eliminated manual Excel work",
+        },
+        {
+          label: "Risk Grading",
+          value: "Automated",
+          description: "algorithm-driven ETF scoring",
+        },
         {
           label: "Transaction Accuracy",
           value: "99.9999%",
           description: "six-sigma quality level",
         },
         {
-          label: "Cost Savings",
-          value: "$4.7M",
-          description: "annual reconciliation cost reduction",
-        },
-        {
-          label: "Daily Transaction Volume",
-          value: "15M+",
-          description: "with room to scale further",
-        },
-        {
-          label: "Reconciliation Time",
+          label: "Investment Insights",
           value: "Real-time",
-          description: "eliminated 3-hour batch window",
-        },
-        {
-          label: "Manual Intervention",
-          value: "97%",
-          description: "reduction in required manual fixes",
-        },
-        {
-          label: "System Latency",
-          value: "<50ms",
-          description: "p99 transaction processing time",
+          description: "data-driven decisions",
         },
       ],
       testimonial: {
         quote:
-          "This system is the backbone of our entire operation now. The combination of performance, reliability, and perfect audit trails has exceeded every expectation. It's transformed from a pain point to a competitive advantage.",
-        author: "Chief Technology Officer",
-        company: "Strategic Banking Partner",
+          "Savannah ETF transformed our investment process. What used to take hours in Excel now happens instantly with better accuracy. The automated risk grading and ETF sourcing have revolutionized how we evaluate opportunities.",
+        author: "Chief Investment Officer",
+        company: "Strategic Investment Partner",
       },
     },
     keyFeatures: [
-      "Atomic transaction processing with distributed consensus",
-      "Cryptographic audit trail with tamper detection",
-      "Real-time reconciliation eliminating batch windows",
-      "Event sourcing enabling perfect history reconstruction",
-      "Multi-data-center deployment with strong consistency",
-      "Horizontal scaling handling 50M+ transactions/day",
+      "Automated ETF sourcing processing 15M+ data points daily",
+      "Proprietary risk-grading algorithm (1-10 scoring)",
+      "Real-time portfolio visualization and analytics",
+      "Eliminated manual Excel analysis and reconciliation errors",
+      "Sector exposure analysis and diversification recommendations",
+      "Automated transaction processing with cryptographic audit trails",
     ],
   },
 };
@@ -694,12 +730,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CaseStudyPage({
+export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projectData[params.slug];
+  const { slug } = await params;
+  const project = projectData[slug];
 
   if (!project) {
     notFound();
