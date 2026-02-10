@@ -29,7 +29,7 @@ export default function Home() {
               <span className="text-brand-secondary">Live Product</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-14 leading-relaxed font-light">
-              We empower visionary founders by transforming complex <span className="text-white font-bold opacity-90">FinTech</span> and <span className="text-white font-bold opacity-90">Web3</span> concepts into secure, market-ready digital assets.
+              We empower visionary founders by transforming complex <span className="text-white font-bold opacity-90">Ideas</span>  into secure, market-ready digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
@@ -58,7 +58,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase leading-none">The Lithium <br /><span className="text-brand-primary">Edge</span></h2>
               <p className="text-xl text-white/70 mb-10 leading-relaxed font-light">
-                We aren't just developers; we are strategic architects. Lithium Labs was founded to bridge the critical gap between visionary concepts and production-grade digital assets.
+                 Lithium Labs was founded to bridge the critical gap between visionary concepts and production-grade digital assets.
               </p>
               <div className="space-y-6 mb-12">
                 {[

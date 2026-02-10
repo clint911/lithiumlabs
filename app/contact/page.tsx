@@ -150,9 +150,14 @@ export default function ContactPage() {
                         className="w-full p-6 rounded-2xl backdrop-blur-3xl bg-white/[0.03] border border-white/10 text-white focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition-all appearance-none font-light text-lg"
                       >
                         <option value="" className="bg-brand-foundation">Select Domain</option>
+                         <option value="web" className="bg-brand-foundation">Web Design</option>
+                          <option value="mobile" className="bg-brand-foundation">Mobile APP Development</option>
+                           <option value="api" className="bg-brand-foundation">API Development</option>
                         <option value="fintech" className="bg-brand-foundation">FinTech Infrastructure</option>
+                         <option value="payments" className="bg-brand-foundation">Payment Integration</option>
                         <option value="web3" className="bg-brand-foundation">Web3 & Assets</option>
                         <option value="enterprise" className="bg-brand-foundation">Institutional SaaS</option>
+                         <option value="ai" className="bg-brand-foundation">AI & Machine Learning Integration</option>
                       </select>
                     </div>
 
