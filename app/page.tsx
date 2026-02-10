@@ -96,22 +96,22 @@ export default function Home() {
             <div className="max-w-3xl">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase">Engineering <span className="text-brand-primary">Pillars</span></h2>
               <p className="text-lg text-white/70 font-light leading-relaxed">
-                Strategic technical execution across the entire FinTech lifecycle, from architectural design to institutional scaling.
+                Strategic technical execution across the entire Software development lifecycle, from architectural design to institutional scaling.
               </p>
             </div>
             <Link href="/services">
               <Button variant="link" className="text-brand-primary text-sm font-black p-0 flex items-center group uppercase tracking-widest">
-                Full Capability List <ArrowRight className="ml-3 h-4 w-4 group-hover:translate-x-2 transition-transform" />
+                Full Service Inventory <ArrowRight className="ml-3 h-4 w-4 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <Globe className="h-10 w-10" />, title: "Full-Stack Dev", color: "brand-primary", description: "Modern frameworks for market-ready applications." },
-              { icon: <CreditCard className="h-10 w-10" />, title: "Payments Sync", color: "brand-secondary", description: "Global & local gateway integrations." },
+              { icon: <Globe className="h-10 w-10" />, title: "Web Design", color: "brand-primary", description: "Modern frameworks for market-ready web applications." },
+              { icon: <CreditCard className="h-10 w-10" />, title: "Cross platform Development", color: "brand-secondary", description: "Android & Ios apps using React Native." },
               { icon: <TrendingUp className="h-10 w-10" />, title: "System Design", color: "brand-tertiary", description: "Scalable institutional architectures." },
-              { icon: <Cog className="h-10 w-10" />, title: "Optimization", color: "brand-primary", description: "Continuous security & performance audits." },
+              { icon: <Cog className="h-10 w-10" />, title: "API Development", color: "brand-primary", description: "Secure & Scalable platform APIS" },
             ].map((service, index) => (
               <Card key={index} className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-500 rounded-[2.5rem] group shadow-[0_0_30px_rgba(37,99,235,0.03)] hover:shadow-[0_0_50px_rgba(37,99,235,0.08)]">
                 <CardContent className="p-10">
@@ -141,13 +141,13 @@ export default function Home() {
                 title: "LionX Ecosystem",
                 client: "LionX Digital Creatives",
                 color: "brand-primary",
-                description: "Multi-tier financial platform bridging decentralized assets and secure backend infrastructure.",
+                description: "Digital Creatives platform using modern incentives & rewarding mechanisms. ",
               },
               {
-                title: "Hifadhi Cloud System",
-                client: "Hifadhi Services",
+                title: "Expendi Savings App",
+                client: "Expendi Labs",
                 color: "brand-tertiary",
-                description: "Secure, scalable cloud storage tailored for jurisdictional financial data.",
+                description: "Savings platform leveraging DeFi yields to help Africans earn competitive returns on their savings. Cross-border savings solution with bank-level security, abstracting blockchain complexity while providing users with traditional banking simplicity combined with modern financial returns.",
               }
             ].map((project, index) => (
               <Card key={index} className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-white/20 transition-all duration-700 rounded-[3rem] group shadow-[0_0_40px_rgba(255,100,255,0.02)] hover:shadow-[0_0_60px_rgba(255,100,255,0.05)]">
