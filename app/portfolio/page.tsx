@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function PortfolioPage() {
@@ -141,7 +142,7 @@ export default function PortfolioPage() {
         "Successfully matched local talent with international remote opportunities. Streamlined internal task allocation and improved project delivery efficiency across distributed teams.",
       technologies: [
         "SpringBoot",
-        "NextJs", 
+        "NextJs",
         "Stripe API",
         "M-Pesa API",
         "PostgreSQL",
@@ -302,16 +303,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-          <div className="text-4xl font-black text-white tracking-tighter uppercase">
-            Lithium<span className="text-brand-primary">Labs</span>
-          </div>
-          <div className="text-white/40 text-[10px] font-black uppercase tracking-[0.4em]">
-            © {new Date().getFullYear()} Lithium Labs Consortium
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
