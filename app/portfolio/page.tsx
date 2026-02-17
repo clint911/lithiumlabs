@@ -194,12 +194,12 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Verified{" "}
               <span className="text-brand-primary">Transformations</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
               The complete operational portfolio of **Lithium Labs**. Strategic
               execution across the entire FinTech lifecycle.
             </p>
@@ -286,15 +286,15 @@ export default function PortfolioPage() {
       {/* CTA Footer Section */}
       <section className="relative z-10 py-40 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-16 md:p-24 shadow-4xl relative overflow-hidden">
-            <h2 className="text-4xl font-black text-white mb-8 tracking-tighter uppercase">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
+            <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Your Success Starts Here
             </h2>
-            <p className="text-xl text-white/60 mb-12 font-light leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 sm:mb-12 font-light leading-relaxed">
               Ready to build your institutional legacy?
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-12 py-8 rounded-2xl text-xl font-black uppercase tracking-widest shadow-2xl">
+              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-wide sm:tracking-widest shadow-2xl whitespace-normal sm:whitespace-nowrap">
                 Connect With Strategists
               </Button>
             </Link>

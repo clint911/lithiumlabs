@@ -397,8 +397,8 @@ export default function CaseStudyPage() {
               your project.
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-12 py-8 rounded-2xl text-xl font-black uppercase tracking-widest shadow-2xl">
-                Start Your Project <ArrowRight className="ml-4 h-6 w-6" />
+              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-2xl">
+                Start Your Project <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </Link>
           </div>

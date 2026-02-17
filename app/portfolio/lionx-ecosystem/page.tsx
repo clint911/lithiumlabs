@@ -219,9 +219,9 @@ export default function CaseStudyPage() {
               {project.liveUrl && (
                 <Link href={project.liveUrl} target="_blank">
                   <Button
-                    className={`bg-${project.color} hover:bg-${project.color}/90 text-white px-8 py-6 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl`}
+                    className={`bg-${project.color} hover:bg-${project.color}/90 text-white px-6 py-4 sm:px-8 sm:py-6 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl`}
                   >
-                    View Live Site <ExternalLink className="ml-3 h-5 w-5" />
+                    View Live Site <ExternalLink className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
               )}
@@ -412,17 +412,17 @@ export default function CaseStudyPage() {
       {/* CTA Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-16 md:p-24 shadow-4xl">
-            <h2 className="text-4xl font-black text-white mb-8 tracking-tighter uppercase">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl">
+            <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Ready to Build Something Similar?
             </h2>
-            <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 sm:mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Let's discuss how we can bring the same level of excellence to
               your project.
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-12 py-8 rounded-2xl text-xl font-black uppercase tracking-widest shadow-2xl">
-                Start Your Project <ArrowRight className="ml-4 h-6 w-6" />
+              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-2xl">
+                Start Your Project <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </Link>
           </div>

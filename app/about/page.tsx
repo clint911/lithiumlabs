@@ -21,11 +21,11 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Your strategic <span className="text-brand-primary">technology</span> and software solutions partner.
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
               Lithium Labs serves as the foundational partner for modern financial technology. We build the infrastructure that moves the world’s money, empowering businesses to navigate the digital economy through engineering secure, compliant, or scalable products.
             </p>
           </div>
@@ -97,15 +97,15 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-16 md:p-24 shadow-4xl relative overflow-hidden">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
-            <h2 className="text-4xl font-black text-white mb-8 tracking-tighter uppercase">Partner With Us</h2>
-            <p className="text-xl text-white/40 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">Partner With Us</h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 sm:mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Ready to transform your innovative concept into a market-ready digital product?
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white px-12 py-8 rounded-2xl text-xl font-black uppercase tracking-widest shadow-2xl">
-                Start Discovery <ArrowRight className="ml-4 h-6 w-6" />
+              <Button size="lg" className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-2xl">
+                Start Discovery <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </Link>
           </div>

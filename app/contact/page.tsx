@@ -21,11 +21,11 @@ export default function ContactPage() {
       {/* Hero Section - Balanced Typography */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-12 md:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Initiate <span className="text-brand-primary">Strategic</span> Build
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
               Ready to transform your vision into a benchmark digital product? Our strategists are standing by for institutional-grade triage.
             </p>
           </div>
@@ -48,8 +48,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">Inquiries</div>
-                      <div className="text-white font-black text-lg uppercase tracking-tighter">partnerships@lithiumlabs.com</div>
-                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide">clintonfreelance380@gmail.com</div>
+                      <div className="text-white font-black text-sm sm:text-base md:text-lg uppercase tracking-tight break-all sm:break-normal">partnerships@lithiumlabs.com</div>
+                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide break-all sm:break-normal">clintonfreelance380@gmail.com</div>
                     </div>
                   </div>
 
@@ -150,14 +150,14 @@ export default function ContactPage() {
                         className="w-full p-6 rounded-2xl backdrop-blur-3xl bg-white/[0.03] border border-white/10 text-white focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition-all appearance-none font-light text-lg"
                       >
                         <option value="" className="bg-brand-foundation">Select Domain</option>
-                         <option value="web" className="bg-brand-foundation">Web Design</option>
-                          <option value="mobile" className="bg-brand-foundation">Mobile APP Development</option>
-                           <option value="api" className="bg-brand-foundation">API Development</option>
+                        <option value="web" className="bg-brand-foundation">Web Design</option>
+                        <option value="mobile" className="bg-brand-foundation">Mobile APP Development</option>
+                        <option value="api" className="bg-brand-foundation">API Development</option>
                         <option value="fintech" className="bg-brand-foundation">FinTech Infrastructure</option>
-                         <option value="payments" className="bg-brand-foundation">Payment Integration</option>
+                        <option value="payments" className="bg-brand-foundation">Payment Integration</option>
                         <option value="web3" className="bg-brand-foundation">Web3 & Assets</option>
                         <option value="enterprise" className="bg-brand-foundation">Institutional SaaS</option>
-                         <option value="ai" className="bg-brand-foundation">AI & Machine Learning Integration</option>
+                        <option value="ai" className="bg-brand-foundation">AI & Machine Learning Integration</option>
                       </select>
                     </div>
 
@@ -172,8 +172,8 @@ export default function ContactPage() {
                     </div>
 
                     <div className="md:col-span-2 mt-6">
-                      <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-10 rounded-[2rem] text-2xl font-black transition-all hover:scale-[1.01] active:scale-95 shadow-2xl shadow-brand-primary/30 uppercase tracking-widest">
-                        Initiate Build <ArrowRight className="ml-4 h-8 w-8" />
+                      <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-6 sm:py-8 md:py-10 rounded-[2rem] text-lg sm:text-xl md:text-2xl font-black transition-all hover:scale-[1.01] active:scale-95 shadow-2xl shadow-brand-primary/30 uppercase tracking-widest">
+                        Initiate Build <ArrowRight className="ml-3 sm:ml-4 h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
                       </Button>
                     </div>
                   </form>
