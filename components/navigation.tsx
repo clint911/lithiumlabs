@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
@@ -38,9 +39,21 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="text-3xl font-black text-white tracking-tighter uppercase" onClick={closeMenu}>
-            Lithium<span className="text-brand-primary">Labs</span>
+          <Link
+            href="/"
+            className="relative transition-all duration-500 hover:scale-105 active:scale-95 group"
+            onClick={closeMenu}
+          >
+            <Image
+              src="/logo/lithium-labs-horizontal.svg"
+              alt="Lithium Labs"
+              width={scrolled ? 210 : 240}
+              height={scrolled ? 70 : 80}
+              className="transition-all duration-500"
+              priority
+            />
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-12">

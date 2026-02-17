@@ -1,0 +1,102 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background (matching design system colors) -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#FDE68A;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#FCA5A5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF64FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for Logo Icon (Electric Blue to Magenta) -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF64FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for Text -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.95" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.90" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.85" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Logo Group (Lightbulb with Brain/Chip) -->
+  <g id="logo-icon" transform="translate(250, 190)">
+    <!-- Cloud/Brain Shape -->
+    <path d="M -60 -20 Q -80 -35, -75 -55 Q -70 -75, -50 -80 Q -30 -85, -15 -75 Q 0 -85, 15 -75 Q 30 -85, 50 -80 Q 70 -75, 75 -55 Q 80 -35, 60 -20 L 60 0 Q 60 5, 55 5 L -55 5 Q -60 5, -60 0 Z" 
+          fill="none" 
+          stroke="#030712" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Microchip in center -->
+    <rect x="-25" y="-45" width="50" height="50" rx="5" 
+          fill="none" 
+          stroke="#030712" 
+          stroke-width="6"/>
+    <rect x="-15" y="-35" width="30" height="30" rx="2" 
+          fill="none" 
+          stroke="#030712" 
+          stroke-width="4"/>
+    
+    <!-- Chip pins (left side) -->
+    <line x1="-35" y1="-30" x2="-25" y2="-30" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-35" y1="-15" x2="-25" y2="-15" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-35" y1="0" x2="-25" y2="0" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Chip pins (right side) -->
+    <line x1="25" y1="-30" x2="35" y2="-30" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="25" y1="-15" x2="35" y2="-15" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="25" y1="0" x2="35" y2="0" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Chip pins (top) -->
+    <line x1="-10" y1="-55" x2="-10" y2="-45" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="-55" x2="10" y2="-45" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Chip pins (bottom) -->
+    <line x1="-10" y1="5" x2="-10" y2="15" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="5" x2="10" y2="15" stroke="#030712" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Antenna nodes (3 dots above) -->
+    <circle cx="-60" cy="-65" r="6" fill="#030712"/>
+    <circle cx="0" cy="-75" r="6" fill="#030712"/>
+    <circle cx="60" cy="-65" r="6" fill="#030712"/>
+    
+    <!-- Antenna lines -->
+    <line x1="-60" y1="-59" x2="-60" y2="-40" stroke="#030712" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="-69" x2="0" y2="-50" stroke="#030712" stroke-width="5" stroke-linecap="round"/>
+    <line x1="60" y1="-59" x2="60" y2="-40" stroke="#030712" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Lightbulb base -->
+    <path d="M -40 5 L -40 40 Q -40 50, -30 50 L 30 50 Q 40 50, 40 40 L 40 5" 
+          fill="none" 
+          stroke="#030712" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Bulb ridges -->
+    <line x1="-25" y1="55" x2="25" y2="55" stroke="#030712" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-20" y1="65" x2="20" y2="65" stroke="#030712" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Bulb screw base -->
+    <ellipse cx="0" cy="75" rx="18" ry="8" fill="none" stroke="#030712" stroke-width="6"/>
+  </g>
+  
+  <!-- Text: Lithium Labs -->
+  <text x="250" y="350" 
+        font-family="Arial, sans-serif" 
+        font-size="48" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="url(#textGradient)" 
+        letter-spacing="2">
+    Lithium Labs
+  </text>
+</svg>
