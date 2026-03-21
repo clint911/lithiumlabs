@@ -75,7 +75,7 @@ export default async function BlogPost({ params }: { params: Params }) {
             {tags.map((tag) => (
               <Badge
                 key={tag.id}
-                className="bg-brand-secondary/10 text-brand-secondary border-none px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest"
+                className="bg-brand-secondary/10 text-brand-secondary border-none px-3 py-1 rounded-full text-micro font-black uppercase tracking-widest"
               >
                 {tag.name}
               </Badge>
@@ -89,7 +89,7 @@ export default async function BlogPost({ params }: { params: Params }) {
 
           {/* Hero Image */}
           {image && (
-            <div className="relative aspect-[16/9] rounded-[3rem] overflow-hidden mb-12 shadow-[0_0_60px_rgba(147,112,219,0.08)]">
+            <div className="relative aspect-[16/9] rounded-card-md overflow-hidden mb-12 shadow-glow-secondary-md">
               <Image
                 src={image}
                 alt={title}
@@ -120,7 +120,7 @@ export default async function BlogPost({ params }: { params: Params }) {
               {relatedPosts.map((post) => (
                 <Card
                   key={post.id}
-                  className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-secondary/20 transition-all duration-700 rounded-[2.5rem] group shadow-[0_0_40px_rgba(147,112,219,0.02)] hover:shadow-[0_0_60px_rgba(147,112,219,0.08)] overflow-hidden"
+                  className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-secondary/20 transition-all duration-700 rounded-card group shadow-glow-secondary-card hover:shadow-glow-secondary-md overflow-hidden"
                 >
                   <Link href={`/blog/${post.slug}`} className="block">
                     <div className="aspect-[16/9] relative overflow-hidden rounded-t-[2.5rem]">

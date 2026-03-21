@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-hero backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Your strategic{" "}
               <span className="text-brand-primary">technology</span> and
@@ -54,7 +54,7 @@ export default function AboutPage() {
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]">
+            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-card-lg group shadow-glow-primary hover:shadow-glow-primary-md">
               <CardContent className="p-12 md:p-16">
                 <div className="flex items-center mb-10">
                   <Target className="h-10 w-10 text-brand-primary mr-6 transition-transform group-hover:scale-110" />
@@ -75,7 +75,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-[3.5rem] group shadow-[0_0_40px_rgba(255,100,255,0.02)] hover:shadow-[0_0_60px_rgba(255,100,255,0.05)]">
+            <Card className="backdrop-blur-2xl bg-white/[0.05] border-white/10 rounded-card-lg group shadow-glow-magenta hover:shadow-glow-magenta-md">
               <CardContent className="p-12 md:p-16">
                 <div className="flex items-center mb-10">
                   <Lightbulb className="h-10 w-10 text-brand-secondary mr-6 transition-transform group-hover:scale-110" />
@@ -137,7 +137,7 @@ export default function AboutPage() {
             ].map((value, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:bg-white/10 transition-all duration-500 rounded-[3rem] group shadow-[0_0_20px_rgba(37,99,235,0.02)] hover:shadow-[0_0_40px_rgba(37,99,235,0.06)]"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:bg-white/10 transition-all duration-500 rounded-card-md group shadow-[0_0_20px_rgba(37,99,235,0.02)] hover:shadow-[0_0_40px_rgba(37,99,235,0.06)]"
               >
                 <CardContent className="p-12">
                   <div
@@ -161,7 +161,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-hero p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Partner With Us
@@ -173,7 +173,7 @@ export default function AboutPage() {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] transition-all"
+                className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest hover:shadow-glow-secondary-btn transition-all"
               >
                 Start Discovery{" "}
                 <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
@@ -189,7 +189,7 @@ export default function AboutPage() {
           <div className="text-4xl font-black text-white tracking-tighter uppercase">
             Lithium<span className="text-brand-primary">Labs</span>
           </div>
-          <div className="text-white/30 text-[10px] font-black uppercase tracking-[0.4em]">
+          <div className="text-white/30 text-micro-lg font-black uppercase tracking-badge">
             © {new Date().getFullYear()} Lithium Labs Consortium
           </div>
         </div>

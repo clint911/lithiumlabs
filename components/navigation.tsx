@@ -37,7 +37,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-foundation/90 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-secondary/5 bg-brand-foundation/20 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -63,7 +63,7 @@ export default function Navigation() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition-all text-[11px] font-black tracking-[0.3em] uppercase ${pathname === link.href ? "text-brand-primary" : "text-white/40 hover:text-white"}`}
+                className={`transition-all text-[11px] font-black tracking-brand uppercase ${pathname === link.href ? "text-brand-primary" : "text-white/40 hover:text-white"}`}
               >
                 {link.name}
               </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-8 h-12 rounded-2xl font-black uppercase text-xs tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)]">
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-8 h-12 rounded-2xl font-black uppercase text-xs tracking-widest transition-all hover:scale-105 active:scale-95 hover:shadow-glow-secondary-btn">
                 Initiate Build
               </Button>
             </Link>
@@ -114,7 +114,7 @@ export default function Navigation() {
               ))}
               <div className="pt-10">
                 <Link href="/contact" onClick={closeMenu}>
-                  <Button className="w-full bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white py-10 rounded-[2rem] text-2xl font-black shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] uppercase tracking-tighter transition-all">
+                  <Button className="w-full bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white py-10 rounded-card-sm text-2xl font-black hover:shadow-glow-secondary-btn uppercase tracking-tighter transition-all">
                     Get Started
                   </Button>
                 </Link>

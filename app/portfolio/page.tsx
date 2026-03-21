@@ -194,7 +194,7 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-hero backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Verified{" "}
               <span className="text-brand-primary">Transformations</span>
@@ -214,7 +214,7 @@ export default function PortfolioPage() {
             {allProjects.map((project, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 overflow-hidden rounded-[3.5rem] group flex flex-col shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 overflow-hidden rounded-card-lg group flex flex-col shadow-glow-primary hover:shadow-glow-primary-md"
               >
                 <div className="relative h-64 overflow-hidden border-b border-white/10">
                   <img
@@ -226,14 +226,14 @@ export default function PortfolioPage() {
                   <div className="absolute top-6 left-6">
                     <Badge
                       variant="secondary"
-                      className={`bg-${project.color}/10 text-${project.color} border-none px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-widest`}
+                      className={`bg-${project.color}/10 text-${project.color} border-none px-4 py-1 rounded-full text-micro font-black uppercase tracking-widest`}
                     >
                       {project.category}
                     </Badge>
                   </div>
                 </div>
                 <CardContent className="p-10 flex-grow flex flex-col">
-                  <div className="flex items-center justify-between mb-6 text-white/40 text-[10px] font-black uppercase tracking-widest">
+                  <div className="flex items-center justify-between mb-6 text-white/40 text-micro-lg font-black uppercase tracking-widest">
                     <span>{project.client}</span>
                     <span>{project.timeline}</span>
                   </div>
@@ -286,7 +286,7 @@ export default function PortfolioPage() {
       {/* CTA Footer Section */}
       <section className="relative z-10 py-40 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-hero p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Your Success Starts Here
             </h2>
@@ -294,7 +294,7 @@ export default function PortfolioPage() {
               Ready to build your institutional legacy?
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-wide sm:tracking-widest shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] whitespace-normal sm:whitespace-nowrap transition-all">
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-wide sm:tracking-widest hover:shadow-glow-secondary-btn whitespace-normal sm:whitespace-nowrap transition-all">
                 Connect With Strategists
               </Button>
             </Link>

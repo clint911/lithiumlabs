@@ -33,7 +33,7 @@ export default async function BlogListingPage({
       {/* Hero Section */}
       <section className="pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.05] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-hero backdrop-blur-3xl bg-white/[0.05] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Insights &amp;{" "}
               <span className="text-brand-secondary">Builds</span>
@@ -60,7 +60,7 @@ export default async function BlogListingPage({
               {posts.map((post) => (
                 <Card
                   key={post.id}
-                  className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-secondary/20 transition-all duration-700 rounded-[3rem] group shadow-[0_0_40px_rgba(147,112,219,0.02)] hover:shadow-[0_0_60px_rgba(147,112,219,0.08)] flex flex-col overflow-hidden"
+                  className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-secondary/20 transition-all duration-700 rounded-card-md group shadow-glow-secondary-card hover:shadow-glow-secondary-md flex flex-col overflow-hidden"
                 >
                   {/* Image */}
                   <Link href={`/blog/${post.slug}`} className="block">
@@ -90,7 +90,7 @@ export default async function BlogListingPage({
                         {post.tags.map((tag) => (
                           <Badge
                             key={tag.id}
-                            className="bg-brand-secondary/10 text-brand-secondary border-none px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest"
+                            className="bg-brand-secondary/10 text-brand-secondary border-none px-3 py-1 rounded-full text-micro font-black uppercase tracking-widest"
                           >
                             {tag.name}
                           </Badge>
@@ -127,7 +127,7 @@ export default async function BlogListingPage({
                       <Link href={`/blog/${post.slug}`}>
                         <Button
                           variant="outline"
-                          className="border-white/10 bg-transparent text-white/60 hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary px-5 py-2 rounded-xl font-black uppercase text-[9px] tracking-widest transition-all"
+                          className="border-white/10 bg-transparent text-white/60 hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary px-5 py-2 rounded-xl font-black uppercase text-micro tracking-widest transition-all"
                         >
                           Read <ArrowRight className="ml-2 h-3 w-3" />
                         </Button>

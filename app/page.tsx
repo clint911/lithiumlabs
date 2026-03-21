@@ -32,7 +32,7 @@ export default function Home() {
       {/* Hero Section - Balanced Typography */}
       <section className="relative z-10 pt-56 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.05] border border-white/10 mb-8 shadow-4xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-hero backdrop-blur-3xl bg-white/[0.05] border border-white/10 mb-8 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               From <span className="text-brand-primary">Idea</span> to
               <br />
@@ -47,7 +47,7 @@ export default function Home() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-10 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black transition-all hover:scale-105 shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] uppercase tracking-widest"
+                  className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-10 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black transition-all hover:scale-105 hover:shadow-glow-secondary-btn uppercase tracking-widest"
                 >
                   Initiate Build{" "}
                   <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
@@ -106,7 +106,7 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="relative h-[400px] rounded-[3rem] overflow-hidden border border-white/10 shadow-4xl group">
+            <div className="relative h-[400px] rounded-card-md overflow-hidden border border-white/10 shadow-4xl group">
               <div className="absolute inset-0 bg-brand-foundation/40 mix-blend-multiply transition-opacity group-hover:opacity-20" />
               <div
                 className="h-full w-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
@@ -177,7 +177,7 @@ export default function Home() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-500 rounded-[2.5rem] group shadow-[0_0_30px_rgba(37,99,235,0.03)] hover:shadow-[0_0_50px_rgba(37,99,235,0.08)]"
+                className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-500 rounded-card group shadow-glow-primary-sm hover:shadow-glow-primary-md"
               >
                 <CardContent className="p-10">
                   <div
@@ -230,12 +230,12 @@ export default function Home() {
             ].map((project, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-white/20 transition-all duration-700 rounded-[3rem] group shadow-[0_0_40px_rgba(255,100,255,0.02)] hover:shadow-[0_0_60px_rgba(255,100,255,0.05)]"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-white/20 transition-all duration-700 rounded-card-md group shadow-glow-magenta hover:shadow-glow-magenta-md"
               >
                 <CardContent className="p-12">
                   <Badge
                     variant="secondary"
-                    className={`bg-${project.color}/10 text-${project.color} border-none px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-widest mb-8`}
+                    className={`bg-${project.color}/10 text-${project.color} border-none px-4 py-1 rounded-full text-micro font-black uppercase tracking-widest mb-8`}
                   >
                     Institutional Build
                   </Badge>
@@ -248,7 +248,7 @@ export default function Home() {
                   <Link href="/portfolio">
                     <Button
                       variant="outline"
-                      className="border-white/10 bg-transparent text-white/60 hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary px-8 py-5 rounded-xl font-black uppercase text-[10px] tracking-widest transition-all"
+                      className="border-white/10 bg-transparent text-white/60 hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary px-8 py-5 rounded-xl font-black uppercase text-micro-lg tracking-widest transition-all"
                     >
                       Audit Result
                     </Button>
@@ -271,7 +271,7 @@ export default function Home() {
       {/* CTA Footer Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-brand-foundation/60 border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden shadow-[0_0_100px_rgba(37,99,235,0.05)]">
+          <div className="backdrop-blur-3xl bg-brand-foundation/60 border border-white/10 rounded-hero p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden shadow-glow-primary-xl">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] -mr-48 -mt-48" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase leading-none">
               The Future Is Built Now
@@ -280,7 +280,7 @@ export default function Home() {
               Ready to transform your vision into a benchmark digital asset?
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] transition-all">
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest hover:shadow-glow-secondary-btn transition-all">
                 Initiate Build
               </Button>
             </Link>
@@ -295,7 +295,7 @@ export default function Home() {
             <div className="text-4xl font-black text-white tracking-tighter uppercase">
               Lithium<span className="text-brand-primary">Labs</span>
             </div>
-            <div className="text-white/50 text-[10px] font-black uppercase tracking-[0.4em]">
+            <div className="text-white/50 text-micro-lg font-black uppercase tracking-badge">
               © {new Date().getFullYear()} Lithium Labs Consortium
             </div>
           </div>

@@ -126,7 +126,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-hero backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
               Comprehensive{" "}
               <span className="text-brand-primary">Technical</span> Services
@@ -147,11 +147,11 @@ export default function ServicesPage() {
             {serviceCategories.map((service, index) => (
               <Card
                 key={index}
-                className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-700 rounded-[3.5rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]"
+                className="backdrop-blur-3xl bg-white/[0.05] border-white/10 hover:border-brand-primary/20 transition-all duration-700 rounded-card-lg group shadow-glow-primary hover:shadow-glow-primary-md"
               >
                 <CardContent className="p-12 md:p-16">
                   <div
-                    className={`w-20 h-20 rounded-[2rem] bg-${service.color}/10 border border-${service.color}/20 flex items-center justify-center mb-10 transition-transform group-hover:scale-110`}
+                    className={`w-20 h-20 rounded-card-sm bg-${service.color}/10 border border-${service.color}/20 flex items-center justify-center mb-10 transition-transform group-hover:scale-110`}
                   >
                     <div className={`text-${service.color}`}>
                       {service.icon}
@@ -250,7 +250,7 @@ export default function ServicesPage() {
       {/* CTA Footer Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-hero p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl relative overflow-hidden">
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Ready to Build?
             </h2>
@@ -260,7 +260,7 @@ export default function ServicesPage() {
               can transform your digital presence.
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] transition-all">
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest hover:shadow-glow-secondary-btn transition-all">
                 Contact Us{" "}
                 <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
@@ -275,7 +275,7 @@ export default function ServicesPage() {
           <div className="text-4xl font-black text-white tracking-tighter uppercase">
             Lithium<span className="text-brand-primary">Labs</span>
           </div>
-          <div className="text-white/30 text-[10px] font-black uppercase tracking-[0.4em]">
+          <div className="text-white/30 text-micro-lg font-black uppercase tracking-badge">
             © {new Date().getFullYear()} Lithium Labs Consortium
           </div>
         </div>
