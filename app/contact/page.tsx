@@ -1,8 +1,19 @@
-import { ArrowRight, Mail, Phone, MapPin, Clock, Github, Linkedin, Twitter, Shield, Calendar } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Navigation from "@/components/navigation"
-import Link from "next/link"
+import {
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Github,
+  Linkedin,
+  Twitter,
+  Shield,
+  Calendar,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/navigation";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -17,16 +28,17 @@ export default function ContactPage() {
       {/* Navigation */}
       <Navigation />
 
-
       {/* Hero Section - Balanced Typography */}
       <section className="relative z-10 pt-48 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 rounded-[4rem] backdrop-blur-3xl bg-white/[0.06] border border-white/10 mb-12 shadow-4xl animate-in fade-in zoom-in duration-1000">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] uppercase">
-              Initiate <span className="text-brand-primary">Strategic</span> Build
+              Initiate <span className="text-brand-primary">Strategic</span>{" "}
+              Build
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed font-light">
-              Ready to transform your vision into a benchmark digital product? Our strategists are standing by for institutional-grade triage.
+              Ready to transform your vision into a benchmark digital product?
+              Our strategists are standing by for institutional-grade triage.
             </p>
           </div>
         </div>
@@ -39,7 +51,9 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-10">
               <div className="p-12 rounded-[3.5rem] backdrop-blur-3xl bg-white/[0.05] border border-white/10 shadow-[0_0_30px_rgba(37,99,235,0.03)] hover:shadow-[0_0_50px_rgba(37,99,235,0.08)] transition-all">
-                <h2 className="text-3xl font-black text-white mb-12 tracking-tighter uppercase">Global Nodes</h2>
+                <h2 className="text-3xl font-black text-white mb-12 tracking-tighter uppercase">
+                  Global Nodes
+                </h2>
 
                 <div className="space-y-12">
                   <div className="flex items-start space-x-6 group">
@@ -47,9 +61,15 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-brand-primary" />
                     </div>
                     <div>
-                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">Inquiries</div>
-                      <div className="text-white font-black text-sm sm:text-base md:text-lg uppercase tracking-tight break-all sm:break-normal">partnerships@lithiumlabs.com</div>
-                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide break-all sm:break-normal">clintonfreelance380@gmail.com</div>
+                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">
+                        Inquiries
+                      </div>
+                      <div className="text-white font-black text-sm sm:text-base md:text-lg uppercase tracking-tight break-all sm:break-normal">
+                        partnerships@lithiumlabs.com
+                      </div>
+                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide break-all sm:break-normal">
+                        clintonfreelance380@gmail.com
+                      </div>
                     </div>
                   </div>
 
@@ -58,8 +78,12 @@ export default function ContactPage() {
                       <Phone className="h-6 w-6 text-brand-secondary" />
                     </div>
                     <div>
-                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">Operations</div>
-                      <div className="text-white font-black text-lg tracking-widest uppercase">+254 114597682</div>
+                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">
+                        Operations
+                      </div>
+                      <div className="text-white font-black text-lg tracking-widest uppercase">
+                        +254 114597682
+                      </div>
                     </div>
                   </div>
 
@@ -68,9 +92,15 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 text-brand-tertiary" />
                     </div>
                     <div>
-                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">Hub</div>
-                      <div className="text-white font-black text-lg uppercase tracking-tighter">AppleWood Adams</div>
-                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide uppercase">Nairobi, Kenya</div>
+                      <div className="text-white/30 text-[9px] font-black uppercase tracking-[0.3em] mb-2">
+                        Hub
+                      </div>
+                      <div className="text-white font-black text-lg uppercase tracking-tighter">
+                        AppleWood Adams
+                      </div>
+                      <div className="text-white/60 text-xs font-light mt-1 tracking-wide uppercase">
+                        Nairobi, Kenya
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -81,7 +111,7 @@ export default function ContactPage() {
                       <Button
                         key={idx}
                         variant="outline"
-                        className="w-12 h-12 rounded-xl border-white/10 text-white/50 hover:text-white hover:bg-white/5 bg-transparent p-0 transition-all"
+                        className="w-12 h-12 rounded-xl border-white/10 text-white/50 hover:text-brand-secondary hover:border-brand-secondary/30 hover:bg-brand-secondary/10 bg-transparent p-0 transition-all"
                       >
                         <Icon className="h-5 w-5" />
                       </Button>
@@ -92,15 +122,19 @@ export default function ContactPage() {
 
               <Card className="backdrop-blur-3xl bg-brand-primary/5 border-white/10 rounded-[3rem] overflow-hidden shadow-[0_0_30px_rgba(37,99,235,0.03)] group transition-all">
                 <CardContent className="p-12 relative">
-                  <h3 className="text-xl font-black text-white mb-6 tracking-tighter uppercase relative z-10">Uptime Assurance</h3>
+                  <h3 className="text-xl font-black text-white mb-6 tracking-tighter uppercase relative z-10">
+                    Uptime Assurance
+                  </h3>
                   <div className="space-y-4 relative z-10">
                     <div className="flex items-center text-xs text-white/50 font-black uppercase tracking-[0.1em]">
                       <Clock className="h-4 w-4 mr-4 text-brand-primary" />
-                      Inquiry: <span className="text-white ml-2">24h Response</span>
+                      Inquiry:{" "}
+                      <span className="text-white ml-2">24h Response</span>
                     </div>
                     <div className="flex items-center text-xs text-white/50 font-black uppercase tracking-[0.1em]">
                       <Shield className="h-4 w-4 mr-4 text-brand-secondary" />
-                      Security: <span className="text-white ml-2">2h Triage</span>
+                      Security:{" "}
+                      <span className="text-white ml-2">2h Triage</span>
                     </div>
                   </div>
                 </CardContent>
@@ -111,11 +145,15 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <Card className="backdrop-blur-3xl bg-white/[0.04] border border-white/10 rounded-[4rem] shadow-5xl relative overflow-hidden h-full shadow-[0_0_50px_rgba(255,255,255,0.02)]">
                 <CardContent className="p-12 md:p-16">
-                  <h2 className="text-4xl font-black text-white mb-10 tracking-tighter uppercase">Technical Brief</h2>
+                  <h2 className="text-4xl font-black text-white mb-10 tracking-tighter uppercase">
+                    Technical Brief
+                  </h2>
 
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-3">
-                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">First Name</label>
+                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">
+                        First Name
+                      </label>
                       <input
                         type="text"
                         required
@@ -124,7 +162,9 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="space-y-3">
-                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">Last Name</label>
+                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">
+                        Last Name
+                      </label>
                       <input
                         type="text"
                         required
@@ -134,7 +174,9 @@ export default function ContactPage() {
                     </div>
 
                     <div className="md:col-span-2 space-y-3">
-                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">Institutional Email</label>
+                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">
+                        Institutional Email
+                      </label>
                       <input
                         type="email"
                         required
@@ -144,25 +186,53 @@ export default function ContactPage() {
                     </div>
 
                     <div className="md:col-span-2 space-y-3">
-                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">Build Domain</label>
+                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">
+                        Build Domain
+                      </label>
                       <select
                         required
                         className="w-full p-6 rounded-2xl backdrop-blur-3xl bg-white/[0.03] border border-white/10 text-white focus:outline-none focus:ring-1 focus:ring-brand-primary/50 transition-all appearance-none font-light text-lg"
                       >
-                        <option value="" className="bg-brand-foundation">Select Domain</option>
-                        <option value="web" className="bg-brand-foundation">Web Design</option>
-                        <option value="mobile" className="bg-brand-foundation">Mobile APP Development</option>
-                        <option value="api" className="bg-brand-foundation">API Development</option>
-                        <option value="fintech" className="bg-brand-foundation">FinTech Infrastructure</option>
-                        <option value="payments" className="bg-brand-foundation">Payment Integration</option>
-                        <option value="web3" className="bg-brand-foundation">Web3 & Assets</option>
-                        <option value="enterprise" className="bg-brand-foundation">Institutional SaaS</option>
-                        <option value="ai" className="bg-brand-foundation">AI & Machine Learning Integration</option>
+                        <option value="" className="bg-brand-foundation">
+                          Select Domain
+                        </option>
+                        <option value="web" className="bg-brand-foundation">
+                          Web Design
+                        </option>
+                        <option value="mobile" className="bg-brand-foundation">
+                          Mobile APP Development
+                        </option>
+                        <option value="api" className="bg-brand-foundation">
+                          API Development
+                        </option>
+                        <option value="fintech" className="bg-brand-foundation">
+                          FinTech Infrastructure
+                        </option>
+                        <option
+                          value="payments"
+                          className="bg-brand-foundation"
+                        >
+                          Payment Integration
+                        </option>
+                        <option value="web3" className="bg-brand-foundation">
+                          Web3 & Assets
+                        </option>
+                        <option
+                          value="enterprise"
+                          className="bg-brand-foundation"
+                        >
+                          Institutional SaaS
+                        </option>
+                        <option value="ai" className="bg-brand-foundation">
+                          AI & Machine Learning Integration
+                        </option>
                       </select>
                     </div>
 
                     <div className="md:col-span-2 space-y-3">
-                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">Strategic Vision</label>
+                      <label className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] ml-2">
+                        Strategic Vision
+                      </label>
                       <textarea
                         rows={5}
                         required
@@ -172,8 +242,9 @@ export default function ContactPage() {
                     </div>
 
                     <div className="md:col-span-2 mt-6">
-                      <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-6 sm:py-8 md:py-10 rounded-[2rem] text-lg sm:text-xl md:text-2xl font-black transition-all hover:scale-[1.01] active:scale-95 shadow-2xl shadow-brand-primary/30 uppercase tracking-widest">
-                        Initiate Build <ArrowRight className="ml-3 sm:ml-4 h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
+                      <Button className="w-full bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white py-6 sm:py-8 md:py-10 rounded-[2rem] text-lg sm:text-xl md:text-2xl font-black transition-all hover:scale-[1.01] active:scale-95 shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] uppercase tracking-widest">
+                        Initiate Build{" "}
+                        <ArrowRight className="ml-3 sm:ml-4 h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
                       </Button>
                     </div>
                   </form>
@@ -190,9 +261,11 @@ export default function ContactPage() {
           <div className="text-4xl font-black text-white tracking-tighter uppercase">
             Lithium<span className="text-brand-primary">Labs</span>
           </div>
-          <div className="text-white/30 text-[10px] font-black uppercase tracking-[0.4em]">© {new Date().getFullYear()} Lithium Labs Consortium</div>
+          <div className="text-white/30 text-[10px] font-black uppercase tracking-[0.4em]">
+            © {new Date().getFullYear()} Lithium Labs Consortium
+          </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

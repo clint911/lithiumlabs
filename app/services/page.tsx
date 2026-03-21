@@ -260,8 +260,9 @@ export default function ServicesPage() {
               can transform your digital presence.
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-2xl">
-                Contact Us <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
+              <Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30 hover:bg-brand-secondary/20 hover:border-brand-secondary/40 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-[0_0_30px_rgba(37,99,235,0.10)] hover:shadow-[0_0_40px_rgba(147,112,219,0.25)] transition-all">
+                Contact Us{" "}
+                <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </Link>
           </div>

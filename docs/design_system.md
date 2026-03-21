@@ -134,22 +134,38 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - Custom shadow glow effects with brand colors
 - Group hover states for child element coordination
 
+### Button Color Language
+
+The system uses **"blue at rest, purple in motion"** — a transparent glass base that shifts to brand-secondary (soft indigo-purple) on hover. This reduces blue overload, adds visual depth, and creates a consistent interactive signal across all CTAs.
+
+| Variant             | Normal State                                                                | Hover State                                                                                            |
+| ------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Primary CTA**     | `bg-brand-primary/20 backdrop-blur-sm border-brand-primary/30` — glass blue | `hover:bg-brand-secondary/20 hover:border-brand-secondary/40` — purple glass                           |
+| **Outline / Audit** | `border-white/10 bg-transparent text-white/60` — ghost                      | `hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary` — purple tint |
+| **Ghost / Link**    | `text-white/70`                                                             | `hover:text-brand-secondary` — purple text                                                             |
+
+**Rationale**: Transparent glass preserves layered depth and premium feel. `brand-secondary` (`255 83% 68%`, soft indigo-purple) on hover creates a consistent interactive language without overloading the palette.
+
 ### Buttons
 
 **Primary CTA**:
 
 ```tsx
-<Button className="bg-brand-primary hover:bg-brand-primary/90
+<Button className="bg-brand-primary/20 backdrop-blur-sm border border-brand-primary/30
+  hover:bg-brand-secondary/20 hover:border-brand-secondary/40
   text-white px-12 py-8 rounded-2xl text-xl font-black
-  uppercase tracking-widest shadow-2xl">
+  uppercase tracking-widest
+  shadow-[0_0_30px_rgba(37,99,235,0.10)]
+  hover:shadow-[0_0_40px_rgba(147,112,219,0.25)]
+  transition-all">
 ```
 
 **Secondary/Outline**:
 
 ```tsx
-<Button variant="outline" className="border-white/10 text-white/70
-  hover:text-white px-8 py-6 rounded-xl font-black uppercase
-  text-xs tracking-widest">
+<Button variant="outline" className="border-white/10 bg-transparent text-white/60
+  hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary
+  px-8 py-6 rounded-xl font-black uppercase text-xs tracking-widest transition-all">
 ```
 
 **Characteristics**:
