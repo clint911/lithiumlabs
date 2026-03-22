@@ -15,9 +15,10 @@ interface Params {
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
-  const result = await wisp.getPost(params.slug);
+  const { slug } = await params;
+  const result = await wisp.getPost(slug);
   if (!result.post) return {};
   const { title, description, image } = result.post;
   return {
@@ -32,10 +33,15 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPost({ params }: { params: Params }) {
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { slug } = await params;
   const [postResult, relatedResult] = await Promise.all([
-    wisp.getPost(params.slug),
-    wisp.getRelatedPosts({ slug: params.slug, limit: 3 }),
+    wisp.getPost(slug),
+    wisp.getRelatedPosts({ slug, limit: 3 }),
   ]);
 
   if (!postResult.post) notFound();

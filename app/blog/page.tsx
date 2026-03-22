@@ -22,9 +22,10 @@ export const metadata: Metadata = {
 export default async function BlogListingPage({
   searchParams,
 }: {
-  searchParams?: { page?: string };
+  searchParams?: Promise<{ page?: string }>;
 }) {
-  const page = Number(searchParams?.page ?? 1);
+  const resolvedParams = await searchParams;
+  const page = Number(resolvedParams?.page ?? 1);
   const result = await wisp.getPosts({ limit: 6, page });
   const { posts, pagination } = result;
 
