@@ -171,7 +171,7 @@ export default function CaseStudyPage() {
           <Link href="/portfolio">
             <Button
               variant="outline"
-              className="border-white/10 text-white/70 hover:text-white px-6 py-4 rounded-xl font-black uppercase text-xs tracking-widest"
+              className="border-white/10 bg-transparent text-white/60 hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary px-6 py-4 rounded-xl font-black uppercase text-xs tracking-widest transition-all"
             >
               <ArrowLeft className="mr-3 h-4 w-4" /> Back to Portfolio
             </Button>
@@ -221,14 +221,15 @@ export default function CaseStudyPage() {
                   <Button
                     className={`bg-${project.color} hover:bg-${project.color}/90 text-white px-6 py-4 sm:px-8 sm:py-6 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl`}
                   >
-                    View Live Site <ExternalLink className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+                    View Live Site{" "}
+                    <ExternalLink className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
               )}
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-tertiary/20 rounded-[4rem] blur-3xl" />
-              <div className="relative rounded-[4rem] overflow-hidden border border-white/10 backdrop-blur-xl bg-white/[0.02] shadow-4xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-tertiary/20 rounded-hero blur-3xl" />
+              <div className="relative rounded-hero overflow-hidden border border-white/10 backdrop-blur-xl bg-white/[0.02] shadow-4xl">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -244,7 +245,7 @@ export default function CaseStudyPage() {
       {/* Challenge Section */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
-          <Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-[3.5rem] shadow-[0_0_40px_rgba(37,99,235,0.03)]">
+          <Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-card-lg shadow-glow-primary">
             <CardContent className="p-12 md:p-16">
               <div className="flex items-center mb-8">
                 <Target className={`h-10 w-10 text-${project.color} mr-6`} />
@@ -285,7 +286,7 @@ export default function CaseStudyPage() {
             {project.solution.approach.map((phase: any, idx: number) => (
               <Card
                 key={idx}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 rounded-[3rem] group shadow-[0_0_40px_rgba(37,99,235,0.03)] hover:shadow-[0_0_60px_rgba(37,99,235,0.08)]"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 hover:border-brand-primary/20 transition-all duration-700 rounded-card-md group shadow-glow-primary hover:shadow-glow-primary-md"
               >
                 <CardContent className="p-10">
                   <div className="flex items-center mb-6">
@@ -322,7 +323,7 @@ export default function CaseStudyPage() {
             {project.technologies.map((tech: any, idx: number) => (
               <Card
                 key={idx}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-[2rem] hover:border-brand-primary/20 transition-all duration-300"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-card-sm hover:border-brand-primary/20 transition-all duration-300"
               >
                 <CardContent className="p-6">
                   <h4 className="text-lg font-black text-white mb-2 uppercase tracking-tighter">
@@ -348,7 +349,7 @@ export default function CaseStudyPage() {
             {project.results.metrics.map((metric: any, idx: number) => (
               <Card
                 key={idx}
-                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-[3rem] shadow-[0_0_40px_rgba(37,99,235,0.03)]"
+                className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-card-md shadow-glow-primary"
               >
                 <CardContent className="p-10 text-center">
                   <div
@@ -367,7 +368,7 @@ export default function CaseStudyPage() {
             ))}
           </div>
 
-          <Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-[4rem] shadow-[0_0_40px_rgba(37,99,235,0.03)]">
+          <Card className="backdrop-blur-3xl bg-white/[0.04] border-white/10 rounded-hero shadow-glow-primary">
             <CardContent className="p-12 md:p-16">
               <div className="flex items-start mb-8">
                 <div className="text-6xl text-brand-primary mr-6">"</div>
@@ -412,7 +413,7 @@ export default function CaseStudyPage() {
       {/* CTA Section */}
       <section className="relative z-10 py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl">
+          <div className="backdrop-blur-3xl bg-white/[0.03] border border-white/10 rounded-hero p-8 sm:p-12 md:p-16 lg:p-24 shadow-4xl">
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 sm:mb-8 tracking-tighter uppercase">
               Ready to Build Something Similar?
             </h2>
@@ -421,8 +422,9 @@ export default function CaseStudyPage() {
               your project.
             </p>
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest shadow-2xl">
-                Start Your Project <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl text-base sm:text-lg md:text-xl font-black uppercase tracking-widest hover:shadow-glow-secondary-btn transition-all">
+                Start Your Project{" "}
+                <ArrowRight className="ml-3 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6" />
               </Button>
             </Link>
           </div>

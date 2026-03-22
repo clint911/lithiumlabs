@@ -66,9 +66,12 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - **lg**: Standard body (18px / text-lg)
 - **sm**: Small copy (14px / text-sm)
 - **xs**: Labels, captions (12px / text-xs)
-- **[10px]**: Micro labels (10px)
-- **[9px]**: Badge text (9px)
-- **[8px]**: Smallest elements (8px)
+- **`text-micro-lg`** (`0.625rem` / 10px) — micro labels
+- **`text-micro`** (`0.5625rem` / 9px) — badge text, pills
+- **`tracking-brand`** (`0.3em`) — nav links, uppercase labels
+- **`tracking-badge`** (`0.4em`) — CTA section eyebrow labels
+
+> Tokens defined in `styles/tokens.css` under `@theme { --text-micro-* ; --tracking-* }`.
 
 ### Typographic Style Rules
 
@@ -83,15 +86,16 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 
 ### Border Radius Scale
 
-- `rounded-[1.5rem]` (24px) - Small elements
-- `rounded-[2rem]` (32px) - Icons, small cards
-- `rounded-[2.5rem]` (40px) - Medium cards
-- `rounded-[3rem]` (48px) - Standard cards
-- `rounded-[3.5rem]` (56px) - Large cards
-- `rounded-[4rem]` (64px) - Hero sections, special emphasis
-- `rounded-xl` (12px) - Buttons, small interactive elements
-- `rounded-2xl` (16px) - Primary buttons
-- `rounded-full` - Badges, pills, dots
+- `rounded-card-sm` (`2rem` / 32px) — icons, mobile CTAs
+- `rounded-card` (`2.5rem` / 40px) — medium cards
+- `rounded-card-md` (`3rem` / 48px) — standard cards
+- `rounded-card-lg` (`3.5rem` / 56px) — large cards
+- `rounded-hero` (`4rem` / 64px) — hero sections, large CTA containers
+- `rounded-xl` (12px) — small interactive elements
+- `rounded-2xl` (16px) — primary CTA buttons
+- `rounded-full` — badges, pills, dots
+
+> Tokens defined in `styles/tokens.css` under `@theme { --radius-* }`.
 
 ### Padding Scale
 
@@ -134,22 +138,37 @@ The LithiumLabs design system is a premium, institutional-grade visual language 
 - Custom shadow glow effects with brand colors
 - Group hover states for child element coordination
 
+### Button Color Language
+
+The system uses **"invisible at rest, purple in motion"** — all CTAs are fully transparent at rest and shift to brand-secondary (soft indigo-purple) only on hover. This creates a clean, uncluttered look that emphasizes content, with a premium interactive signal appearing on engagement.
+
+| Variant             | Normal State                                           | Hover State                                                                                            |
+| ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| **Primary CTA**     | `bg-transparent border border-white/[0.08]` — ghost    | `hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:shadow-glow-secondary-btn`          |
+| **Outline / Audit** | `border-white/10 bg-transparent text-white/60` — ghost | `hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary` — purple tint |
+| **Ghost / Link**    | `text-white/70`                                        | `hover:text-brand-secondary` — purple text                                                             |
+
+**Rationale**: Ghost-at-rest removes all blue emphasis from the idle state so the typography and content take precedence. The `brand-secondary` purple glow (`shadow-glow-secondary-btn`) appears only on hover, making the interaction feel magnetic and premium.
+
 ### Buttons
 
 **Primary CTA**:
 
 ```tsx
-<Button className="bg-brand-primary hover:bg-brand-primary/90
+<Button className="bg-transparent border border-white/[0.08]
+  hover:bg-brand-secondary/10 hover:border-brand-secondary/30
   text-white px-12 py-8 rounded-2xl text-xl font-black
-  uppercase tracking-widest shadow-2xl">
+  uppercase tracking-widest
+  hover:shadow-glow-secondary-btn
+  transition-all">
 ```
 
 **Secondary/Outline**:
 
 ```tsx
-<Button variant="outline" className="border-white/10 text-white/70
-  hover:text-white px-8 py-6 rounded-xl font-black uppercase
-  text-xs tracking-widest">
+<Button variant="outline" className="border-white/10 bg-transparent text-white/60
+  hover:bg-brand-secondary/10 hover:border-brand-secondary/30 hover:text-brand-secondary
+  px-8 py-6 rounded-xl font-black uppercase text-xs tracking-widest transition-all">
 ```
 
 **Characteristics**:
@@ -303,17 +322,26 @@ animate-in fade-in zoom-in duration-1000
 
 ## Shadow System
 
-### Custom Glows
+### Custom Glow Tokens
 
-- **Blue glow**: `shadow-[0_0_40px_rgba(37,99,235,0.03)]`
-- **Magenta glow**: `shadow-[0_0_40px_rgba(255,100,255,0.02)]`
-- **Hover intensify**: Increase alpha ~2-3x
-- **Primary button**: `shadow-2xl shadow-brand-primary/30`
+| Token                        | Value                             | Usage                              |
+| ---------------------------- | --------------------------------- | ---------------------------------- |
+| `shadow-glow-primary-sm`     | `0 0 30px rgba(37,99,235,0.03)`   | Subtle card rest (contact, page)   |
+| `shadow-glow-primary`        | `0 0 40px rgba(37,99,235,0.03)`   | Card rest state (portfolio detail) |
+| `shadow-glow-primary-md`     | `0 0 60px rgba(37,99,235,0.08)`   | Card hover state                   |
+| `shadow-glow-primary-xl`     | `0 0 100px rgba(37,99,235,0.05)`  | Large CTA section                  |
+| `shadow-glow-secondary-card` | `0 0 40px rgba(147,112,219,0.02)` | Blog card rest                     |
+| `shadow-glow-secondary-md`   | `0 0 60px rgba(147,112,219,0.08)` | Blog hero / card hover             |
+| `shadow-glow-secondary-btn`  | `0 0 40px rgba(147,112,219,0.25)` | CTA button hover glow              |
+| `shadow-glow-magenta`        | `0 0 40px rgba(255,100,255,0.02)` | Testimonial card rest              |
+| `shadow-glow-magenta-md`     | `0 0 60px rgba(255,100,255,0.05)` | Testimonial card hover             |
+
+> All tokens defined in `styles/tokens.css`.
 
 ### Layered Shadows
 
 - Base: `shadow-4xl` (massive diffusion)
-- Add custom glow on top for color tint
+- Add token glow on top for color tint
 
 ---
 
@@ -347,7 +375,7 @@ When creating new pages/components:
 - [ ] Borders: white/10 base, glow on hover
 - [ ] Shadows: Include brand-color glows
 - [ ] Test at opacity scale: 3%, 4%, 5%, 6%, 10%, 20%
-- [ ] Verify rounded corners: 2rem, 3rem, 3.5rem, 4rem
+- [ ] Use radius tokens: `rounded-card-sm`, `rounded-card-md`, `rounded-card-lg`, `rounded-hero`
 - [ ] Ensure consistent padding: p-10, p-12, p-16
 - [ ] Add entry animations to hero sections
 
@@ -443,9 +471,48 @@ export default function PageName() {
 - Use white/10 or brand-color/20 borders
 - Layer gradients for text legibility
 - Scale icons and buttons only, not cards
-- Use custom rounded values (2rem, 3rem, 4rem)
+- Use custom rounded tokens (`rounded-card-sm`, `rounded-card-md`, `rounded-card-lg`, `rounded-hero`)
 
 ---
 
-_Last Updated: February 2026_
-_Design System Version: 1.0_
+## Design Token Reference
+
+All tokens live in [`styles/tokens.css`](../styles/tokens.css) and are registered via Tailwind v4 `@theme {}`. They are imported at the top of `app/globals.css`.
+
+### Shadow Tokens
+
+| Utility class                | CSS var                        | Value                             |
+| ---------------------------- | ------------------------------ | --------------------------------- |
+| `shadow-glow-primary-sm`     | `--shadow-glow-primary-sm`     | `0 0 30px rgba(37,99,235,0.03)`   |
+| `shadow-glow-primary`        | `--shadow-glow-primary`        | `0 0 40px rgba(37,99,235,0.03)`   |
+| `shadow-glow-primary-md`     | `--shadow-glow-primary-md`     | `0 0 60px rgba(37,99,235,0.08)`   |
+| `shadow-glow-primary-xl`     | `--shadow-glow-primary-xl`     | `0 0 100px rgba(37,99,235,0.05)`  |
+| `shadow-glow-secondary-card` | `--shadow-glow-secondary-card` | `0 0 40px rgba(147,112,219,0.02)` |
+| `shadow-glow-secondary-md`   | `--shadow-glow-secondary-md`   | `0 0 60px rgba(147,112,219,0.08)` |
+| `shadow-glow-secondary-btn`  | `--shadow-glow-secondary-btn`  | `0 0 40px rgba(147,112,219,0.25)` |
+| `shadow-glow-magenta`        | `--shadow-glow-magenta`        | `0 0 40px rgba(255,100,255,0.02)` |
+| `shadow-glow-magenta-md`     | `--shadow-glow-magenta-md`     | `0 0 60px rgba(255,100,255,0.05)` |
+
+### Border Radius Tokens
+
+| Utility class     | CSS var            | Value           |
+| ----------------- | ------------------ | --------------- |
+| `rounded-card-sm` | `--radius-card-sm` | `2rem` (32px)   |
+| `rounded-card`    | `--radius-card`    | `2.5rem` (40px) |
+| `rounded-card-md` | `--radius-card-md` | `3rem` (48px)   |
+| `rounded-card-lg` | `--radius-card-lg` | `3.5rem` (56px) |
+| `rounded-hero`    | `--radius-hero`    | `4rem` (64px)   |
+
+### Typography Tokens
+
+| Utility class    | CSS var            | Value             |
+| ---------------- | ------------------ | ----------------- |
+| `text-micro`     | `--text-micro`     | `0.5625rem` (9px) |
+| `text-micro-lg`  | `--text-micro-lg`  | `0.625rem` (10px) |
+| `tracking-brand` | `--tracking-brand` | `0.3em`           |
+| `tracking-badge` | `--tracking-badge` | `0.4em`           |
+
+---
+
+_Last Updated: March 2026_
+_Design System Version: 2.0_

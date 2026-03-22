@@ -1,0 +1,45 @@
+/*
+ * Design Token System — Lithium Labs
+ * Tailwind v4 CSS-first @theme tokens.
+ * Imported by app/globals.css.
+ *
+ * Naming convention:
+ *   --shadow-glow-*   → shadow-glow-*   (box-shadow utilities)
+ *   --radius-*        → rounded-*       (border-radius utilities)
+ *   --text-*          → text-*          (font-size utilities)
+ *   --tracking-*      → tracking-*      (letter-spacing utilities)
+ */
+
+@theme {
+  /* ── Shadows: Glow Primary (Electric Blue #2563eb) ─────────────────── */
+  --shadow-glow-primary-sm: 0 0 30px rgba(37, 99, 235, 0.03);
+  --shadow-glow-primary: 0 0 40px rgba(37, 99, 235, 0.03);
+  --shadow-glow-primary-md: 0 0 60px rgba(37, 99, 235, 0.08);
+  --shadow-glow-primary-xl: 0 0 100px rgba(37, 99, 235, 0.05);
+
+  /* ── Shadows: Glow Secondary (Indigo-Purple #9370db) ───────────────── */
+  --shadow-glow-secondary-card: 0 0 40px rgba(147, 112, 219, 0.02);
+  --shadow-glow-secondary-md: 0 0 60px rgba(147, 112, 219, 0.08);
+  --shadow-glow-secondary-btn: 0 0 40px rgba(147, 112, 219, 0.25);
+
+  /* ── Shadows: Glow Magenta (#ff64ff) ───────────────────────────────── */
+  --shadow-glow-magenta: 0 0 40px rgba(255, 100, 255, 0.02);
+  --shadow-glow-magenta-md: 0 0 60px rgba(255, 100, 255, 0.05);
+
+  /* ── Border Radius ──────────────────────────────────────────────────── */
+  --radius-card-sm: 2rem;
+  --radius-card: 2.5rem;
+  --radius-card-md: 3rem;
+  --radius-card-lg: 3.5rem;
+  --radius-hero: 4rem;
+
+  /* ── Typography: Micro Scale ────────────────────────────────────────── */
+  --text-micro: 0.5625rem; /* 9px  */
+  --text-micro--line-height: 1rem;
+  --text-micro-lg: 0.625rem; /* 10px */
+  --text-micro-lg--line-height: 1rem;
+
+  /* ── Letter Spacing ─────────────────────────────────────────────────── */
+  --tracking-brand: 0.3em;
+  --tracking-badge: 0.4em;
+}

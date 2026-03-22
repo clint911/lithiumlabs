@@ -1,41 +1,44 @@
-"use client"
-import Link from "next/link"
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   const navLinks = [
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-foundation/90 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}>
+    <nav
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? "backdrop-blur-3xl bg-brand-secondary/5 bg-brand-foundation/20 py-4 shadow-2xl border-b border-white/5" : "bg-transparent py-8"}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -54,14 +57,13 @@ export default function Navigation() {
             />
           </Link>
 
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-12">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition-all text-[11px] font-black tracking-[0.3em] uppercase ${pathname === link.href ? "text-brand-primary" : "text-white/40 hover:text-white"}`}
+                className={`transition-all text-[11px] font-black tracking-brand uppercase ${pathname === link.href ? "text-brand-primary" : "text-white/40 hover:text-white"}`}
               >
                 {link.name}
               </Link>
@@ -71,7 +73,7 @@ export default function Navigation() {
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 h-12 rounded-2xl font-black uppercase text-xs tracking-widest transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-brand-primary/20">
+              <Button className="bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white px-8 h-12 rounded-2xl font-black uppercase text-xs tracking-widest transition-all hover:scale-105 active:scale-95 hover:shadow-glow-secondary-btn">
                 Initiate Build
               </Button>
             </Link>
@@ -86,7 +88,11 @@ export default function Navigation() {
               className="text-white hover:bg-white/10 p-2"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+              {isMenuOpen ? (
+                <X className="h-8 w-8" />
+              ) : (
+                <Menu className="h-8 w-8" />
+              )}
             </Button>
           </div>
         </div>
@@ -108,7 +114,7 @@ export default function Navigation() {
               ))}
               <div className="pt-10">
                 <Link href="/contact" onClick={closeMenu}>
-                  <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-10 rounded-[2rem] text-2xl font-black shadow-3xl shadow-brand-primary/30 uppercase tracking-tighter">
+                  <Button className="w-full bg-transparent border border-white/[0.08] hover:bg-brand-secondary/10 hover:border-brand-secondary/30 text-white py-10 rounded-card-sm text-2xl font-black hover:shadow-glow-secondary-btn uppercase tracking-tighter transition-all">
                     Get Started
                   </Button>
                 </Link>
@@ -118,5 +124,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
