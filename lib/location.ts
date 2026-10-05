@@ -26,11 +26,11 @@ export type GeoLocation = {
 
 // Tier 3 — used when neither the Vercel headers nor the IP lookup resolve.
 const FALLBACK: GeoLocation = {
-  city: "bangalore",
-  region: "in",
-  latitude: 12.9716,
-  longitude: 77.5946,
-  timezone: "Asia/Kolkata",
+  city: "nairobi",
+  region: "ke",
+  latitude: -1.2921,
+  longitude: 36.8219,
+  timezone: "Africa/Nairobi",
 }
 
 export async function getLocation(): Promise<GeoLocation> {

@@ -10,13 +10,13 @@ const fontSans = Geist({ subsets: ["latin"], variable: "--font-sans" })
 const fontMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codebucks.agency"),
+  metadataBase: new URL("https://lithiumlabs.vercel.app"),
   title: {
-    default: "CodeBucks · Full-stack engineer, AI-first",
-    template: "%s · CodeBucks",
+    default: "Clinton · Software Products Developer, Tech Enthusiast",
+    template: "%s · Clinton",
   },
   description:
-    "Full-stack engineer designing and shipping AI-native software from the inference layer to the last interaction.",
+    "Software Products Developer designing and shipping software Products & Systems from the inference layer to the last interaction.",
 }
 
 export const viewport: Viewport = {

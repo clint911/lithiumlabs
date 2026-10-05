@@ -104,7 +104,7 @@ export function Contact(): React.ReactElement {
                   className="h-11 rounded-md bg-primary px-5 text-sm font-medium text-on-primary hover:bg-primary-active"
                 >
                   <Link
-                    href="mailto:codebucks27@gmail.com"
+                    href="mailto:clintonfreelance380@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

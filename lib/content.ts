@@ -122,9 +122,9 @@ export const CAPABILITIES = [
     body: "End-to-end SaaS systems built for actual production load. Type-safe APIs, predictable data layers, and a frontend that survives real users without ceremony.",
     items: [
       "Next.js",
-      "Hono / tRPC",
-      "Postgres",
-      "Drizzle",
+      "Nest / Springboot",
+      "Postgres / MySQL",
+      "Typeorm / Drizzle",
       "Stripe",
       "Edge / Workers",
     ],
@@ -198,9 +198,9 @@ export const STACK_PANES = [
   {
     title: "Server & data",
     items: [
-      ["Node.js / Hono", "runtime"],
+      ["Node.js / Java", "runtime"],
       ["Postgres", "database"],
-      ["Drizzle ORM", "data"],
+      ["Typeorm / Drizzle ORM", "data"],
       ["Cloudflare", "edge"],
       ["Vercel", "deploy"],
     ],
@@ -211,7 +211,7 @@ export const STACK_PANES = [
       ["Vercel AI SDK", "orchestration"],
       ["OpenAI / Anthropic", "models"],
       ["Replicate", "image"],
-      ["Inngest", "workflows"],
+      ["Inngest / Github Actions", "workflows"],
     ],
   },
   {
@@ -219,7 +219,7 @@ export const STACK_PANES = [
     items: [
       ["Docker", "runtime"],
       ["Resend", "email"],
-      ["Stripe", "payments"],
+      ["Paystack", "payments"],
       ["PostHog / Sentry", "observability"],
     ],
   },
@@ -228,7 +228,7 @@ export const STACK_PANES = [
 // --- About ----------------------------------------------------------------
 // components/contact.tsx (About band) — the meta definition list. [key, value].
 export const ABOUT_META = [
-  ["Based", "India · GMT +5:30"],
+  ["Based", "Nairobi · GMT +3:00"],
   ["Practice", "AI-first SaaS products"],
   ["Years shipping", "6+"],
   ["Availability", "Selected product builds"],
@@ -251,16 +251,16 @@ export const FOOTER_COLUMNS = [
   {
     title: "Contact",
     links: [
-      ["codebucks.agency", "mailto:codebucks27@gmail.com"],
+      ["lithiumlabs.vercel.app", "mailto:clintonfreelance380@gmail.com"],
       ["Start a project", "#contact"],
     ],
   },
   {
     title: "Social",
     links: [
-      ["GitHub ↗", "https://github.com/codebucks27"],
-      ["LinkedIn ↗", "https://www.linkedin.com/in/codebucks/"],
-      ["X / Twitter ↗", "https://x.com/code_bucks"],
+      ["GitHub ↗", "https://github.com/clint911"],
+      ["LinkedIn ↗", "https://www.linkedin.com/in/clinton-njogu/"],
+      ["X / Twitter ↗", "https://x.com/clintoneyke"],
     ],
   },
 ] as const
